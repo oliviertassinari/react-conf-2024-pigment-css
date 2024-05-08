@@ -27,35 +27,28 @@ import {
 const formidableLogo =
   'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
 
-// SPECTACLE_CLI_THEME_START
 const theme = {
   fonts: {
-    header: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
-    text: '"Open Sans Condensed", Helvetica, Arial, sans-serif'
+    header: '"General Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+    text: '"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
   }
 };
-// SPECTACLE_CLI_THEME_END
 
-const SlideFragments = () => (
-  <>
-    <Slide>
-      <Text>This is a slide fragment.</Text>
-    </Slide>
-    <Slide>
-      <Text>This is also a slide fragment.</Text>
-      <Appear>
-        <Text>This item shows up!</Text>
-      </Appear>
-      <Appear>
-        <Text>This item also shows up!</Text>
-      </Appear>
-    </Slide>
-  </>
-);
+const transition = {
+  from: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 1,
+  },
+  leave: {
+    opacity: 0,
+  }
+};
 
 export default function Presentation() {
   return (
-    <Deck theme={theme} template={<DefaultTemplate />}>
+    <Deck theme={theme} template={<DefaultTemplate />} transition={transition}>
       <Slide>
         <FlexBox height="100%">
           <SpectacleLogo size={500} />
@@ -82,20 +75,6 @@ export default function Presentation() {
         </FlexBox>
       </Slide>
       <Slide
-        transition={{
-          from: {
-            transform: 'scale(0.5) rotate(45deg)',
-            opacity: 0
-          },
-          enter: {
-            transform: 'scale(1) rotate(0)',
-            opacity: 1
-          },
-          leave: {
-            transform: 'scale(0.2) rotate(315deg)',
-            opacity: 0
-          }
-        }}
         backgroundColor="tertiary"
         backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/main/src/beau.jpg?raw=true)"
         backgroundOpacity={0.5}
@@ -167,7 +146,6 @@ export default function Presentation() {
             ))}
         </Grid>
       </Slide>
-      <SlideFragments />
       <Slide>
         <CodePane language="jsx" theme={codePaneThemes.a11yDark}>{`
           import { createClient, Provider } from 'urql';
