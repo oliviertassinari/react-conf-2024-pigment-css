@@ -1,197 +1,255 @@
 import * as React from 'react';
 import { styled, css, keyframes } from '@pigment-css/react';
+import {
+  FlexBox,
+  Heading,
+  SpectacleLogo,
+  UnorderedList,
+  CodeSpan,
+  OrderedList,
+  ListItem,
+  Appear,
+  Slide,
+  Deck,
+  Text,
+  Grid,
+  Box,
+  Image,
+  CodePane,
+  MarkdownSlide,
+  MarkdownSlideSet,
+  Notes,
+  DefaultTemplate,
+  SlideLayout,
+  codePaneThemes
+} from 'spectacle';
 
-const scale = keyframes({
-  to: { scale: 'var(--s2)' },
-});
+const formidableLogo =
+  'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
 
-const Link = styled('a', { shouldForwardProp: (prop) => prop !== 'outlined' })<{
-  outlined?: boolean;
-}>(({ theme }) => ({
-  fontSize: '1rem',
-  background: 'rgba(0 0 0 / 0.04)',
-  padding: '0.8rem 1rem',
-  letterSpacing: '1px',
-  borderRadius: '8px',
-  textAlign: 'center',
-  ...theme.applyStyles('dark', {
-    background: 'rgba(255 255 255 / 0.1)',
-  }),
-  variants: [
-    {
-      props: { outlined: true },
-      style: {
-        background: 'transparent',
-        color: `hsl(${theme.vars.palette.primary})`,
-        border: `1px solid hsl(${theme.vars.palette.border})`,
-      },
-    },
-  ],
-}));
+// SPECTACLE_CLI_THEME_START
+const theme = {
+  fonts: {
+    header: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
+    text: '"Open Sans Condensed", Helvetica, Arial, sans-serif'
+  }
+};
+// SPECTACLE_CLI_THEME_END
 
-const Bubble = styled('span')({
-  height: 'var(--size, 100%)',
-  aspectRatio: '1',
-  background: 'radial-gradient(hsl(var(--h) 100% 70%) 25%, transparent 50%)',
-  position: 'absolute',
-  display: 'inline-block',
-  left: 'var(--x, 0)',
-  top: 'var(--y, 0)',
-  scale: '0',
-  translate: '-50% -50%',
-  mixBlendMode: 'multiply',
-  filter: 'blur(2px)',
-  animation: `${scale} var(--s, 2s) var(--d, 0s) infinite alternate`,
-});
+const SlideFragments = () => (
+  <>
+    <Slide>
+      <Text>This is a slide fragment.</Text>
+    </Slide>
+    <Slide>
+      <Text>This is also a slide fragment.</Text>
+      <Appear>
+        <Text>This item shows up!</Text>
+      </Appear>
+      <Appear>
+        <Text>This item also shows up!</Text>
+      </Appear>
+    </Slide>
+  </>
+);
 
-function randomBetween(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function generateBubbleVars() {
-  return `
-    --x: ${randomBetween(10, 90)}%;
-    --y: ${randomBetween(15, 85)}%;
-    --h: ${randomBetween(0, 360)};
-    --s2: ${randomBetween(2, 6)};
-    --d: -${randomBetween(250, 400) / 1000}s;
-    --s: ${randomBetween(3, 6)}s;
-  `;
-}
-
-export default function Home() {
+export default function Presentation() {
   return (
-    <main
-      className={css({
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100lvh',
-        padding: '20px',
-        color: 'hsl(var(--palette-foreground))',
-        backgroundColor: 'hsl(var(--palette-background))',
-        fontFamily:
-          "system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
-      })}
-    >
-      <h1
-        className={`my-custom-class ${css(({ theme }) => ({
-          fontFamily: 'system-ui, sans-serif',
-          fontSize: '4rem',
-          fontWeight: 500,
-          textAlign: 'center',
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
-          color: '#888',
-          marginBottom: '1rem',
-          ...theme.applyStyles('dark', { color: '#fff' }),
-        }))}`}
+    <Deck theme={theme} template={<DefaultTemplate />}>
+      <Slide>
+        <FlexBox height="100%">
+          <SpectacleLogo size={500} />
+        </FlexBox>
+        <Notes>
+          Spectacle supports notes per slide.
+          <ol>
+            <li>Notes can now be HTML markup!</li>
+            <li>Lists can make it easier to make points.</li>
+          </ol>
+        </Notes>
+      </Slide>
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Heading margin="0px" fontSize="150px">
+            ✨<i>Spectacle</i> ✨
+          </Heading>
+          <Heading margin="0px" fontSize="h2">
+            A ReactJS Presentation Library
+          </Heading>
+          <Heading margin="0px 32px" color="primary" fontSize="h3">
+            Where you can write your decks in JSX, Markdown, or MDX!
+          </Heading>
+        </FlexBox>
+      </Slide>
+      <Slide
+        transition={{
+          from: {
+            transform: 'scale(0.5) rotate(45deg)',
+            opacity: 0
+          },
+          enter: {
+            transform: 'scale(1) rotate(0)',
+            opacity: 1
+          },
+          leave: {
+            transform: 'scale(0.2) rotate(315deg)',
+            opacity: 0
+          }
+        }}
+        backgroundColor="tertiary"
+        backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/main/src/beau.jpg?raw=true)"
+        backgroundOpacity={0.5}
       >
-        Pigment&nbsp;CSS
-        <span
-          className={css(({ theme }) => ({
-            position: 'absolute',
-            inset: '0',
-            background: 'white',
-            mixBlendMode: 'color-burn',
-            overflow: 'hidden',
-            pointerEvents: 'none',
-            ...theme.applyStyles('dark', {
-              mixBlendMode: 'darken',
-              filter: 'brightness(2)',
-            }),
-          }))}
+        <Heading>Custom Backgrounds</Heading>
+        <UnorderedList>
+          <ListItem>
+            <CodeSpan>backgroundColor</CodeSpan>
+          </ListItem>
+          <ListItem>
+            <CodeSpan>backgroundImage</CodeSpan>
+          </ListItem>
+          <ListItem>
+            <CodeSpan>backgroundOpacity</CodeSpan>
+          </ListItem>
+          <ListItem>
+            <CodeSpan>backgroundSize</CodeSpan>
+          </ListItem>
+          <ListItem>
+            <CodeSpan>backgroundPosition</CodeSpan>
+          </ListItem>
+          <ListItem>
+            <CodeSpan>backgroundRepeat</CodeSpan>
+          </ListItem>
+        </UnorderedList>
+      </Slide>
+      <Slide>
+        <Heading>Animated Elements</Heading>
+        <OrderedList>
+          <Appear>
+            <ListItem>Elements can animate in!</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Out of order</ListItem>
+          </Appear>
+          <Appear priority={0}>
+            <ListItem>
+              Just identify the order with the prop <CodeSpan>priority</CodeSpan>!
+            </ListItem>
+          </Appear>
+        </OrderedList>
+      </Slide>
+      <Slide>
+        <FlexBox>
+          <Text>These</Text>
+          <Text>Text</Text>
+          <Text color="secondary">Items</Text>
+          <Text fontWeight="bold">Flex</Text>
+        </FlexBox>
+        <Grid gridTemplateColumns="1fr 2fr" gridColumnGap={15}>
+          <Box backgroundColor="primary">
+            <Text color="secondary">Single-size Grid Item</Text>
+          </Box>
+          <Box backgroundColor="secondary">
+            <Text>Double-size Grid Item</Text>
+          </Box>
+        </Grid>
+        <Grid
+          gridTemplateColumns="1fr 1fr 1fr"
+          gridTemplateRows="1fr 1fr 1fr"
+          gridRowGap={1}
         >
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-        </span>
-      </h1>
-      <div
-        className={css({
-          fontFamily: 'system-ui, sans-serif',
-          letterSpacing: '2px',
-          opacity: 0.6,
-          lineHeight: 2,
-          textAlign: 'center',
-          textWrap: 'balance',
-        })}
-      >
-        CSS-in-JS library with static extraction
+          {Array(9)
+            .fill('')
+            .map((_, index) => (
+              <FlexBox paddingTop={0} key={`formidable-logo-${index}`} flex={1}>
+                <Image src={formidableLogo} width={100} />
+              </FlexBox>
+            ))}
+        </Grid>
+      </Slide>
+      <SlideFragments />
+      <Slide>
+        <CodePane language="jsx" theme={codePaneThemes.a11yDark}>{`
+          import { createClient, Provider } from 'urql';
+
+          const client = createClient({ url: 'https://0ufyz.sse.codesandbox.io' });
+
+          const App = () => (
+            <Provider value={client}>
+              <Todos />
+            </Provider>
+          );
+          `}</CodePane>
+        <Box height={20} />
+        <CodePane language="java" showLineNumbers={false}>{`
+          public class NoLineNumbers {
+            public static void main(String[] args) {
+              System.out.println("Hello");
+            }
+          }
+          `}</CodePane>
+      </Slide>
+      <div>
+        <Slide>
+          <Heading>This is a slide embedded in a div</Heading>
+        </Slide>
       </div>
-      <div
-        className={css({
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '1rem',
-          marginTop: '2rem',
-        })}
-      >
-        <Link
-          href="https://github.com/mui/material-ui/blob/master/packages/pigment-css-react/README.md"
-          target="_blank"
-          rel="noopener noreferrer"
+      <MarkdownSlide componentProps={{ color: 'yellow' }}>
+        {`
+          # This is a Markdown Slide
+
+          - You can pass props down to all elements on the slide.
+          - Just use the \`componentProps\` prop.
+          `}
+      </MarkdownSlide>
+      <MarkdownSlide animateListItems>
+        {`
+        # This is also a Markdown Slide
+
+        It uses the \`animateListItems\` prop.
+
+        - Its list items...
+        - ...will appear...
+        - ...one at a time.
+        `}
+      </MarkdownSlide>
+      <Slide>
+        <Grid
+          gridTemplateColumns="50% 50%"
+          gridTemplateRows="50% 50%"
+          height="100%"
         >
-          Documentation
-        </Link>
-        <Link
-          outlined
-          href="https://github.com/orgs/mui/projects/27/views/1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Roadmap
-        </Link>
-      </div>
-    </main>
+          <FlexBox alignItems="center" justifyContent="center">
+            <Heading>This is a 4x4 Grid</Heading>
+          </FlexBox>
+          <FlexBox alignItems="center" justifyContent="center">
+            <Text textAlign="center">
+              With all the content aligned and justified center.
+            </Text>
+          </FlexBox>
+          <FlexBox alignItems="center" justifyContent="center">
+            <Text textAlign="center">
+              It uses Spectacle <CodeSpan>{'<Grid />'}</CodeSpan> and{' '}
+              <CodeSpan>{'<FlexBox />'}</CodeSpan> components.
+            </Text>
+          </FlexBox>
+          <FlexBox alignItems="center" justifyContent="center">
+            <Box width={200} height={200} backgroundColor="secondary" />
+          </FlexBox>
+        </Grid>
+      </Slide>
+      <MarkdownSlideSet>
+        {`
+          # This is the first slide of a Markdown Slide Set
+          ---
+          # This is the second slide of a Markdown Slide Set
+          `}
+      </MarkdownSlideSet>
+      <SlideLayout.List
+        title="Slide layouts!"
+        items={['Two-column', 'Lists', 'And more!']}
+        animateListItems
+      />
+    </Deck>
   );
 }
