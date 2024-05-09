@@ -100,7 +100,7 @@ export default function Slide1() {
           fontSize: '1.4rem',
         }))}
       >
-        CSS in the server component age
+        CSS-in-JS in the server component age
       </div>
     </main>
   );
