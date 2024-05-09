@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { styled, css, keyframes } from '@pigment-css/react';
+import Slide1 from './Slide1';
 import {
   FlexBox,
   Heading,
@@ -49,6 +50,9 @@ const transition = {
 export default function Presentation() {
   return (
     <Deck theme={theme} template={<DefaultTemplate />} transition={transition}>
+      <Slide>
+        <Slide1 />
+      </Slide>
       <Slide>
         <FlexBox height="100%">
           <SpectacleLogo size={500} />
