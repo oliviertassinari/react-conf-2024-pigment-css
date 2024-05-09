@@ -37,8 +37,8 @@ function generateBubbleVars() {
     '--y': `${randomBetween(15, 85)}%`,
     '--hue': `${getHue()}`,
     '--scale': `${randomBetween(2, 6)}`,
-    '--duration': `-${randomBetween(250, 400) / 1000}s`,
-    '--start': `${randomBetween(3, 6)}s`,
+    '--duration': `-${randomBetween(250, 400) / 100}s`,
+    '--start': `${randomBetween(1, 5)}s`,
   } as any;
 }
 
