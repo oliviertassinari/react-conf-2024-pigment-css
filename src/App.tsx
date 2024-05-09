@@ -22,11 +22,10 @@ import {
   Notes,
   DefaultTemplate,
   SlideLayout,
-  codePaneThemes
+  codePaneThemes,
 } from 'spectacle';
 
-const formidableLogo =
-  'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
+const formidableLogo = 'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
 
 const theme = {
   colors: {
@@ -41,12 +40,13 @@ const theme = {
   // },
   fontSizes: {
     header: '64px',
-    paragraph: '28px'
+    paragraph: '28px',
   },
   fonts: {
-    header: '"General Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
-    text: '"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
-  }
+    header:
+      '"General Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+    text: '"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+  },
 };
 
 const transition = {
@@ -58,7 +58,7 @@ const transition = {
   },
   leave: {
     opacity: 0,
-  }
+  },
 };
 
 export default function Presentation() {
@@ -149,11 +149,7 @@ export default function Presentation() {
             <Text>Double-size Grid Item</Text>
           </Box>
         </Grid>
-        <Grid
-          gridTemplateColumns="1fr 1fr 1fr"
-          gridTemplateRows="1fr 1fr 1fr"
-          gridRowGap={1}
-        >
+        <Grid gridTemplateColumns="1fr 1fr 1fr" gridTemplateRows="1fr 1fr 1fr" gridRowGap={1}>
           {Array(9)
             .fill('')
             .map((_, index) => (
@@ -209,18 +205,12 @@ export default function Presentation() {
         `}
       </MarkdownSlide>
       <Slide>
-        <Grid
-          gridTemplateColumns="50% 50%"
-          gridTemplateRows="50% 50%"
-          height="100%"
-        >
+        <Grid gridTemplateColumns="50% 50%" gridTemplateRows="50% 50%" height="100%">
           <FlexBox alignItems="center" justifyContent="center">
             <Heading>This is a 4x4 Grid</Heading>
           </FlexBox>
           <FlexBox alignItems="center" justifyContent="center">
-            <Text textAlign="center">
-              With all the content aligned and justified center.
-            </Text>
+            <Text textAlign="center">With all the content aligned and justified center.</Text>
           </FlexBox>
           <FlexBox alignItems="center" justifyContent="center">
             <Text textAlign="center">
