@@ -32,14 +32,14 @@ function getHue() {
 }
 
 function generateBubbleVars() {
-  return `
-    --x: ${randomBetween(0, 100)}%;
-    --y: ${randomBetween(15, 85)}%;
-    --hue: ${getHue()};
-    --scale: ${randomBetween(2, 6)};
-    --duration: -${randomBetween(250, 400) / 1000}s;
-    --start: ${randomBetween(3, 6)}s;
-  `;
+  return {
+    '--x': `${randomBetween(0, 100)}%`,
+    '--y': `${randomBetween(15, 85)}%`,
+    '--hue': `${getHue()}`,
+    '--scale': `${randomBetween(2, 6)}`,
+    '--duration': `-${randomBetween(250, 400) / 1000}s`,
+    '--start': `${randomBetween(3, 6)}s`,
+  } as any;
 }
 
 export default function Slide1() {
@@ -83,36 +83,12 @@ export default function Slide1() {
             }),
           }))}
         >
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
+          <Bubble className={css(generateBubbleVars())} />
+          <Bubble className={css(generateBubbleVars())} />
+          <Bubble className={css(generateBubbleVars())} />
+          <Bubble className={css(generateBubbleVars())} />
+          <Bubble className={css(generateBubbleVars())} />
+          <Bubble className={css(generateBubbleVars())} />
         </span>
       </h1>
       <div
