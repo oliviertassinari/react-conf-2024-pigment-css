@@ -52,15 +52,11 @@ export default function Slide1() {
         justifyContent: 'center',
         height: '100lvh',
         padding: '20px',
-        color: 'hsl(var(--palette-foreground))',
-        backgroundColor: 'hsl(var(--palette-background))',
-        fontFamily:
-          "system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
       })}
     >
       <h1
-        className={`my-custom-class ${css(({ theme }) => ({
-          fontFamily: 'system-ui, sans-serif',
+        className={css(({ theme }) => ({
+          fontFamily: theme.typography.fontFamilyTagline,
           fontSize: '5rem',
           fontWeight: 500,
           textAlign: 'center',
@@ -70,14 +66,14 @@ export default function Slide1() {
           color: '#888',
           marginBottom: '1rem',
           ...theme.applyStyles('dark', { color: '#fff' }),
-        }))}`}
+        }))}
       >
         Pigment CSS
         <span
           className={css(({ theme }) => ({
             position: 'absolute',
             inset: '0',
-            background: 'white',
+            backgroundColor: '#fff',
             mixBlendMode: 'color-burn',
             overflow: 'hidden',
             pointerEvents: 'none',
@@ -120,14 +116,13 @@ export default function Slide1() {
         </span>
       </h1>
       <div
-        className={css({
-          fontFamily: 'system-ui, sans-serif',
-          letterSpacing: '2px',
-          opacity: 0.6,
-          lineHeight: 2,
+        className={css(({ theme }) => ({
+          fontFamily: theme.typography.fontFamily,
+          opacity: 0.8,
           textAlign: 'center',
           textWrap: 'balance',
-        })}
+          fontSize: '1.4rem',
+        }))}
       >
         CSS in the server component age
       </div>

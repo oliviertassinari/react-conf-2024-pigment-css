@@ -1,7 +1,25 @@
 import { extendTheme } from '@pigment-css/vite-plugin';
 
+const systemFont = [
+  '-apple-system',
+  'BlinkMacSystemFont',
+  '"Segoe UI"',
+  'Roboto',
+  '"Helvetica Neue"',
+  'Arial',
+  'sans-serif',
+  '"Apple Color Emoji"',
+  '"Segoe UI Emoji"',
+  '"Segoe UI Symbol"',
+];
+
 // To learn more about theming, visit https://github.com/mui/material-ui/blob/master/packages/zero-runtime/README.md#theming
 const theme = extendTheme({
+  typography: {
+    fontFamily: ['"IBM Plex Sans"', ...systemFont].join(','),
+    fontFamilyTagline: ['"General Sans"', ...systemFont].join(','),
+    fontFamilySystem: systemFont.join(','),
+  },
   colorSchemes: {
     light: {
       palette: {
