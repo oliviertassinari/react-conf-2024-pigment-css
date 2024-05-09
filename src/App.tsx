@@ -29,6 +29,20 @@ const formidableLogo =
   'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
 
 const theme = {
+  colors: {
+    primary: '#fff',
+    secondary: 'hsl(210, 100%, 60%)',
+    tertiary: '#000',
+    quaternary: 'red',
+    quinary: 'red',
+  },
+  // backdropStyle: {
+  //   // backgroundColor: '#000',
+  // },
+  fontSizes: {
+    header: '64px',
+    paragraph: '28px'
+  },
   fonts: {
     header: '"General Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
     text: '"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
@@ -79,7 +93,6 @@ export default function Presentation() {
         </FlexBox>
       </Slide>
       <Slide
-        backgroundColor="tertiary"
         backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/main/src/beau.jpg?raw=true)"
         backgroundOpacity={0.5}
       >

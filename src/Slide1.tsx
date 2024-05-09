@@ -2,37 +2,13 @@ import * as React from 'react';
 import { styled, css, keyframes } from '@pigment-css/react';
 
 const scale = keyframes({
-  to: { scale: 'var(--s2)' },
+  to: { scale: 'var(--scale)' },
 });
-
-const Link = styled('a', { shouldForwardProp: (prop) => prop !== 'outlined' })<{
-  outlined?: boolean;
-}>(({ theme }) => ({
-  fontSize: '1rem',
-  background: 'rgba(0 0 0 / 0.04)',
-  padding: '0.8rem 1rem',
-  letterSpacing: '1px',
-  borderRadius: '8px',
-  textAlign: 'center',
-  ...theme.applyStyles('dark', {
-    background: 'rgba(255 255 255 / 0.1)',
-  }),
-  variants: [
-    {
-      props: { outlined: true },
-      style: {
-        background: 'transparent',
-        color: `hsl(${theme.vars.palette.primary})`,
-        border: `1px solid hsl(${theme.vars.palette.border})`,
-      },
-    },
-  ],
-}));
 
 const Bubble = styled('span')({
   height: 'var(--size, 100%)',
   aspectRatio: '1',
-  background: 'radial-gradient(hsl(var(--h) 100% 70%) 25%, transparent 50%)',
+  background: 'radial-gradient(hsl(var(--hue) 100% 70%) 25%, transparent 50%)',
   position: 'absolute',
   display: 'inline-block',
   left: 'var(--x, 0)',
@@ -41,21 +17,28 @@ const Bubble = styled('span')({
   translate: '-50% -50%',
   mixBlendMode: 'multiply',
   filter: 'blur(2px)',
-  animation: `${scale} var(--s, 2s) var(--d, 0s) infinite alternate`,
+  animation: `${scale} var(--start, 2s) var(--duration, 0s) infinite alternate`,
 });
 
 function randomBetween(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+let index = -1;
+
+function getHue() {
+  index += 1;
+  return [0, 50, 100, 150, 200, 250][index];
+}
+
 function generateBubbleVars() {
   return `
-    --x: ${randomBetween(10, 90)}%;
+    --x: ${randomBetween(0, 100)}%;
     --y: ${randomBetween(15, 85)}%;
-    --h: ${randomBetween(0, 360)};
-    --s2: ${randomBetween(2, 6)};
-    --d: -${randomBetween(250, 400) / 1000}s;
-    --s: ${randomBetween(3, 6)}s;
+    --hue: ${getHue()};
+    --scale: ${randomBetween(2, 6)};
+    --duration: -${randomBetween(250, 400) / 1000}s;
+    --start: ${randomBetween(3, 6)}s;
   `;
 }
 
@@ -78,7 +61,7 @@ export default function Slide1() {
       <h1
         className={`my-custom-class ${css(({ theme }) => ({
           fontFamily: 'system-ui, sans-serif',
-          fontSize: '4rem',
+          fontSize: '5rem',
           fontWeight: 500,
           textAlign: 'center',
           position: 'relative',
@@ -100,30 +83,10 @@ export default function Slide1() {
             pointerEvents: 'none',
             ...theme.applyStyles('dark', {
               mixBlendMode: 'darken',
-              filter: 'brightness(2)',
+              filter: 'brightness(1)',
             }),
           }))}
         >
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
-          <Bubble
-            className={css`
-              ${generateBubbleVars()}
-            `}
-          />
           <Bubble
             className={css`
               ${generateBubbleVars()}
