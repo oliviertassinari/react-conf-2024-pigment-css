@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, css, keyframes } from '@pigment-css/react';
+import { css } from '@pigment-css/react';
 import Slide1 from './Slide1';
 import {
   FlexBox,
@@ -14,13 +14,13 @@ import {
   Deck,
   Text,
   Grid,
-  Box,
   Image,
+  Box,
   CodePane,
   MarkdownSlide,
   MarkdownSlideSet,
+  FullScreen,
   Notes,
-  DefaultTemplate,
   SlideLayout,
   codePaneThemes,
 } from 'spectacle';
@@ -61,9 +61,35 @@ const transition = {
   },
 };
 
+function Template() {
+  return (
+    <div
+      className={css({
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        display: 'flex',
+        opacity: 0,
+        height: 45,
+        alignItems: 'center',
+        pointerEvents: 'all',
+        transition: 'opacity 200ms ease',
+        '&:hover': {
+          opacity: 1,
+        },
+      })}
+    >
+      <div className={css({ padding: '8px 12px', cursor: 'pointer' })}>
+        <FullScreen />
+      </div>
+    </div>
+  );
+}
+
 export default function Presentation() {
   return (
-    <Deck theme={spectacleTheme} template={<DefaultTemplate />} transition={transition}>
+    <Deck theme={spectacleTheme} transition={transition} template={<Template />}>
       <Slide>
         <Slide1 />
       </Slide>
