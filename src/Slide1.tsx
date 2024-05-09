@@ -72,7 +72,7 @@ export default function Slide1() {
           ...theme.applyStyles('dark', { color: '#fff' }),
         }))}`}
       >
-        Pigment&nbsp;CSS
+        Pigment CSS
         <span
           className={css(({ theme }) => ({
             position: 'absolute',
@@ -129,7 +129,7 @@ export default function Slide1() {
           textWrap: 'balance',
         })}
       >
-        CSS-in-JS library with static extraction
+        CSS in the server component age
       </div>
     </main>
   );
