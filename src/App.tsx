@@ -87,6 +87,8 @@ function Template() {
   );
 }
 
+// background: 'linear-gradient(250deg, hsla(210 100% 12% / 0.5) 32%, hsl(200 19% 5%) 62%)',
+
 export default function Presentation() {
   return (
     <Deck theme={spectacleTheme} transition={transition} template={<Template />}>
@@ -111,7 +113,13 @@ export default function Presentation() {
         </Notes>
       </Slide>
       <Slide>
-        <Heading>Who is using styled-components or Emotion?</Heading>
+        <Text fontSize="2rem" color="secondary">
+          A quick poll
+        </Text>
+        <Heading fontWeight="500" color="primary">
+          Who here is currently using
+          <br /> styled-components or Emotion?
+        </Heading>
         <Notes>
           <ul>
             <li>Let's start with two quick pools</li>
@@ -136,7 +144,9 @@ export default function Presentation() {
         </Notes>
       </Slide>
       <Slide>
-        <Heading>Who feels great about it?</Heading>
+        <Heading fontWeight="500" color="primary">
+          Who feels great about it?
+        </Heading>
         <Notes>
           <ul>
             <li>An now, let's get more spicy 🌶️, please raise your hand again</li>
