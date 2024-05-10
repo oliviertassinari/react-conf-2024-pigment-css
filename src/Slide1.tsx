@@ -51,7 +51,7 @@ export default function Slide1() {
         alignItems: 'center',
         justifyContent: 'center',
         height: '100lvh',
-        padding: '20px',
+        paddingBottom: '50px',
       })}
     >
       <h1

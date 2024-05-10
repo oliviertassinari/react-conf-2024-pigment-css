@@ -111,15 +111,38 @@ export default function Presentation() {
         </Notes>
       </Slide>
       <Slide>
-        <FlexBox height="100%">
-          <SpectacleLogo size={500} />
-        </FlexBox>
+        <Heading>Who is using styled-components or Emotion?</Heading>
         <Notes>
-          Spectacle supports notes per slide.
-          <ol>
-            <li>Notes can now be HTML markup!</li>
-            <li>Lists can make it easier to make points.</li>
-          </ol>
+          <ul>
+            <li>Let's start with two quick pools</li>
+            <li>Please raise your hand</li>
+            <li>Who is using styled-components or Emotion today?</li>
+            <li>🙆‍♂️</li>
+            <li>I see xx% of the audience who raised their hands</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        {/* Source https://2023.stateofcss.com/en-US/css-in-js/ */}
+        <Image src="/styled-components.png" width="100%" />
+        <Notes>
+          <ul>
+            <li>You are not alone</li>
+            <li>
+              Accoding to the stateofcss survey, over 50% of the frontend community uses one of
+              these to
+            </li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Heading>Who feels great about it?</Heading>
+        <Notes>
+          <ul>
+            <li>Who is using styled-components or Emotion today?</li>
+            <li>Please raise your hand</li>
+            <li>Ok, so I see xx% of the audience who raised their hands</li>
+          </ul>
         </Notes>
       </Slide>
       <Slide>
