@@ -127,7 +127,7 @@ export default function Presentation() {
         <Image src="/styled-components.png" width="100%" />
         <Notes>
           <ul>
-            <li>You are not alone</li>
+            <li>You are not alone, a lot of people do</li>
             <li>
               Accoding to the stateofcss survey, over 50% of the frontend community uses one of
               these to
@@ -139,9 +139,10 @@ export default function Presentation() {
         <Heading>Who feels great about it?</Heading>
         <Notes>
           <ul>
-            <li>Who is using styled-components or Emotion today?</li>
-            <li>Please raise your hand</li>
-            <li>Ok, so I see xx% of the audience who raised their hands</li>
+            <li>An now, let's get more spicy 🌶️, please raise your hand again</li>
+            <li>How feels great about it?</li>
+            <li>🙆‍♂️</li>
+            <li>I see xx% of the audience who raised their hands</li>
           </ul>
         </Notes>
       </Slide>

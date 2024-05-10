@@ -26,19 +26,28 @@ function randomBetween(min: number, max: number) {
 
 let index = -1;
 
-function getHue() {
-  index += 1;
-  return [0, 50, 100, 150, 200, 250][index];
-}
+// function generateBubbleVars() {
+//   index += 1;
+//   return {
+//     '--x': `${randomBetween(0, 100)}%`,
+//     '--y': `${randomBetween(15, 85)}%`,
+//     '--hue': `${randomBetween(0, 360)}`,
+//     '--scale': `${randomBetween(2, 6)}`,
+//     '--duration': `-${randomBetween(250, 400) / 100}s`,
+//     '--start': `${randomBetween(1, 5)}s`,
+//   } as any;
+// }
 
+// A set of values I love
 function generateBubbleVars() {
+  index += 1;
   return {
-    '--x': `${randomBetween(0, 100)}%`,
-    '--y': `${randomBetween(15, 85)}%`,
-    '--hue': `${getHue()}`,
-    '--scale': `${randomBetween(2, 6)}`,
-    '--duration': `-${randomBetween(250, 400) / 100}s`,
-    '--start': `${randomBetween(1, 5)}s`,
+    '--x': `${[77, 2, 10, 13, 23, 34][index]}%`,
+    '--y': `${[34, 57, 37, 57, 44, 85][index]}%`,
+    '--hue': [0, 50, 100, 150, 200, 250][index],
+    '--scale': `${[2, 2, 3, 6, 2, 2][index]}`,
+    '--duration': `-${[3.48, 2.8, 3.12, 2.72, 3.15, 3.23][index]}s`,
+    '--start': `${[1, 4, 1, 3, 4, 3][index]}s`,
   } as any;
 }
 
