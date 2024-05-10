@@ -92,6 +92,23 @@ export default function Presentation() {
     <Deck theme={spectacleTheme} transition={transition} template={<Template />}>
       <Slide>
         <Slide1 />
+        <Notes>
+          <ul>
+            <li>Hello everyone! I'm so excited to be here.</li>
+            <li>
+              I'm Olivier and I'm going to talk about your favorite topic, or maybe not: CSS-in-JS.
+            </li>
+            <li>
+              By the end of this presentation, I would like you to better understand how React
+              Server Components are shaking the CSS-in-JS space.
+            </li>
+            <li>
+              But fear not, there is hope, I'm also going to introduce Pigment CSS, the solution
+              that the team working on Material UI found.
+            </li>
+            <li>Let's get into it!</li>
+          </ul>
+        </Notes>
       </Slide>
       <Slide>
         <FlexBox height="100%">
