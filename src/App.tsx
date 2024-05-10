@@ -87,8 +87,6 @@ function Template() {
   );
 }
 
-// background: 'linear-gradient(250deg, hsla(210 100% 12% / 0.5) 32%, hsl(200 19% 5%) 62%)',
-
 export default function Presentation() {
   return (
     <Deck theme={spectacleTheme} transition={transition} template={<Template />}>
