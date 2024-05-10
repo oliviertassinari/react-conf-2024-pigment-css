@@ -104,7 +104,7 @@ export default function Presentation() {
             </li>
             <li>
               But fear not, there is hope, I'm also going to introduce Pigment CSS, the solution
-              that the team working on Material UI found.
+              that the team working on Material UI created.
             </li>
             <li>Let's get into it!</li>
           </ul>
