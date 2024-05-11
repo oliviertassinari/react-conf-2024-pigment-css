@@ -2,21 +2,14 @@ import { css } from '@pigment-css/react';
 import Slide1 from './Slide1';
 import { Template } from './Template';
 import { Backdrop } from './Backdrop';
-import {
-  Heading,
-  Slide,
-  Deck,
-  Text,
-  Image,
-  Notes,
-} from 'spectacle';
+import { Heading, Slide, Deck, Text, Image, Notes } from 'spectacle';
 import { rawTheme } from '../rawTheme';
 
 const spectacleTheme = {
   colors: {
     primary: '#fff',
     secondary: 'hsl(210, 100%, 65%)',
-    tertiary: '#000',
+    tertiary: 'transparent',
     quaternary: 'red',
     quinary: 'red',
   },

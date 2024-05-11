@@ -98,6 +98,7 @@ export default function Slide1() {
         borderColor: 'hsla(100 0% 15%)',
         borderRadius: '0.5rem',
         background: 'linear-gradient(250deg, hsla(210 100% 12% / 0.5) 40%, hsl(200 20% 2%) 62%)',
+        backgroundColor: '#000',
       })}
     >
       <h1
@@ -174,11 +175,7 @@ export default function Slide1() {
           },
         }))}
       >
-        <img
-          src="/images/olivier.jpeg"
-          width="40"
-          height="40"
-        />
+        <img src="/images/olivier.jpeg" width="40" height="40" />
         <div
           className={css({
             display: 'flex',
