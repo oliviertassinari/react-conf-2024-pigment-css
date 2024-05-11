@@ -71,7 +71,7 @@ const Bubble4 = () => <span />;
 // }
 
 // A set of values I love
-function generateBubbleVars(index) {
+function generateBubbleVars(index: number) {
   return {
     '--x': `${[10, 5, 10, 100, 23, 50][index]}%`,
     '--y': `${[34, 50, 37, 50, 44, 45][index]}%`,
@@ -84,7 +84,7 @@ function generateBubbleVars(index) {
 
 export default function Slide1() {
   return (
-    <main
+    <div
       className={css({
         height: '100lvh',
         position: 'relative',
@@ -190,6 +190,6 @@ export default function Slide1() {
           <p className={css({ margin: 0, opacity: 0.5 })}>Co-creator of Material UI and CEO @MUI</p>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
