@@ -21,7 +21,7 @@ const spectacleTheme = {
     quinary: 'red',
   },
   fontSizes: {
-    h1: '72px',
+    h1: '62px',
     h2: '64px',
     h3: '56px',
     text: '44px',

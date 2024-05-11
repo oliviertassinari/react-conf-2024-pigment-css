@@ -1,7 +1,10 @@
+import * as React from 'react';
 import { css } from '@pigment-css/react';
-import { FullScreen } from 'spectacle';
+import { DeckContext, FullScreen } from 'spectacle';
 
 export function Template() {
+  const deckContext = React.useContext(DeckContext);
+  console.log('deckContext', deckContext.activeView);
   return (
     <div
       className={`Template-root ${css({
@@ -12,8 +15,8 @@ export function Template() {
         display: 'flex',
         opacity: 0,
         height: 45,
+        zIndex: 1,
         alignItems: 'center',
-        pointerEvents: 'all',
         transition: 'opacity 200ms ease',
         '&:hover': {
           opacity: 1,
