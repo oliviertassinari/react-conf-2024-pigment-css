@@ -91,27 +91,31 @@ export default function Presentation() {
         {/* Source https://2023.stateofcss.com/en-US/css-in-js/ */}
         <Text fontSize="2rem" color="secondary" className={css({ display: 'flex' })}>
           State of CSS
-          <Image src="/images/stateofcss.svg" width="40" className={css({ marginLeft: 4 })} />
+          <Image src="/images/stateofcss.svg" width="40" className={css({ marginLeft: 6 })} />
         </Text>
-        <Image src="/images/styled-components.png" width="100%" />
+        <Image src="/images/styled-components.png" width="80%" className={css({ marginTop: 16, transform: 'translate(20%)' })} />
         <Notes>
+          {/* 15s */}
           <ul>
-            <li>You are not alone, a lot of people do</li>
+            <li>You are not alone, a lot of people do.</li>
             <li>
-              Accoding to the stateofcss survey, over 50% of the frontend community uses one of
-              these to
+              According to the State of CSS survey, over 60% of
+              the frontend community uses one of these two.
             </li>
           </ul>
         </Notes>
       </Slide>
       <Slide>
+        <Text fontSize="2rem" color="secondary">
+          🌶️
+        </Text>
         <Heading fontWeight="500" color="primary">
-          Who feels great about it?
+          How feel left behind with them,<br/>considering migrating away?
         </Heading>
         <Notes>
           <ul>
-            <li>An now, let's get more spicy 🌶️, please raise your hand again</li>
-            <li>How feels great about it?</li>
+            <li>And the last poll, a spicy one 🌶️, please raise your hand again</li>
+            <li>How feel left behind with them, considering migrating away?</li>
             <li>🙆‍♂️</li>
             <li>I see xx% of the audience who raised their hands</li>
           </ul>
