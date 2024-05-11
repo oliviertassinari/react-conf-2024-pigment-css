@@ -32,9 +32,12 @@ const transition = {
     opacity: 0,
   },
   enter: {
+    filter: 'blur(0px)',
     opacity: 1,
   },
   leave: {
+    // Make people loose focus
+    filter: 'blur(2px)',
     opacity: 0,
   },
 };
