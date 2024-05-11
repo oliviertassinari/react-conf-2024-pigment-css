@@ -15,7 +15,7 @@ import { rawTheme } from '../rawTheme';
 const spectacleTheme = {
   colors: {
     primary: '#fff',
-    secondary: 'hsl(210, 100%, 60%)',
+    secondary: 'hsl(210, 100%, 65%)',
     tertiary: '#000',
     quaternary: 'red',
     quinary: 'red',
