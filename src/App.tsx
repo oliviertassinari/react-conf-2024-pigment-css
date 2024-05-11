@@ -112,9 +112,9 @@ export default function Presentation() {
         <Notes>
           {/* 15s */}
           <ul>
-            <li>You are not alone, a lot of people do.</li>
+            <li>This seems reprensative.</li>
             <li>
-              According to the State of CSS survey, over 60% of the frontend community uses one of
+              According to the last State of CSS survey, over 60% of the frontend community uses one of
               these two.
             </li>
           </ul>
@@ -152,9 +152,8 @@ export default function Presentation() {
         <Notes>
           {/* 15s */}
           <ul>
-            <li>I see a good number of hand raised here! x% of the audience</li>
             <li>
-              In the same State of CSS survey, you can see a clear decline of interest for Styled
+              And again, in the same State of CSS survey, you can see a clear decline of interest for Styled
               components and Emotion
             </li>
             <li>What's going on?</li>
@@ -199,9 +198,9 @@ export default function Presentation() {
         <Notes>
           {/* 15s */}
           <ul>
-            <li>I won't provide a definitive answer, but at MUI, we are facing the same challenges.</li>
+            <li>I can't provide a definitive answer, but at MUI, we are facing the same challenges.</li>
             <li>
-              co-creator of Material UI and CEO of MUI.
+              For those that don't know me, I co-created Material UI a long time ago. I'm now running MUI as is CEO.
             </li>
           </ul>
         </Notes>
@@ -218,10 +217,10 @@ export default function Presentation() {
             <Text lineHeight={0.7}>Material UI</Text>
           </ListItem>
           <ListItem>
-            <Text lineHeight={0.7}>MUI X</Text>
+            <Text lineHeight={0.7}>Base UI</Text>
           </ListItem>
           <ListItem>
-            <Text lineHeight={0.7}>Base UI</Text>
+            <Text lineHeight={0.7}>MUI X</Text>
           </ListItem>
           <ListItem>
             <Text lineHeight={0.7}>Toolpad</Text>
@@ -231,20 +230,18 @@ export default function Presentation() {
           {/* 15s */}
           <ul>
             <li>
-              At MUI, we are facing the same challenges.
-              co-creator of Material UI and CEO of MUI.
+              At MUI, we funds the
+              development of a few open-source projects:<br/>
+              - Material UI, a popular UI library that implements the Material Design principles.<br/>
+              - Base UI, Headless UI component library, without styles<br/>
+              - MUI X, a set of advanced React components, like data grids, charts, and so on.<br/>
+              - Toolpad, a set of components to quickly build internal tools.<br/>
             </li>
-            <li>
-              For those of you that don't know us. MUI is the organization that funds the
-              development of multiple open-source projects in the React space: - Material UI, a
-              popular UI library that implements the Material Design principles. - MUI X, a set of
-              advanced React components like data grids and charts. - Base UI, Headless UI
-              components - Toolpad, a set of components to quickly build internal tools.
-            </li>
-            <li>For all of these projects, we rely on Emotion, one way or another.</li>
-            <li>And we are facing two main challenges</li>
+            <li>The common denominator is that all these projects rely on Emotion, one way or another.</li>
+            <li>And we are facing two main challenges:</li>
           </ul>
         </Notes>
+        {/* 3:00 minutes */}
       </Slide>
     </Deck>
   );
