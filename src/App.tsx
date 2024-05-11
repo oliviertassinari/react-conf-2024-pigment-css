@@ -2,7 +2,7 @@ import { css } from '@pigment-css/react';
 import Slide1 from './Slide1';
 import { Template } from './Template';
 import { Backdrop } from './Backdrop';
-import { Heading, Slide, Deck, Text, Image, Notes } from 'spectacle';
+import { Heading, SlideLayout, Slide, Deck, Text, Image, Notes } from 'spectacle';
 import { rawTheme } from '../rawTheme';
 
 const spectacleTheme = {
@@ -48,20 +48,23 @@ export default function Presentation() {
       <Slide>
         <Slide1 />
         <Notes>
+          {/* 50s */}
           <ul>
-            <li>Hello everyone! I'm so excited to be here.</li>
+            <li>Hi everyone! I'm so excited to be here.</li>
             <li>
               I'm Olivier and I'm going to talk about your favorite topic, or maybe not: CSS-in-JS.
             </li>
             <li>
               By the end of this presentation, I would like you to better understand how React
-              Server Components are shaking the CSS-in-JS space.
+              Server Components are shaking this space, the challenges with today's generation of
+              libraries, and the key properties I think you should look out for a great styling
+              solutions.
             </li>
             <li>
-              But fear not, there is hope, I'm also going to introduce Pigment CSS, the solution
-              that the team working on Material UI created.
+              Now, React
+              Server Components might shake the space, but there is hope. I'm also going to introduce Pigment CSS, which is part of
+              a next generation movement for CSS-in-JS libraries.
             </li>
-            <li>Let's get into it!</li>
           </ul>
         </Notes>
       </Slide>
@@ -70,14 +73,15 @@ export default function Presentation() {
           A quick poll
         </Text>
         <Heading fontWeight="500" color="primary">
-          Who here is currently using
-          <br /> styled-components or Emotion?
+          Who has styled-components<br/>
+          or Emotion in their projet today?
         </Heading>
         <Notes>
+          {/* 25s */}
           <ul>
             <li>Let's start with two quick pools</li>
             <li>Please raise your hand</li>
-            <li>Who is using styled-components or Emotion today?</li>
+            <li>Who has styled-components or Emotion in their projet today?</li>
             <li>🙆‍♂️</li>
             <li>I see xx% of the audience who raised their hands</li>
           </ul>
@@ -85,6 +89,10 @@ export default function Presentation() {
       </Slide>
       <Slide>
         {/* Source https://2023.stateofcss.com/en-US/css-in-js/ */}
+        <Text fontSize="2rem" color="secondary" className={css({ display: 'flex' })}>
+          State of CSS
+          <Image src="/images/stateofcss.svg" width="40" className={css({ marginLeft: 4 })} />
+        </Text>
         <Image src="/images/styled-components.png" width="100%" />
         <Notes>
           <ul>
