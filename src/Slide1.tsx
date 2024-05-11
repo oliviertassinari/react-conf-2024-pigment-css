@@ -175,7 +175,7 @@ export default function Slide1() {
         }))}
       >
         <img
-          src="https://ca.slack-edge.com/TS83SPSTV-USKHJJQFJ-66647fe884c4-512"
+          src="/images/olivier.jpeg"
           width="40"
           height="40"
         />

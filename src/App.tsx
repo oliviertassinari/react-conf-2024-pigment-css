@@ -46,7 +46,6 @@ const transition = {
   },
 };
 
-
 export default function Presentation() {
   return (
     <Deck theme={spectacleTheme} transition={transition} template={<Template />}>
@@ -90,7 +89,7 @@ export default function Presentation() {
       </Slide>
       <Slide>
         {/* Source https://2023.stateofcss.com/en-US/css-in-js/ */}
-        <Image src="/styled-components.png" width="100%" />
+        <Image src="/images/styled-components.png" width="100%" />
         <Notes>
           <ul>
             <li>You are not alone, a lot of people do</li>
