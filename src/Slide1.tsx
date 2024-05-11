@@ -1,4 +1,5 @@
 import { styled, css, keyframes } from '@pigment-css/react';
+import styled2 from '@emotion/styled';
 import PigmentLogo from './PigmentLogo';
 
 const scale = keyframes({
@@ -20,9 +21,26 @@ const Bubble = styled('span')({
   animation: `${scale} var(--duration, 4s) var(--delay, 0s) infinite alternate`,
 });
 
-function randomBetween(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+const Bubble2 = styled2('span')({
+  height: 'var(--size, 100%)',
+  aspectRatio: '1',
+  background: 'radial-gradient(hsl(var(--hue) 100% 70%) 25%, transparent 50%)',
+  position: 'absolute',
+  display: 'inline-block',
+  left: 'var(--x, 0)',
+  top: 'var(--y, 0)',
+  scale: '0',
+  translate: '-50% -50%',
+  mixBlendMode: 'multiply',
+  filter: 'blur(8px)',
+  animation: `${scale} var(--duration, 4s) var(--delay, 0s) infinite alternate`,
+});
+
+const Bubble3 = () => <span />;
+
+// function randomBetween(min: number, max: number) {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
 
 // function generateBubbleVars() {
 //   index += 1;
@@ -108,7 +126,8 @@ export default function Slide1() {
             <Bubble className={css(generateBubbleVars(2))} />
             <Bubble className={css(generateBubbleVars(3))} />
             <Bubble className={css(generateBubbleVars(4))} />
-            <Bubble className={css(generateBubbleVars(5))} />
+            <Bubble2 className={css(generateBubbleVars(5))} />
+            <Bubble3 />
           </span>
         </span>
       </h1>
