@@ -249,7 +249,7 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
               This is our data grid, rendering 100,000 rows with CPU throttling.
             </li>
             <li>
-              Do you see the white screen areas?
+              Do you see the blank screen areas?
             </li>
           </ul>
           3m50s
@@ -266,7 +266,7 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
               If you look at the time it takes to render each row, we spent about 14% of the time generating over and over the same Emotion styles.
             </li>
             <li>
-              So in theory, we could have 14% less white screen area.
+              So in theory, we could have 14% less blank screen area.
             </li>
             <li>
               For data analysis use cases, it matters, it's a big deal.
