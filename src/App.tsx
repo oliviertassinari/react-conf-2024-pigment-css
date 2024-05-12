@@ -81,7 +81,7 @@ export default function Presentation() {
           <ul>
             <li>Let's start with two quick question</li>
             <li>Please raise your hands</li>
-            <li>Who here is currently using styled-components or Emotion today?</li>
+            <li>Who here is currently using styled-components or Emotion?</li>
             <li>🙆‍♂️</li>
             <li>I see xx% of the audience who raised their hands</li>
           </ul>

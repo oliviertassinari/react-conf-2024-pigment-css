@@ -24,7 +24,7 @@ export default function Slide2() {
         <Heading fontWeight="500" color="primary">
           Who here is currently using
           <br />
-          styled-components or Emotion today?
+          styled-components or Emotion?
         </Heading>
       </div>
     </SlideContainer>
