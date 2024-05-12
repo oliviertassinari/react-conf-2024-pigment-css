@@ -1,5 +1,11 @@
 import { css } from '@pigment-css/react';
-import Slide1 from './Slide1';
+import Slide1 from './slides/Slide1';
+import Slide2 from './slides/Slide2';
+import Slide3 from './slides/Slide3';
+import Slide4 from './slides/Slide4';
+import Slide5 from './slides/Slide5';
+import Slide6 from './slides/Slide6';
+import Slide7 from './slides/Slide7';
 import { Template } from './Template';
 import { Backdrop } from './Backdrop';
 import {
@@ -14,6 +20,7 @@ import {
   Notes,
 } from 'spectacle';
 import { rawTheme } from '../rawTheme';
+import OlivierId from './components/OlivierId';
 
 const spectacleTheme = {
   colors: {
@@ -24,7 +31,7 @@ const spectacleTheme = {
     quinary: 'red',
   },
   fontSizes: {
-    h1: '62px',
+    h1: '54px',
     h2: '64px',
     h3: '56px',
     text: '44px',
@@ -79,165 +86,92 @@ export default function Presentation() {
         </Notes>
       </Slide>
       <Slide>
-        <Text fontSize="2rem" color="secondary">
-          A quick poll
-        </Text>
-        <Heading fontWeight="500" color="primary">
-          Who has styled-components
-          <br />
-          or Emotion in their projet today?
-        </Heading>
+        <Slide2 />
         <Notes>
           {/* 25s */}
           <ul>
-            <li>Let's start with two quick pools</li>
-            <li>Please raise your hand</li>
-            <li>Who has styled-components or Emotion in their projet today?</li>
+            <li>Let's start with two quick question</li>
+            <li>Please raise your hands</li>
+            <li>Who here is currently using styled-components or Emotion today?</li>
             <li>🙆‍♂️</li>
             <li>I see xx% of the audience who raised their hands</li>
           </ul>
         </Notes>
       </Slide>
       <Slide>
-        {/* Source https://2023.stateofcss.com/en-US/css-in-js/ */}
-        <Text fontSize="2rem" color="secondary" className={css({ display: 'flex' })}>
-          State of CSS
-          <Image src="/images/stateofcss.svg" width="40" className={css({ marginLeft: 6 })} />
-        </Text>
-        <Image
-          src="/images/styled-components.png"
-          width="80%"
-          className={css({ marginTop: 16, transform: 'translate(20%)' })}
-        />
+        <Slide3 />
         <Notes>
           {/* 15s */}
           <ul>
             <li>This seems reprensative.</li>
             <li>
-              According to the last State of CSS survey, over 60% of the frontend community uses one of
-              these two.
+              According to the last State of CSS survey, over 60% of the frontend community uses one
+              of these two.
             </li>
           </ul>
         </Notes>
       </Slide>
       <Slide>
-        <Text fontSize="2rem" color="secondary">
-          🌶️
-        </Text>
-        <Heading fontWeight="500" color="primary">
-          How feel left behind with them,
-          <br />
-          considering migrating away?
-        </Heading>
+        <Slide4 />
         <Notes>
           <ul>
-            <li>And the last poll, a spicy one 🌶️, please raise your hand again</li>
-            <li>How feel left behind with them, considering migrating away?</li>
+            <li>And the last question, a spicy one 🌶️, please raise your hand again</li>
+            <li>Who feels left behind by them and is considering migrating away?</li>
             <li>🙆‍♂️</li>
             <li>I see xx% of the audience who raised their hands</li>
           </ul>
         </Notes>
       </Slide>
       <Slide>
-        {/* Source https://2023.stateofcss.com/en-US/css-in-js/ */}
-        <Text fontSize="2rem" color="secondary" className={css({ display: 'flex' })}>
-          State of CSS
-          <Image src="/images/stateofcss.svg" width="40" className={css({ marginLeft: 6 })} />
-        </Text>
-        <Image
-          src="/images/mood.png"
-          width="90%"
-          className={css({ margin: 'auto', marginBottom: 200 })}
-        />
+        <Slide5 />
         <Notes>
           {/* 15s */}
           <ul>
             <li>
-              And again, in the same State of CSS survey, you can see a clear decline of interest for Styled
-              components and Emotion
+              And again, from the same State of CSS survey, you can see a clear decline of interest
+              in styled-components and Emotion
             </li>
             <li>What's going on?</li>
           </ul>
         </Notes>
       </Slide>
-      <SlideLayout.Center>
-        {/* TODO: I took this from https://www.notion.so/mui-org/Logo-source-127ec595223047b19faaf9b4c4094ba8, but it's weird
-         It looks different */}
-        <Image
-          src="/images/MUI.svg"
-          width="400"
-          className={css({ margin: '0px auto 80px', })}
-        />
-        <div
-          className={css(({ theme }) => ({
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '1.2rem',
-            fontFamily: theme.typography.fontFamily,
-            fontSize: '1.5rem',
-            '> img': {
-              borderRadius: 999,
-              border: '4px solid',
-              borderColor: 'hsla(210 100% 50% / 0.3)',
-            },
-          }))}
-        >
-          <img src="/images/olivier.jpeg" width="70" height="70" />
-          <div
-            className={css({
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '0.2rem',
-            })}
-          >
-            <p className={css({ margin: 0, fontWeight: 500 })}>Olivier Tassinari</p>
-            <p className={css({ margin: 0, opacity: 0.5 })}>Co-creator of Material UI and CEO @MUI</p>
-          </div>
-        </div>
+      <Slide>
+        <Slide6 />
         <Notes>
           {/* 15s */}
           <ul>
-            <li>I can't provide a definitive answer, but at MUI, we are facing the same challenges.</li>
             <li>
-              For those that don't know me, I co-created Material UI a long time ago. I'm now running MUI as is CEO.
+              I can't provide a definitive answer, but at MUI, we are facing the same challenges.
+            </li>
+            <li>
+              For those that don't know me, I co-created Material UI a long time ago. I'm now
+              running MUI as its CEO.
             </li>
           </ul>
         </Notes>
-      </SlideLayout.Center>
+      </Slide>
       <Slide>
-        <Text fontSize="2rem" color="secondary">
-          MUI
-        </Text>
-        <Heading fontWeight="500" color="primary">
-          We funds the development of:
-        </Heading>
-        <UnorderedList>
-          <ListItem>
-            <Text lineHeight={0.7}>Material UI</Text>
-          </ListItem>
-          <ListItem>
-            <Text lineHeight={0.7}>Base UI</Text>
-          </ListItem>
-          <ListItem>
-            <Text lineHeight={0.7}>MUI X</Text>
-          </ListItem>
-          <ListItem>
-            <Text lineHeight={0.7}>Toolpad</Text>
-          </ListItem>
-        </UnorderedList>
+        <Slide7 />
+
         <Notes>
           {/* 15s */}
           <ul>
             <li>
-              At MUI, we funds the
-              development of a few open-source projects:<br/>
-              - Material UI, a popular UI library that implements the Material Design principles.<br/>
-              - Base UI, Headless UI component library, without styles<br/>
-              - MUI X, a set of advanced React components, like data grids, charts, and so on.<br/>
-              - Toolpad, a set of components to quickly build internal tools.<br/>
+              At MUI, we fund the development of a few open-source projects:
+              <br />
+              - Material UI, a popular UI library that implements Google's Material Design
+              <br />
+              - Base UI, a headless, "unstyled" UI component library
+              <br />
+              - MUI X, a set of advanced React components, like Data Grids, Charts, and so on
+              <br />
+              - Toolpad, a set of components to quickly build internal tools
+              <br />
             </li>
-            <li>The common denominator is that all these projects rely on Emotion, one way or another.</li>
+            <li>
+              The common denominator between them is that all these projects rely on Emotion in one
+              way or another.
+            </li>
             <li>And we are facing two main challenges:</li>
           </ul>
         </Notes>
