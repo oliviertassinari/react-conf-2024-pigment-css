@@ -19,15 +19,16 @@ export default function OlivierId({
         '> img': {
           borderRadius: 999,
           border: '4px solid',
-          borderColor: 'hsla(210 100% 50% / 0.3)',
+          borderColor: 'hsla(210 100% 50% / 0.2)',
+          boxShadow: '0 0 0 1px hsla(210 50% 30%)',
         },
       }))}
       style={{
         position: notAbsolute ? 'static' : 'absolute',
-        gap: bigger ? '1.2rem' : '0.875rem',
+        gap: bigger ? '1rem' : '0.875rem',
       }}
     >
-      <img src="/images/olivier.jpeg" width={bigger ? 60 : 40} height={bigger ? 60 : 40} />
+      <img src="/images/olivier.jpeg" width={bigger ? 55 : 40} height={bigger ? 55 : 40} />
       <div
         className={css({
           display: 'flex',
