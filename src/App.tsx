@@ -56,7 +56,6 @@ export default function Presentation() {
       <Slide>
         <Slide1 />
         <Notes>
-          {/* 50s */}
           <ul>
             <li>Hi everyone! I'm so excited to be here.</li>
             <li>
@@ -70,59 +69,63 @@ export default function Presentation() {
             </li>
             <li>
               Now, React Server Components might shake the space, but there is hope. I'm also going
-              to introduce Pigment CSS, which is part of a next generation movement for CSS-in-JS
-              libraries.
+              to introduce Pigment CSS, which is part of a next generation of CSS-in-JS
+              libraries movement.
             </li>
           </ul>
+          40s
         </Notes>
       </Slide>
       <Slide>
         <Slide2 />
         <Notes>
-          {/* 25s */}
           <ul>
-            <li>Let's start with two quick question</li>
+            <li>Let's start with two quick questions</li>
             <li>Please raise your hands</li>
             <li>Who here is currently using styled-components or Emotion?</li>
             <li>🙆‍♂️</li>
             <li>I see xx% of the audience who raised their hands</li>
           </ul>
+          60s
         </Notes>
       </Slide>
       <Slide>
         <Slide3 />
         <Notes>
-          {/* 15s */}
           <ul>
-            <li>This seems reprensative.</li>
+            <li>You folks seems to be a good sample of the ecosystem.</li>
             <li>
               According to the last State of CSS survey, over 60% of the frontend community uses one
               of these two.
             </li>
           </ul>
         </Notes>
+        1m10s
       </Slide>
       <Slide>
         <Slide4 />
         <Notes>
           <ul>
-            <li>And the last question, a spicy one 🌶️, please raise your hand again</li>
-            <li>Who feels left behind by them and is considering migrating away?</li>
+            <li>Last question, a spicy one 🌶️, please raise your hand again</li>
+            <li>Who feels left behind by these libraries and is considering migrating away?</li>
             <li>🙆‍♂️</li>
-            <li>I see xx% of the audience who raised their hands</li>
+            <li>Or so fewer hands than before, but still a good number, about x%</li>
           </ul>
         </Notes>
+        1m30s
       </Slide>
       <Slide>
         <Slide5 />
         <Notes>
-          {/* 15s */}
           <ul>
             <li>
-              And again, from the same State of CSS survey, you can see a clear decline of interest
-              in styled-components and Emotion
+              And again, it's consistent with the same State of CSS survey.
+            </li>
+            <li>
+              You can see a clear decline of interest in styled-components and Emotion since a year ago.
             </li>
           </ul>
+          1m45s
         </Notes>
       </Slide>
       <SlideLayout.Section>
@@ -131,12 +134,12 @@ export default function Presentation() {
           <ul>
             <li>What's going on?</li>
           </ul>
+          1m50s
         </Notes>
       </SlideLayout.Section>
       <Slide>
         <Slide6 />
         <Notes>
-          {/* 15s */}
           <ul>
             <li>
               I can't provide a definitive answer, but at MUI, we are facing the same challenges.
@@ -146,12 +149,12 @@ export default function Presentation() {
               running MUI as its CEO.
             </li>
           </ul>
+          2m05s
         </Notes>
       </Slide>
       <Slide>
         <Slide7 />
         <Notes>
-          {/* 15s */}
           <ul>
             <li>
               At MUI, we fund the development of a few open-source projects:
@@ -167,12 +170,12 @@ export default function Presentation() {
             </li>
             <li>
               The common denominator between them is that all these projects rely on Emotion in one
-              way or another.
+              way or another, which gave us a good exposure to the problems.
             </li>
             <li>And we are facing two main challenges:</li>
           </ul>
+          2m45s
         </Notes>
-        {/* 3:00 minutes */}
       </Slide>
       <Slide>
         <Text fontSize="2rem" color="secondary">
@@ -181,21 +184,25 @@ export default function Presentation() {
         <Heading fontWeight="500" color="primary">
           11 + 4 = 16 kB gzipped of bundle size
         </Heading>
-        <Image src="/images/bundle-size.png" width="50%" className={css({ margin: 'auto' })} />
+        <Image src="/images/bundle-size.png" width="50%" className={css({ margin: '30px auto' })} />
         <Notes>
           {/* https://bundlephobia.com/package/styled-components@6.1.11 */}
           <ul>
-            <li>First, we faced challenges with performance</li>
-            <li>The bundle size of your application takes a hit, we add about 11kB gzipped.</li>
+            <li>First, we face challenges with performance</li>
+            <li>The bundle size of the application takes a hit, styled-components adds about 11kB gzipped because they have a runtime.</li>
             <li>
-              But it's not all, you also add the JavaScript theme object and it's color
-              transformation tools, another 4kB
+              Plus about 4kB to the bundle size because it works with a rich JavaScript theme and it's color
+              transformation tools.
             </li>
             <li>
-              Now, it's not the end of the day, if you compare to the React bundle, you ahve 45KB.
+              So in total, maybe 16 kB.
             </li>
-            <li>Let's just ask ourseves: is it really needed?</li>
+            <li>
+              To be fair, it's not the end of the day, if you compare it to the bundle size of React, you have 45KB.
+            </li>
+            <li>Still, is it really needed?</li>
           </ul>
+          3m15s
         </Notes>
       </Slide>
       <Slide>
@@ -209,9 +216,10 @@ export default function Presentation() {
         <Notes>
           <ul>
             <li>The runtime takes a much larger hit</li>
-            <li>Let's see how much time it take to render this table with 1,000 rows.</li>
+            <li>Here, you can see how much time it take to render a table with 1,000 rows.</li>
             <li>It's not great, you can't use Emotion without virtualization.</li>
           </ul>
+          3m35s
         </Notes>
       </Slide>
       <Slide>
@@ -237,10 +245,15 @@ export default function Presentation() {
           {/* https://mui.com/x/react-data-grid/#pro-plan
 https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
           <ul>
-            <li>But you can see the same pattern even with virtualization.</li>
+            <li>Let's say you add add virtualization, it's still not great.</li>
             <li>
-              This is our data grid, and even then, if you look at the time it takes to render each
-              row, we could allow savy users to have 14% less white screens.
+              This is our data grid, rendering 100,000 rows with CPU throttling by a factor 6.
+            </li>
+            <li>
+              Even then, if you look at the time it takes to render each row, we spent about 14% of the time generating over and over the same styles.
+            </li>
+            <li>
+              So in theory, we could have 14% less white screen area. For navigating a lot of data, it matters.
             </li>
           </ul>
         </Notes>
