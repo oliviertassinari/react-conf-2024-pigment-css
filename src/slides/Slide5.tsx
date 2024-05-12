@@ -35,7 +35,7 @@ export default function Slide5() {
         <Image
           src="/images/mood-no-sub.png"
           width="80%"
-          className={css({ margin: 'auto', marginTop: 60, marginBottom: 200 })}
+          className={css({ margin: 'auto', marginTop: 60, marginBottom: 120 })}
         />
       </div>
     </SlideContainer>
