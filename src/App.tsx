@@ -247,7 +247,7 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
       </Slide>
       <Slide>
         <Text fontSize="2rem" color="secondary">
-          User feedback
+          Performance
         </Text>
         <Image src="/images/user-feedback.png" width="50%" className={css({ margin: 'auto' })} />
         <Notes>
