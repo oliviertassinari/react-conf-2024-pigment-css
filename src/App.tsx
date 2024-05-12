@@ -13,6 +13,8 @@ import { rawTheme } from '../rawTheme';
 
 const spectacleTheme = {
   colors: {
+    primary: '#fff',
+    secondary: 'hsl(210, 100%, 65%)',
     brandBlue: 'hsl(210, 100%, 65%)',
     textPrimary: '#FFF',
     textSecondary: 'hsl(210, 20%, 75%)',
