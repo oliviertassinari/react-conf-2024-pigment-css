@@ -8,7 +8,18 @@ import Slide7 from './slides/Slide7';
 import { css } from '@pigment-css/react';
 import { Template } from './Template';
 import { Backdrop } from './Backdrop';
-import { Slide, SlideLayout, Heading, Text, Deck, Image, Notes, UnorderedList, ListItem } from 'spectacle';
+import {
+  Slide,
+  SlideLayout,
+  Heading,
+  Text,
+  Deck,
+  Image,
+  Appear,
+  Notes,
+  UnorderedList,
+  ListItem,
+} from 'spectacle';
 import { rawTheme } from '../rawTheme';
 
 const spectacleTheme = {
@@ -69,8 +80,8 @@ export default function Presentation() {
             </li>
             <li>
               Now, React Server Components might shake the space, but there is hope. I'm also going
-              to introduce Pigment CSS, which is part of a next generation of CSS-in-JS
-              libraries movement.
+              to introduce Pigment CSS, which is part of a next generation of CSS-in-JS libraries
+              movement.
             </li>
           </ul>
           40s
@@ -118,11 +129,10 @@ export default function Presentation() {
         <Slide5 />
         <Notes>
           <ul>
+            <li>And again, it's consistent with the same survey.</li>
             <li>
-              And again, it's consistent with the same survey.
-            </li>
-            <li>
-              In the State of CSS you can see a clear decline of interest in styled-components and Emotion since a year ago.
+              In the State of CSS you can see a clear decline of interest in styled-components and
+              Emotion since a year ago.
             </li>
           </ul>
           1m45s
@@ -188,16 +198,18 @@ export default function Presentation() {
           {/* https://bundlephobia.com/package/styled-components@6.1.11 */}
           <ul>
             <li>The first problem we faced is with performance.</li>
-            <li>The bundle size of the application takes a hit, styled-components adds about 11kB gzipped because they have a runtime.</li>
             <li>
-              And you also need to add about 4kB because it works with a rich JavaScript theme and it's color
-              transformation tools.
+              The bundle size of the application takes a hit, styled-components adds about 11kB
+              gzipped because they have a runtime.
             </li>
             <li>
-              So in total, maybe 16 kB.
+              And you also need to add about 4kB because it works with a rich JavaScript theme and
+              it's color transformation tools.
             </li>
+            <li>So in total, maybe 16 kB.</li>
             <li>
-              To be fair, it's not the end of the day, if you compare it to the bundle size of React, you have 45KB.
+              To be fair, it's not the end of the day, if you compare it to the bundle size of
+              React, you have 45KB.
             </li>
             <li>Still, is it really needed?</li>
           </ul>
@@ -245,12 +257,8 @@ export default function Presentation() {
 https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
           <ul>
             <li>Let's say you add add virtualization.</li>
-            <li>
-              This is our data grid, rendering 100,000 rows with CPU throttling.
-            </li>
-            <li>
-              Do you see the blank screen areas?
-            </li>
+            <li>This is our data grid, rendering 100,000 rows with CPU throttling.</li>
+            <li>Do you see the blank screen areas?</li>
           </ul>
           3m50s
         </Notes>
@@ -263,14 +271,11 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
         <Notes>
           <ul>
             <li>
-              If you look at the time it takes to render each row, we spent about 14% of the time generating over and over the same Emotion styles.
+              If you look at the time it takes to render each row, we spent about 14% of the time
+              generating over and over the same Emotion styles.
             </li>
-            <li>
-              So in theory, we could have 14% less blank screen area.
-            </li>
-            <li>
-              For data analysis use cases, it matters, it's a big deal.
-            </li>
+            <li>So in theory, we could have 14% less blank screen area.</li>
+            <li>For data analysis use cases, it matters, it's a big deal.</li>
           </ul>
           4m10s
         </Notes>
@@ -279,15 +284,17 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
         <Text fontSize="2rem" color="secondary">
           Performance
         </Text>
-        <Image src="/images/user-feedback-1.png" width="55%" className={css({ margin: '100px auto 20px' })} />
+        <Image
+          src="/images/user-feedback-1.png"
+          width="55%"
+          className={css({ margin: '100px auto 20px' })}
+        />
         {/*<Image src="/images/user-feedback-2.png" width="55%" className={css({ margin: '5px auto' })} />*/}
         <Notes>
           {/* https://www.reddit.com/r/reactjs/comments/1bzsxa6/take_a_survey_which_ui_component_library_does/?rdt=61541 */}
           <ul>
             <li>And if this wasn't enough, we also hear this from our users</li>
-            <li>
-              People loving to use Material UI but feel frustrated about its speed.
-            </li>
+            <li>People loving to use Material UI but feel frustrated about its speed.</li>
           </ul>
           4m20s
         </Notes>
@@ -299,12 +306,23 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
         <Image
           src="/images/rsc-emotion.png"
           width="50%"
-          className={css({ position: 'absolute', borderRadius: 4, top: 150, transform: 'rotate(-1deg)' })}
+          className={css({
+            position: 'absolute',
+            borderRadius: 4,
+            top: 150,
+            transform: 'rotate(-1deg)',
+          })}
         />
         <Image
           src="/images/rsc-sc.png"
           width="50%"
-          className={css({ position: 'absolute', borderRadius: 4, top: 150, left: '50%', transform: 'rotate(4deg)' })}
+          className={css({
+            position: 'absolute',
+            borderRadius: 4,
+            top: 150,
+            left: '50%',
+            transform: 'rotate(4deg)',
+          })}
         />
         <Notes>
           {/*
@@ -313,8 +331,13 @@ https://github.com/styled-components/styled-components/issues/4025
           */}
           <ul>
             <li>That was performance</li>
-            <li>The second key problem, that is more recent, is with the support of React Server Components</li>
-            <li>Nor styled components or Emotion are compatible with it, and we see no real progress.</li>
+            <li>
+              The second key problem, that is more recent, is with the support of React Server
+              Components
+            </li>
+            <li>
+              Nor styled components or Emotion are compatible with it, and we see no real progress.
+            </li>
             <li>The blocking point is the React context API that is not working with RSC.</li>
           </ul>
           4m40s
@@ -324,11 +347,9 @@ https://github.com/styled-components/styled-components/issues/4025
         The options
         <Notes>
           <ul>
-            <li>These problems are too important for MUI not to take action.</li>
+            <li>These problems are too important for MUI not to try to solve.</li>
             <li>Over a year ago, we started to work on this.</li>
-            <li>
-              Let's look at how we approached this.
-            </li>
+            <li>Let's look at how we approached this.</li>
           </ul>
           5m00s
         </Notes>
@@ -342,6 +363,194 @@ https://github.com/styled-components/styled-components/issues/4025
           <ListItem>Panda CSS</ListItem>
           <ListItem>Linaria</ListItem>
           <ListItem>Tokanami</ListItem>
+          <ListItem>…</ListItem>
+        </UnorderedList>
+        <Notes>
+          <ul>
+            <li>First, there are a lot of of options.</li>
+            <li>
+              Inline style, CSS Modules, StyleX, Tailwind CSS, Panda CSS, Linaria, Tokanami, and
+              more
+            </li>
+            <li>It can get overwhelming to compare them all.</li>
+            <li>Instead, we looked at the key properties we wanted out from them</li>
+            <li>
+              Now, these were judged at in the context of Material UI, don't take what I present
+              next as truth, these solution adopt different tradeoffs, I'm sure they all have
+              context where they are best.
+            </li>
+            <li>We developers, love to not disagree on this</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Heading fontWeight="500" color="primary">
+          Style colocation
+        </Heading>
+        <Image
+          src="/images/style-collocation.png"
+          width="50%"
+          className={css({ margin: '0px auto' })}
+        />
+        <Notes>
+          <ul>
+            <li>The first thing we looked at is style colocation</li>
+            <li>This bring great benefits:</li>
+            <li>
+              <ul>
+                <li>It minimize context shifting</li>
+                <li>You don't have to name everything</li>
+                <li>
+                  having the style closer to your code, opens more door to use JavaScript to control
+                  the style
+                </li>
+                <li>and people who truly want separation</li>
+              </ul>
+            </li>
+            {/* Side fun note: http://react-toolbox.io/ */}
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Heading fontWeight="500" color="primary">
+          Style colocation
+        </Heading>
+        <Text>CSS Modules → 🤔</Text>
+        <Notes>
+          <ul>
+            <li>So, we quickly excluded CSS Modules. </li>
+            {/* Side fun note: http://react-toolbox.io/ */}
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Heading fontWeight="500" color="primary">
+          Plain class names vs. Atomic
+        </Heading>
+        <Notes>
+          <ul>
+            <li>One of the trikiest decision is choosing on this tradeoff</li>
+            <li>It involves both performance and DX considerations</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
+          Plain class names vs. Atomic
+        </Heading>
+        {/* TODO: Conflict between Pigment CSS and Styled components */}
+        <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
+          Atomic class names
+        </Text>
+        <Image
+          src="/images/class-atomic.png"
+          width="60%"
+          className={css({ margin: '0px auto' })}
+        />
+        <Notes>
+          <ul>
+            <li></li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
+          Plain class names vs. Atomic
+        </Heading>
+        <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
+          Plain class names
+        </Text>
+        <Image
+          src="/images/class-plain.png"
+          width="60%"
+          className={css({ margin: '0px auto' })}
+        />
+        <Notes>
+          <ul>
+            <li></li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
+          Plain class names vs. Atomic
+        </Heading>
+        <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
+          Growing applications
+        </Text>
+        <UnorderedList>
+          <ListItem>Atomic classes keep the CSS file small</ListItem>
+          <ListItem>Nested selectors are eventually needed</ListItem>
+        </UnorderedList>
+        <Notes>
+          <ul>
+            <li></li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+      <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
+          Plain class names vs. Atomic
+        </Heading>
+        <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
+          Granular style loading
+        </Text>
+        <UnorderedList>
+          <ListItem>Only loading the CSS you need for the page</ListItem>
+          <ListItem>Inlining of critical CSS</ListItem>
+        </UnorderedList>
+        <Notes>
+          <ul>
+            <li>So I believe the future for style performance is deep integration with the bundlers.</li>
+            <li>Knowing exaclty what the dependency tree is and being smart about it</li>
+            <li>Next.js Pages Router with CSS Modules is the best in that space today that I'm aware of</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Heading fontWeight="500" color="primary">
+          Plain class names vs. Atomic
+        </Heading>
+        <UnorderedList>
+          <ListItem>StyleX → 🤔</ListItem>
+          <ListItem>Tailwind CSS → 🤔</ListItem>
+          <ListItem>Panda CSS → 🤔</ListItem>
+        </UnorderedList>
+        <Notes>
+          <ul>
+            <li></li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Heading fontWeight="500" color="primary">
+          Familiarity
+        </Heading>
+        <UnorderedList>
+          <ListItem>Am I good to go with what I already know about CSS?</ListItem>
+        </UnorderedList>
+        <Appear>
+          <UnorderedList>
+            <ListItem>StyleX → 🤔</ListItem>
+            <ListItem>Tailwind CSS → 🤔</ListItem>
+          </UnorderedList>
+        </Appear>
+        <Notes>
+          <ul>
+            <li>Do I have to learn a new API?</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <UnorderedList>
+          <ListItem>Inline style</ListItem>
+          <ListItem>CSS Modules</ListItem>
+          <ListItem>StyleX</ListItem>
+          <ListItem>Tailwind CSS</ListItem>
+          <ListItem>Panda CSS</ListItem>
+          <ListItem>Linaria</ListItem>
+          <ListItem>Tokanami</ListItem>
+          <ListItem>…</ListItem>
         </UnorderedList>
       </Slide>
     </Deck>
