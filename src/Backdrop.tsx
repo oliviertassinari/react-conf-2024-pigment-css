@@ -9,7 +9,7 @@ export const Backdrop = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HT
         ref={ref}
         className={`Backdrop-root ${className} ${css({
           backgroundColor: '#000',
-          '& .idnhTW': {
+          '& .sc-aXZVg': {
             zIndex: 'initial !important',
             position: 'initial !important',
             pointerEvents: 'initial !important',
