@@ -26,7 +26,7 @@ export default function StateOfCSSTitle({ subtitles }: { subtitles: React.ReactN
         {/* Source https://2023.stateofcss.com/en-US/css-in-js/ */}
         <Image src="/images/stateofcss.svg" width="40" />
         <Text fontSize="1.5rem" color="primary" fontWeight="500">
-          State of CSS 2023
+          State of CSS
         </Text>
       </section>
       <section

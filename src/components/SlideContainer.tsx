@@ -1,5 +1,5 @@
+import * as React from 'react';
 import { css } from '@pigment-css/react';
-import React from 'react';
 
 export default function SlideContainer({
   children,
@@ -9,7 +9,7 @@ export default function SlideContainer({
   noBgColor?: boolean;
 }) {
   return (
-    <main
+    <div
       className={css({
         height: '100lvh',
         paddingBottom: '50px',
@@ -23,6 +23,6 @@ export default function SlideContainer({
       style={{ backgroundColor: noBgColor ? 'transparent' : '#000' }}
     >
       {children}
-    </main>
+    </div>
   );
 }
