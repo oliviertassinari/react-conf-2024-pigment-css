@@ -48,7 +48,7 @@ export function Template() {
           filter: 'blur(70px)',
         })}`}
         style={{
-          opacity: deckContext.activeView.slideIndex === 0 ? 0 : 0.7,
+          opacity: deckContext.activeView.slideIndex === 0 ? 0 : 0.75,
         }}
       >
         <Spot
