@@ -10,9 +10,9 @@ export default function Card({ children }: { children: React.ReactNode }) {
         alignItems: 'center',
         justifyContent: 'center',
         gap: '1rem',
-        backgroundColor: 'hsla(210 100% 100% / 0.05)',
+        backgroundColor: 'hsla(220, 100%, 85%, 0.05)',
         border: '1px solid',
-        borderColor: 'hsla(210 100% 100% / 0.2)',
+        borderColor: 'hsla(220, 100%, 95%, 0.15)',
         borderRadius: '.65rem',
         boxShadow: '0 12px 40px hsl(0 0% 0%)',
         '& > div': {

@@ -24,8 +24,7 @@ export default function OlivierId({
       }))}
       style={{
         position: notAbsolute ? 'static' : 'absolute',
-        fontSize: bigger ? '1.5rem' : '0.875rem',
-        gap: bigger ? '2rem' : '0.875rem',
+        gap: bigger ? '1.2rem' : '0.875rem',
       }}
     >
       <img src="/images/olivier.jpeg" width={bigger ? 60 : 40} height={bigger ? 60 : 40} />
@@ -38,8 +37,15 @@ export default function OlivierId({
           gap: '0.2rem',
         })}
       >
-        <p className={css({ margin: 0, fontWeight: 500 })}>Olivier Tassinari</p>
-        <p className={css({ margin: 0, opacity: 0.5 })}>Co-creator of Material UI and CEO @MUI</p>
+        <p
+          className={css({ margin: 0, fontWeight: 500 })}
+          style={{ fontSize: bigger ? '1.5rem' : '1.3rem' }}
+        >
+          Olivier Tassinari
+        </p>
+        <p className={css({ margin: 0, opacity: 0.5, fontSize: '1.2rem' })}>
+          Co-creator of Material UI and CEO @MUI
+        </p>
       </div>
     </div>
   );

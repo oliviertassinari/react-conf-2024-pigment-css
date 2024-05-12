@@ -22,9 +22,9 @@ const Spot = styled('span')({
   height: 800,
   width: 800,
   translate: '-50% -50%',
-  background: 'radial-gradient(hsla(var(--hue) 100% 8%) 40%, hsl(200 20% 2%) 62%, transparent 80%)',
+  background: 'radial-gradient(hsla(var(--hue) 100% 8%) 40%, hsl(210 20% 2%) 62%, transparent 80%)',
   position: 'absolute',
-  transition: 'all 2s ease',
+  transition: 'all 3s ease',
   mixBlendMode: 'lighten',
 });
 
@@ -48,15 +48,15 @@ export function Template() {
           filter: 'blur(70px)',
         })}`}
         style={{
-          opacity: deckContext.activeView.slideIndex === 0 ? 0 : 1,
+          opacity: deckContext.activeView.slideIndex === 0 ? 0 : 0.7,
         }}
       >
         <Spot
           style={
             {
               top: `${randomBetween(randomGenerator(), 0, 100)}%`,
-              left: `${randomBetween(randomGenerator(), 0, 100)}%`,
-              '--hue': randomBetween(randomGenerator(), 180, 240),
+              left: `${randomBetween(randomGenerator(), 80, 100)}%`,
+              '--hue': randomBetween(randomGenerator(), 200, 230),
             } as React.CSSProperties
           }
         />
@@ -65,7 +65,7 @@ export function Template() {
             {
               top: `${randomBetween(randomGenerator(), 0, 100)}%`,
               left: `${randomBetween(randomGenerator(), 0, 100)}%`,
-              '--hue': randomBetween(randomGenerator(), 180, 240),
+              '--hue': randomBetween(randomGenerator(), 200, 230),
             } as React.CSSProperties
           }
         />
@@ -78,11 +78,11 @@ export function Template() {
           left: 0,
           right: 0,
           display: 'flex',
+          alignItems: 'center',
           opacity: 0,
           height: 45,
           zIndex: 1,
-          alignItems: 'center',
-          transition: 'opacity 200ms ease',
+          transition: 'opacity 100ms ease',
           '&:hover': {
             opacity: 1,
           },
