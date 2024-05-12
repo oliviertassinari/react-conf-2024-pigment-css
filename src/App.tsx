@@ -263,8 +263,10 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
         <Text fontSize="2rem" color="secondary">
           Performance
         </Text>
-        <Image src="/images/user-feedback.png" width="50%" className={css({ margin: 'auto' })} />
+        <Image src="/images/user-feedback-1.png" width="55%" className={css({ margin: '50px auto 20px' })} />
+        <Image src="/images/user-feedback-2.png" width="55%" className={css({ margin: '5px auto' })} />
         <Notes>
+          {/* https://www.reddit.com/r/reactjs/comments/1bzsxa6/take_a_survey_which_ui_component_library_does/?rdt=61541 */}
           <ul>
             <li>And if this wasn't enough, some user feedback validation</li>
             <li>
