@@ -187,8 +187,13 @@ export default function Presentation() {
           <ul>
             <li>First, we faced challenges with performance</li>
             <li>The bundle size of your application takes a hit, we add about 11kB gzipped.</li>
-            <li>But it's not all, you also add the JavaScript theme object and it's color transformation tools, another 4kB</li>
-            <li>Now, it's not the end of the day, if you compare to the React bundle, you ahve 45KB.</li>
+            <li>
+              But it's not all, you also add the JavaScript theme object and it's color
+              transformation tools, another 4kB
+            </li>
+            <li>
+              Now, it's not the end of the day, if you compare to the React bundle, you ahve 45KB.
+            </li>
             <li>Let's just ask ourseves: is it really needed?</li>
           </ul>
         </Notes>
@@ -216,10 +221,16 @@ export default function Presentation() {
         <Heading fontWeight="500" color="primary">
           Data Grid
         </Heading>
-        <video autoPlay muted loop playsInline className={css({
-          width: '40%',
-          margin: 'auto',
-        })}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className={css({
+            width: '40%',
+            margin: 'auto',
+          })}
+        >
             <source src="/images/data-grid.mov" type="video/mp4"></source>
         </video>
         <Notes>
@@ -227,7 +238,10 @@ export default function Presentation() {
 https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
           <ul>
             <li>But you can see the same pattern even with virtualization.</li>
-            <li>This is our data grid, and even then, if you look at the time it takes to render each row, we could allow savy users to have 14% less white screens.</li>
+            <li>
+              This is our data grid, and even then, if you look at the time it takes to render each
+              row, we could allow savy users to have 14% less white screens.
+            </li>
           </ul>
         </Notes>
       </Slide>
@@ -253,7 +267,10 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
         <Notes>
           <ul>
             <li>And if this wasn't enough, some user feedback validation</li>
-            <li>A user loving the sx prop, as a quick say to apply CSS and with smart shorthands, but not fast enough.</li>
+            <li>
+              A user loving the sx prop, as a quick say to apply CSS and with smart shorthands, but
+              not fast enough.
+            </li>
           </ul>
         </Notes>
       </Slide>
@@ -261,8 +278,16 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
         <Text fontSize="2rem" color="secondary">
           RSC support
         </Text>
-        <Image src="/images/user-feedback.png" width="50%" className={css({ margin: 'auto' })} />
-        <Image src="/images/user-feedback.png" width="50%" className={css({ margin: 'auto' })} />
+        <Image
+          src="/images/rsc-emotion.png"
+          width="50%"
+          className={css({ position: 'absolute', borderRadius: 4, top: 150, transform: 'rotate(-1deg)' })}
+        />
+        <Image
+          src="/images/rsc-sc.png"
+          width="50%"
+          className={css({ position: 'absolute', borderRadius: 4, top: 150, left: '50%', transform: 'rotate(4deg)' })}
+        />
         <Notes>
           {/*
 https://github.com/emotion-js/emotion/issues/2978
@@ -278,11 +303,14 @@ https://github.com/styled-components/styled-components/issues/4025
       <SlideLayout.Section>
         The options
         <Notes>
-        <ul>
-          <li>These problems are too important, we need to take action.</li>
-          <li>Which we what we started doing at MUI over a year ago.</li>
-          <li>Let's look at the key dimensions I think should be considered, but also for the sake of illustrating them, see how they translate into specific libraries.</li>
-        </ul>
+          <ul>
+            <li>These problems are too important, we need to take action.</li>
+            <li>Which we what we started doing at MUI over a year ago.</li>
+            <li>
+              Let's look at the key dimensions I think should be considered, but also for the sake
+              of illustrating them, see how they translate into specific libraries.
+            </li>
+          </ul>
         </Notes>
       </SlideLayout.Section>
     </Deck>
