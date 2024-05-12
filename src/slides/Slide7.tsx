@@ -22,7 +22,7 @@ export default function Slide2() {
           },
         })}
       >
-        <Text fontSize="1.5rem" color="secondary" fontWeight="500">
+        <Text fontSize="1.5rem" color="brandBlue" fontWeight="500">
           The MUI ecosystem
         </Text>
         <Heading fontWeight="500" color="primary">
@@ -38,22 +38,22 @@ export default function Slide2() {
           })}
         >
           <Card>
-            <Text fontSize="1.8rem" color="primary" fontWeight="500">
+            <Text fontSize="1.8rem" color="textSecondary" fontWeight="500">
               Material UI
             </Text>
           </Card>
           <Card>
-            <Text fontSize="1.8rem" color="primary" fontWeight="500">
+            <Text fontSize="1.8rem" color="textSecondary" fontWeight="500">
               Base UI
             </Text>
           </Card>
           <Card>
-            <Text fontSize="1.8rem" color="primary" fontWeight="500">
+            <Text fontSize="1.8rem" color="textSecondary" fontWeight="500">
               MUI X
             </Text>
           </Card>
           <Card>
-            <Text fontSize="1.8rem" color="primary" fontWeight="500">
+            <Text fontSize="1.8rem" color="textSecondary" fontWeight="500">
               Toolpad
             </Text>
           </Card>
