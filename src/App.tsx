@@ -86,7 +86,7 @@ export default function Presentation() {
             <li>🙆‍♂️</li>
             <li>I see xx% of the audience who raised their hands</li>
           </ul>
-          60s
+          1m00s
         </Notes>
       </Slide>
       <Slide>
@@ -99,8 +99,8 @@ export default function Presentation() {
               of these two.
             </li>
           </ul>
+          1m10s
         </Notes>
-        1m10s
       </Slide>
       <Slide>
         <Slide4 />
@@ -111,18 +111,18 @@ export default function Presentation() {
             <li>🙆‍♂️</li>
             <li>Or so fewer hands than before, but still a good number, about x%</li>
           </ul>
+          1m30s
         </Notes>
-        1m30s
       </Slide>
       <Slide>
         <Slide5 />
         <Notes>
           <ul>
             <li>
-              And again, it's consistent with the same State of CSS survey.
+              And again, it's consistent with the same survey.
             </li>
             <li>
-              You can see a clear decline of interest in styled-components and Emotion since a year ago.
+              In the State of CSS you can see a clear decline of interest in styled-components and Emotion since a year ago.
             </li>
           </ul>
           1m45s
@@ -172,7 +172,6 @@ export default function Presentation() {
               The common denominator between them is that all these projects rely on Emotion in one
               way or another, which gave us a good exposure to the problems.
             </li>
-            <li>And we are facing two main challenges:</li>
           </ul>
           2m45s
         </Notes>
@@ -188,10 +187,10 @@ export default function Presentation() {
         <Notes>
           {/* https://bundlephobia.com/package/styled-components@6.1.11 */}
           <ul>
-            <li>First, we face challenges with performance</li>
+            <li>The first problem we faced is with performance.</li>
             <li>The bundle size of the application takes a hit, styled-components adds about 11kB gzipped because they have a runtime.</li>
             <li>
-              Plus about 4kB to the bundle size because it works with a rich JavaScript theme and it's color
+              And you also need to add about 4kB because it works with a rich JavaScript theme and it's color
               transformation tools.
             </li>
             <li>
@@ -202,7 +201,7 @@ export default function Presentation() {
             </li>
             <li>Still, is it really needed?</li>
           </ul>
-          3m15s
+          3m20s
         </Notes>
       </Slide>
       <Slide>
@@ -245,9 +244,9 @@ export default function Presentation() {
           {/* https://mui.com/x/react-data-grid/#pro-plan
 https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
           <ul>
-            <li>Let's say you add add virtualization, it's still not great.</li>
+            <li>Let's say you add add virtualization.</li>
             <li>
-              This is our data grid, rendering 100,000 rows with CPU throttling by a factor 6.
+              This is our data grid, rendering 100,000 rows with CPU throttling.
             </li>
             <li>
               Do you see the white screen areas?
@@ -267,13 +266,13 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
         <Notes>
           <ul>
             <li>
-              Even then, if you look at the time it takes to render each row, we spent about 14% of the time generating over and over the same styles.
+              If you look at the time it takes to render each row, we spent about 14% of the time generating over and over the same Emotion styles.
             </li>
             <li>
               So in theory, we could have 14% less white screen area.
             </li>
             <li>
-              For data analysis use cases, it matters a lot.
+              For data analysis use cases, it matters, it's a big deal.
             </li>
           </ul>
           4m10s
@@ -283,16 +282,17 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
         <Text fontSize="2rem" color="secondary">
           Performance
         </Text>
-        <Image src="/images/user-feedback-1.png" width="55%" className={css({ margin: '50px auto 20px' })} />
-        <Image src="/images/user-feedback-2.png" width="55%" className={css({ margin: '5px auto' })} />
+        <Image src="/images/user-feedback-1.png" width="55%" className={css({ margin: '100px auto 20px' })} />
+        {/*<Image src="/images/user-feedback-2.png" width="55%" className={css({ margin: '5px auto' })} />*/}
         <Notes>
           {/* https://www.reddit.com/r/reactjs/comments/1bzsxa6/take_a_survey_which_ui_component_library_does/?rdt=61541 */}
           <ul>
-            <li>And if this wasn't enough, some user feedback validation</li>
+            <li>And if this wasn't enough, we also hear this from our users</li>
             <li>
               People loving to use Material UI but feel frustrated about its speed.
             </li>
           </ul>
+          4m20s
         </Notes>
       </Slide>
       <Slide>
@@ -315,23 +315,25 @@ https://github.com/emotion-js/emotion/issues/2978
 https://github.com/styled-components/styled-components/issues/4025
           */}
           <ul>
-            <li>The second key problem is with the support of React Server Components</li>
-            <li>Nor styled components or Emotion are compatible with it.</li>
-            <li>We are blocked the React context API not working with RSC.</li>
+            <li>That was performance</li>
+            <li>The second key problem, that is more recent, is with the support of React Server Components</li>
+            <li>Nor styled components or Emotion are compatible with it, and we see no real progress.</li>
+            <li>The blocking point is the React context API that is not working with RSC.</li>
           </ul>
+          4m40s
         </Notes>
       </Slide>
       <SlideLayout.Section>
         The options
         <Notes>
           <ul>
-            <li>These problems are too important, we need to take action.</li>
-            <li>Which we what we started doing at MUI over a year ago.</li>
+            <li>These problems are too important for MUI not to take action.</li>
+            <li>Over a year ago, we started to work on this.</li>
             <li>
-              Let's look at the key dimensions I think should be considered, but also for the sake
-              of illustrating them, see how they translate into specific libraries.
+              Let's look at how we approached this.
             </li>
           </ul>
+          5m00s
         </Notes>
       </SlideLayout.Section>
     </Deck>
