@@ -19,7 +19,7 @@ export default function Slide2() {
         })}
       >
         <Text fontSize="1.5rem" color="brandBlue" fontWeight="500">
-          Getting started
+          Poll
         </Text>
         <Heading fontWeight="500" color="primary">
           Who here is currently using
