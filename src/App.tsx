@@ -234,8 +234,8 @@ export default function Presentation() {
           loop
           playsInline
           className={css({
-            width: '40%',
-            margin: 'auto',
+            width: '50%',
+            margin: '0 auto',
           })}
         >
             <source src="/images/data-grid.mov" type="video/mp4"></source>
@@ -259,10 +259,7 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
         <Text fontSize="2rem" color="secondary">
           Performance
         </Text>
-        <Heading fontWeight="500" color="primary">
-          Data Grid
-        </Heading>
-        <Image src="/images/data-grid.png" width="50%" className={css({ margin: 'auto' })} />
+        <Image src="/images/data-grid.png" width="40%" className={css({ margin: '50px auto' })} />
         <Notes>
           <ul>
             <li>
