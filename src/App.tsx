@@ -8,7 +8,7 @@ import Slide7 from './slides/Slide7';
 import { css } from '@pigment-css/react';
 import { Template } from './Template';
 import { Backdrop } from './Backdrop';
-import { Slide, SlideLayout, Heading, Text, Deck, Image, Notes } from 'spectacle';
+import { Slide, SlideLayout, Heading, Text, Deck, Image, Notes, UnorderedList, ListItem } from 'spectacle';
 import { rawTheme } from '../rawTheme';
 
 const spectacleTheme = {
@@ -238,7 +238,7 @@ export default function Presentation() {
             margin: '0 auto',
           })}
         >
-            <source src="/images/data-grid.mov" type="video/mp4"></source>
+            <source src="/images/data-grid.mp4" type="video/mp4"></source>
         </video>
         <Notes>
           {/* https://mui.com/x/react-data-grid/#pro-plan
@@ -333,6 +333,17 @@ https://github.com/styled-components/styled-components/issues/4025
           5m00s
         </Notes>
       </SlideLayout.Section>
+      <Slide>
+        <UnorderedList>
+          <ListItem>Inline style</ListItem>
+          <ListItem>CSS Modules</ListItem>
+          <ListItem>StyleX</ListItem>
+          <ListItem>Tailwind CSS</ListItem>
+          <ListItem>Panda CSS</ListItem>
+          <ListItem>Linaria</ListItem>
+          <ListItem>Tokanami</ListItem>
+        </UnorderedList>
+      </Slide>
     </Deck>
   );
 }
