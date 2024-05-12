@@ -1,4 +1,3 @@
-import { css } from '@pigment-css/react';
 import Slide1 from './slides/Slide1';
 import Slide2 from './slides/Slide2';
 import Slide3 from './slides/Slide3';
@@ -8,19 +7,8 @@ import Slide6 from './slides/Slide6';
 import Slide7 from './slides/Slide7';
 import { Template } from './Template';
 import { Backdrop } from './Backdrop';
-import {
-  Heading,
-  SlideLayout,
-  UnorderedList,
-  ListItem,
-  Slide,
-  Deck,
-  Text,
-  Image,
-  Notes,
-} from 'spectacle';
+import { Slide, Deck, Notes } from 'spectacle';
 import { rawTheme } from '../rawTheme';
-import OlivierId from './components/OlivierId';
 
 const spectacleTheme = {
   colors: {
