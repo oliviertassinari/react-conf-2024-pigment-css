@@ -1,6 +1,9 @@
+import React from 'react';
 import { css } from '@pigment-css/react';
 import SlideContainer from '../components/SlideContainer';
-import { Text, Image } from 'spectacle';
+import ChartSubtitle from '../components/ChartSubtitle';
+import StateOfCSSTitle from '../components/StateOfCSSTitle';
+import { Image } from 'spectacle';
 
 export default function Slide5() {
   return (
@@ -18,27 +21,21 @@ export default function Slide5() {
           },
         })}
       >
-        <div
-          className={css({
-            width: '90%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '1rem',
-            paddingBottom: '1rem',
-            borderBottom: '1px dashed hsl(0 0% 15%)',
-          })}
-        >
-          {/* Source https://2023.stateofcss.com/en-US/css-in-js/ */}
-          <Image src="/images/stateofcss.svg" width="40" />
-          <Text fontSize="1.5rem" color="primary" fontWeight="500">
-            State of CSS 2023
-          </Text>
-        </div>
+        <StateOfCSSTitle
+          subtitles={
+            <React.Fragment>
+              <ChartSubtitle color="#09657D" label="Would use again" />
+              <ChartSubtitle color="#FE6A6A" label="Would not use" />
+              <ChartSubtitle color="#39D6FF" label="Interested" />
+              <ChartSubtitle color="#FFA3A3" label="Not interested" />
+              <ChartSubtitle color="#BBB2B6" label="Never heard" />
+            </React.Fragment>
+          }
+        />
         <Image
-          src="/images/mood.png"
-          width="90%"
-          className={css({ margin: 'auto', marginBottom: 200 })}
+          src="/images/mood-no-sub.png"
+          width="80%"
+          className={css({ margin: 'auto', marginTop: 60, marginBottom: 200 })}
         />
       </div>
     </SlideContainer>

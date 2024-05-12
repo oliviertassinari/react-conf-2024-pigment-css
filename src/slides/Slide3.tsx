@@ -1,6 +1,9 @@
+import React from 'react';
 import { css } from '@pigment-css/react';
 import SlideContainer from '../components/SlideContainer';
-import { Text, Image } from 'spectacle';
+import StateOfCSSTitle from '../components/StateOfCSSTitle';
+import ChartSubtitle from '../components/ChartSubtitle';
+import { Image } from 'spectacle';
 
 export default function Slide3() {
   return (
@@ -18,27 +21,19 @@ export default function Slide3() {
           },
         })}
       >
-        <div
-          className={css({
-            width: '90%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '1rem',
-            paddingBottom: '1rem',
-            borderBottom: '1px dashed hsl(0 0% 15%)',
-          })}
-        >
-          {/* Source https://2023.stateofcss.com/en-US/css-in-js/ */}
-          <Image src="/images/stateofcss.svg" width="40" />
-          <Text fontSize="1.5rem" color="primary" fontWeight="500">
-            State of CSS 2023
-          </Text>
-        </div>
+        <StateOfCSSTitle
+          subtitles={
+            <React.Fragment>
+              <ChartSubtitle color="#4861EC" label="styled-components" />
+              <ChartSubtitle color="#FE6A6A" label="Emotion" />
+              <ChartSubtitle color="#4BC77E" label="CSS Modules" />
+            </React.Fragment>
+          }
+        />
         <Image
-          src="/images/styled-components.png"
+          src="/images/styled-components-no-sub.png"
           width="80%"
-          className={css({ transform: 'translate(10%)' })}
+          className={css({ transform: 'translate(7%)' })}
         />
       </div>
     </SlideContainer>
