@@ -11,7 +11,7 @@ const systemFont = [
   '"Segoe UI Symbol"',
 ];
 
-// To learn more about theming, visit https://github.com/mui/material-ui/blob/master/packages/zero-runtime/README.md#theming
+// To learn more about theming, visit: https://github.com/mui/pigment-css?tab=readme-ov-file#theming
 export const rawTheme = {
   typography: {
     fontFamily: ['"IBM Plex Sans"', ...systemFont].join(','),
