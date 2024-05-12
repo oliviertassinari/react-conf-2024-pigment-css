@@ -18,7 +18,7 @@ export default function Slide2() {
           },
         })}
       >
-        <Text fontSize="1.5rem" color="secondary" fontWeight="500">
+        <Text fontSize="1.5rem" color="brandBlue" fontWeight="500">
           Getting started
         </Text>
         <Heading fontWeight="500" color="primary">

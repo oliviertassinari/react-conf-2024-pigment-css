@@ -18,8 +18,8 @@ export default function Slide4() {
           },
         })}
       >
-        <Text fontSize="1.5rem" color="red" fontWeight="500">
-          🌶️&nbsp;&nbsp;&nbsp;Spicy &nbsp;&nbsp;&nbsp;🌶️
+        <Text fontSize="1.5rem" color="textRed" fontWeight="500">
+          🌶️&nbsp;&nbsp;&nbsp;Spicy &nbsp;&nbsp;🌶️
         </Text>
         <Heading fontWeight="500" color="primary">
           Who feels left behind by them and <br />
