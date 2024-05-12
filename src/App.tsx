@@ -12,11 +12,11 @@ import { rawTheme } from '../rawTheme';
 
 const spectacleTheme = {
   colors: {
-    primary: '#fff',
-    secondary: 'hsl(210, 100%, 65%)',
+    brandBlue: 'hsl(210, 100%, 65%)',
+    textPrimary: '#FFF',
+    textSecondary: 'hsl(210, 20%, 75%)',
+    textRed: 'hsl(0, 99%, 70%)',
     tertiary: 'transparent',
-    quaternary: 'red',
-    quinary: 'red',
   },
   fontSizes: {
     h1: '54px',
@@ -140,7 +140,6 @@ export default function Presentation() {
       </Slide>
       <Slide>
         <Slide7 />
-
         <Notes>
           {/* 15s */}
           <ul>
