@@ -250,12 +250,10 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
               This is our data grid, rendering 100,000 rows with CPU throttling by a factor 6.
             </li>
             <li>
-              Even then, if you look at the time it takes to render each row, we spent about 14% of the time generating over and over the same styles.
-            </li>
-            <li>
-              So in theory, we could have 14% less white screen area. For navigating a lot of data, it matters.
+              Do you see the white screen areas?
             </li>
           </ul>
+          3m50s
         </Notes>
       </Slide>
       <Slide>
@@ -268,8 +266,17 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
         <Image src="/images/data-grid.png" width="50%" className={css({ margin: 'auto' })} />
         <Notes>
           <ul>
-            <li>.</li>
+            <li>
+              Even then, if you look at the time it takes to render each row, we spent about 14% of the time generating over and over the same styles.
+            </li>
+            <li>
+              So in theory, we could have 14% less white screen area.
+            </li>
+            <li>
+              For data analysis use cases, it matters a lot.
+            </li>
           </ul>
+          4m10s
         </Notes>
       </Slide>
       <Slide>
@@ -283,8 +290,7 @@ https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
           <ul>
             <li>And if this wasn't enough, some user feedback validation</li>
             <li>
-              A user loving the sx prop, as a quick say to apply CSS and with smart shorthands, but
-              not fast enough.
+              People loving to use Material UI but feel frustrated about its speed.
             </li>
           </ul>
         </Notes>
