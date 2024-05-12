@@ -1,7 +1,9 @@
 import { styled, css, keyframes } from '@pigment-css/react';
 import styled2 from '@emotion/styled';
 import styled3 from 'styled-components';
-import PigmentLogo from './PigmentLogo';
+import PigmentLogo from '../components/PigmentLogo';
+import SlideContainer from '../components/SlideContainer';
+import OlivierId from '../components/OlivierId';
 
 const scale = keyframes({
   to: { scale: 'var(--scale)' },
@@ -84,29 +86,12 @@ function generateBubbleVars(index: number) {
 
 export default function Slide1() {
   return (
-    <div
-      className={css({
-        height: '100lvh',
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: '1rem',
-        paddingBottom: '50px',
-        border: '1px solid',
-        borderColor: 'hsla(100 0% 15%)',
-        borderRadius: '0.5rem',
-        background: 'linear-gradient(250deg, hsla(210 100% 12% / 0.5) 40%, hsl(200 20% 2%) 62%)',
-        backgroundColor: '#000',
-      })}
-    >
+    <SlideContainer>
       <h1
         className={css(({ theme }) => ({
           all: 'unset',
           position: 'relative',
           display: 'flex',
-          // flexDirection: 'column',
           alignItems: 'center',
           gap: '2rem',
           color: '#888',
@@ -122,7 +107,7 @@ export default function Slide1() {
         }))}
       >
         <PigmentLogo />
-        <span className={css({ position: 'relative' })}>
+        <span className={css({ position: 'relative', backgroundClip: 'text' })}>
           Pigment CSS
           <span
             className={css(({ theme }) => ({
@@ -132,6 +117,7 @@ export default function Slide1() {
               mixBlendMode: 'color-burn',
               overflow: 'hidden',
               pointerEvents: 'none',
+              backgroundClip: 'text',
               ...theme.applyStyles('dark', {
                 mixBlendMode: 'darken',
                 filter: 'brightness(1)',
@@ -155,38 +141,12 @@ export default function Slide1() {
           textAlign: 'center',
           textWrap: 'balance',
           fontSize: '1.4rem',
+          paddingBottom: '50px',
         }))}
       >
         CSS-in-JS in the server components age
       </div>
-      <div
-        className={css(({ theme }) => ({
-          position: 'absolute',
-          bottom: 32,
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.875rem',
-          fontFamily: theme.typography.fontFamily,
-          fontSize: '0.875rem',
-          '> img': {
-            borderRadius: 999,
-            border: '4px solid',
-            borderColor: 'hsla(210 100% 50% / 0.3)',
-          },
-        }))}
-      >
-        <img src="/images/olivier.jpeg" width="40" height="40" />
-        <div
-          className={css({
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '0.2rem',
-          })}
-        >
-          <p className={css({ margin: 0, fontWeight: 500 })}>Olivier Tassinari</p>
-          <p className={css({ margin: 0, opacity: 0.5 })}>Co-creator of Material UI and CEO @MUI</p>
-        </div>
-      </div>
-    </div>
+      <OlivierId />
+    </SlideContainer>
   );
 }
