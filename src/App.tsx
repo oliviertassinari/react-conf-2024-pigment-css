@@ -5,9 +5,10 @@ import Slide4 from './slides/Slide4';
 import Slide5 from './slides/Slide5';
 import Slide6 from './slides/Slide6';
 import Slide7 from './slides/Slide7';
+import { css } from '@pigment-css/react';
 import { Template } from './Template';
 import { Backdrop } from './Backdrop';
-import { Slide, Deck, Notes } from 'spectacle';
+import { Slide, SlideLayout, Heading, Text, Deck, Image, Notes } from 'spectacle';
 import { rawTheme } from '../rawTheme';
 
 const spectacleTheme = {
@@ -119,10 +120,17 @@ export default function Presentation() {
               And again, from the same State of CSS survey, you can see a clear decline of interest
               in styled-components and Emotion
             </li>
-            <li>What's going on?</li>
           </ul>
         </Notes>
       </Slide>
+      <SlideLayout.Section>
+        The challenges
+        <Notes>
+          <ul>
+            <li>What's going on?</li>
+          </ul>
+        </Notes>
+      </SlideLayout.Section>
       <Slide>
         <Slide6 />
         <Notes>
@@ -164,6 +172,117 @@ export default function Presentation() {
         </Notes>
         {/* 3:00 minutes */}
       </Slide>
+      <Slide>
+        <Text fontSize="2rem" color="secondary">
+          Performance
+        </Text>
+        <Heading fontWeight="500" color="primary">
+          11 + 4 = 16 kB gzipped of bundle size
+        </Heading>
+        <Image src="/images/bundle-size.png" width="50%" className={css({ margin: 'auto' })} />
+        <Notes>
+          {/* https://bundlephobia.com/package/styled-components@6.1.11 */}
+          <ul>
+            <li>First, we faced challenges with performance</li>
+            <li>The bundle size of your application takes a hit, we add about 11kB gzipped.</li>
+            <li>But it's not all, you also add the JavaScript theme object and it's color transformation tools, another 4kB</li>
+            <li>Now, it's not the end of the day, if you compare to the React bundle, you ahve 45KB.</li>
+            <li>Let's just ask ourseves: is it really needed?</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Text fontSize="2rem" color="secondary">
+          Performance
+        </Text>
+        <Heading fontWeight="500" color="primary">
+          Runtime
+        </Heading>
+        <Image src="/images/.png" width="50%" className={css({ margin: 'auto' })} />
+        <Notes>
+          <ul>
+            <li>The runtime takes a much larger hit</li>
+            <li>Let's see how much time it take to render this table with 1,000 rows.</li>
+            <li>It's not great, you can't use Emotion without virtualization.</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Text fontSize="2rem" color="secondary">
+          Performance
+        </Text>
+        <Heading fontWeight="500" color="primary">
+          Data Grid
+        </Heading>
+        <video autoPlay muted loop playsInline className={css({
+          width: '40%',
+          margin: 'auto',
+        })}>
+            <source src="/images/data-grid.mov" type="video/mp4"></source>
+        </video>
+        <Notes>
+          {/* https://mui.com/x/react-data-grid/#pro-plan
+https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
+          <ul>
+            <li>But you can see the same pattern even with virtualization.</li>
+            <li>This is our data grid, and even then, if you look at the time it takes to render each row, we could allow savy users to have 14% less white screens.</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Text fontSize="2rem" color="secondary">
+          Performance
+        </Text>
+        <Heading fontWeight="500" color="primary">
+          Data Grid
+        </Heading>
+        <Image src="/images/data-grid.png" width="50%" className={css({ margin: 'auto' })} />
+        <Notes>
+          <ul>
+            <li>.</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Text fontSize="2rem" color="secondary">
+          User feedback
+        </Text>
+        <Image src="/images/user-feedback.png" width="50%" className={css({ margin: 'auto' })} />
+        <Notes>
+          <ul>
+            <li>And if this wasn't enough, some user feedback validation</li>
+            <li>A user loving the sx prop, as a quick say to apply CSS and with smart shorthands, but not fast enough.</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Text fontSize="2rem" color="secondary">
+          RSC support
+        </Text>
+        <Image src="/images/user-feedback.png" width="50%" className={css({ margin: 'auto' })} />
+        <Image src="/images/user-feedback.png" width="50%" className={css({ margin: 'auto' })} />
+        <Notes>
+          {/*
+https://github.com/emotion-js/emotion/issues/2978
+https://github.com/styled-components/styled-components/issues/4025
+          */}
+          <ul>
+            <li>The second key problem is with the support of React Server Components</li>
+            <li>Nor styled components or Emotion are compatible with it.</li>
+            <li>We are blocked the React context API not working with RSC.</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <SlideLayout.Section>
+        The options
+        <Notes>
+        <ul>
+          <li>These problems are too important, we need to take action.</li>
+          <li>Which we what we started doing at MUI over a year ago.</li>
+          <li>Let's look at the key dimensions I think should be considered, but also for the sake of illustrating them, see how they translate into specific libraries.</li>
+        </ul>
+        </Notes>
+      </SlideLayout.Section>
     </Deck>
   );
 }

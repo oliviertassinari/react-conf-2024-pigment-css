@@ -34,7 +34,7 @@ function randomBetween(random: number, min: number, max: number) {
 
 export function Template() {
   const deckContext = React.useContext(DeckContext);
-  console.log('deckContext', deckContext.activeView.slideIndex);
+  // console.log('deckContext', deckContext.activeView.slideIndex);
   const randomGenerator = splitmix32(deckContext.activeView.slideIndex);
   return (
     <div className="Template-root">
