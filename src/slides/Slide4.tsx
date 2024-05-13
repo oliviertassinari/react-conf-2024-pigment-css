@@ -11,7 +11,7 @@ export default function Slide4() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '1.5rem',
+          gap: '1rem',
           '& > div': {
             margin: 0,
             padding: 0,

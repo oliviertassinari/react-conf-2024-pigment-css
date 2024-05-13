@@ -3,7 +3,7 @@ import SlideContainer from '../components/SlideContainer';
 import Card from '../components/Card';
 import { Heading, Text } from 'spectacle';
 
-export default function Slide2() {
+export default function Slide7() {
   return (
     <SlideContainer noBgColor>
       <div
@@ -12,13 +12,9 @@ export default function Slide2() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '1rem',
           '& > div': {
             margin: 0,
             padding: 0,
-          },
-          '& > ul': {
-            width: '100%',
           },
         })}
       >
@@ -30,7 +26,7 @@ export default function Slide2() {
         </Heading>
         <section
           className={css({
-            marginTop: '2rem',
+            marginTop: '4rem',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',

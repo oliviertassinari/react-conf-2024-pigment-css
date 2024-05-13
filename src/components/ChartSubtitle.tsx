@@ -7,7 +7,7 @@ export default function ChartSubtitle({ color, label }: { color: string; label: 
       className={css({
         display: 'flex',
         alignItems: 'center',
-        gap: '.75rem',
+        gap: '.5rem',
       })}
     >
       <div

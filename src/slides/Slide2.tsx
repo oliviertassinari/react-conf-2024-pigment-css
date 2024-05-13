@@ -11,7 +11,6 @@ export default function Slide2() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '1rem',
           '& > div': {
             margin: 0,
             padding: 0,
@@ -19,7 +18,7 @@ export default function Slide2() {
         })}
       >
         <Text fontSize="1.5rem" color="brandBlue" fontWeight="500">
-          Poll
+          Quick poll
         </Text>
         <Heading fontWeight="500" color="primary">
           Who here is currently using

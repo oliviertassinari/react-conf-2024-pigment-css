@@ -18,13 +18,13 @@ export default function StateOfCSSTitle({ subtitles }: { subtitles: React.ReactN
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '1rem',
+          gap: '.65rem',
           paddingBottom: '1rem',
           borderBottom: '1px solid hsl(0 0% 10%)',
         })}
       >
         {/* Source https://2023.stateofcss.com/en-US/css-in-js/ */}
-        <Image src="/images/stateofcss.svg" width="40" />
+        <Image src="/images/stateofcss.svg" width="36" />
         <Text fontSize="1.5rem" color="primary" fontWeight="500">
           State of CSS
         </Text>
@@ -37,7 +37,8 @@ export default function StateOfCSSTitle({ subtitles }: { subtitles: React.ReactN
           gap: '2rem',
           border: '1px solid hsl(0 0% 10%)',
           borderTop: 0,
-          backgroundColor: 'hsl(0 0% 5%)',
+          borderRadius: '0 0 8px 8px',
+          backgroundColor: 'hsl(210 60% 5%)',
         })}
       >
         {subtitles}
