@@ -27,6 +27,7 @@ import Slide6 from './slides/Slide6';
 import Slide7 from './slides/Slide7';
 import Slide8 from './slides/Slide8';
 import Slide9 from './slides/Slide9';
+import Slide10 from './slides/Slide10';
 
 const Button = styled.button`
   background: transparent;
@@ -239,27 +240,9 @@ export default function Presentation() {
         </Notes>
       </Slide>
       <Slide>
-        <Text fontSize="2rem" color="secondary">
-          Performance
-        </Text>
-        <Heading fontWeight="500" color="primary">
-          Data Grid
-        </Heading>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className={css({
-            width: '50%',
-            margin: '0 auto',
-          })}
-        >
-            <source src="/images/data-grid.mp4" type="video/mp4"></source>
-        </video>
+        <Slide10 />
         <Notes>
-          {/* https://mui.com/x/react-data-grid/#pro-plan
-https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
+          {/* https://mui.com/x/react-data-grid/#pro-plan https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
           <ul>
             <li>Let's say you add add virtualization.</li>
             <li>This is our data grid, rendering 100,000 rows with CPU throttling.</li>

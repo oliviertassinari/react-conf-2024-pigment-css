@@ -1,8 +1,8 @@
 import { css } from '@pigment-css/react';
 import SlideContainer from '../components/SlideContainer';
-import { Heading, Text, Image } from 'spectacle';
+import { Heading, Text } from 'spectacle';
 
-export default function Slide9() {
+export default function Slide10() {
   return (
     <SlideContainer noBgColor>
       <div
@@ -21,12 +21,13 @@ export default function Slide9() {
           Performance
         </Text>
         <Heading fontWeight="500" color="primary">
-          Runtime impact
+          Data Grid
         </Heading>
         <span
           className={css({
             marginTop: 50,
             width: '70%',
+            flexGrow: 0,
             padding: '1rem',
             display: 'flex',
             justifyContent: 'center',
@@ -36,11 +37,18 @@ export default function Slide9() {
             backgroundColor: 'hsla(220, 100%, 95%, 0.1)',
           })}
         >
-          <Image
-            src="/images/benchmark-before.png"
-            width="100%"
-            className={css({ margin: 0, borderRadius: '0.3rem' })}
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={css({
+              width: '70%',
+              borderRadius: '0.3rem',
+            })}
+          >
+            <source src="/images/data-grid.mp4" type="video/mp4" />
+          </video>
         </span>
       </div>
     </SlideContainer>
