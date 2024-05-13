@@ -1,10 +1,3 @@
-import Slide1 from './slides/Slide1';
-import Slide2 from './slides/Slide2';
-import Slide3 from './slides/Slide3';
-import Slide4 from './slides/Slide4';
-import Slide5 from './slides/Slide5';
-import Slide6 from './slides/Slide6';
-import Slide7 from './slides/Slide7';
 import { styled, css } from '@pigment-css/react';
 import { Template } from './Template';
 import { Backdrop } from './Backdrop';
@@ -24,14 +17,25 @@ import {
 } from 'spectacle';
 import { rawTheme } from '../rawTheme';
 
+// Slides
+import Slide1 from './slides/Slide1';
+import Slide2 from './slides/Slide2';
+import Slide3 from './slides/Slide3';
+import Slide4 from './slides/Slide4';
+import Slide5 from './slides/Slide5';
+import Slide6 from './slides/Slide6';
+import Slide7 from './slides/Slide7';
+import Slide8 from './slides/Slide8';
+import Slide9 from './slides/Slide9';
+
 const Button = styled.button`
   background: transparent;
   border-radius: 3px;
-  border: 2px solid #BF4F74;
-  color: #BF4F74;
+  border: 2px solid #bf4f74;
+  color: #bf4f74;
   margin: 0 1em;
   padding: 0.25em 1em;
-`
+`;
 
 const spectacleTheme = {
   colors: {
@@ -149,15 +153,17 @@ export default function Presentation() {
           1m45s
         </Notes>
       </Slide>
-      <SlideLayout.Section>
-        The challenges
+      <SlideLayout.Center>
+        <Heading fontWeight="500" color="primary">
+          The challenges
+        </Heading>
         <Notes>
           <ul>
             <li>What's going on?</li>
           </ul>
           1m50s
         </Notes>
-      </SlideLayout.Section>
+      </SlideLayout.Center>
       <Slide>
         <Slide6 />
         <Notes>
@@ -198,24 +204,18 @@ export default function Presentation() {
         </Notes>
       </Slide>
       <Slide>
-        <Text fontSize="2rem" color="secondary">
-          Performance
-        </Text>
-        <Heading fontWeight="500" color="primary">
-          11 + 4 = 16 kB gzipped of bundle size
-        </Heading>
-        <Image src="/images/bundle-size.png" width="50%" className={css({ margin: '30px auto' })} />
+        <Slide8 />
         <Notes>
           {/* https://bundlephobia.com/package/styled-components@6.1.11 */}
           <ul>
-            <li>The first problem we faced is with performance.</li>
+            <li>The first problem we faced was with performance.</li>
             <li>
               The bundle size of the application takes a hit, styled-components adds about 11kB
               gzipped because they have a runtime.
             </li>
             <li>
               And you also need to add about 4kB because it works with a rich JavaScript theme and
-              it's color transformation tools.
+              its color transformation tools.
             </li>
             <li>So in total, maybe 16 kB.</li>
             <li>
@@ -228,17 +228,11 @@ export default function Presentation() {
         </Notes>
       </Slide>
       <Slide>
-        <Text fontSize="2rem" color="secondary">
-          Performance
-        </Text>
-        <Heading fontWeight="500" color="primary">
-          Runtime
-        </Heading>
-        <Image src="/images/benchmark-before.png" width="50%" className={css({ margin: 'auto' })} />
+        <Slide9 />
         <Notes>
           <ul>
             <li>The runtime takes a much larger hit</li>
-            <li>Here, you can see how much time it take to render a table with 1,000 rows.</li>
+            <li>Here, you can see how much time it takes to render a table with 1,000 rows.</li>
             <li>It's not great, you can't use Emotion without virtualization.</li>
           </ul>
           3m35s
@@ -354,8 +348,10 @@ https://github.com/styled-components/styled-components/issues/4025
           4m40s
         </Notes>
       </Slide>
-      <SlideLayout.Section>
-        The options
+      <SlideLayout.Center>
+        <Heading fontWeight="500" color="primary">
+          The options
+        </Heading>
         <Notes>
           <ul>
             <li>These problems are too important for MUI not to try to solve.</li>
@@ -364,7 +360,7 @@ https://github.com/styled-components/styled-components/issues/4025
           </ul>
           5m00s
         </Notes>
-      </SlideLayout.Section>
+      </SlideLayout.Center>
       <Slide>
         <UnorderedList>
           <ListItem>Inline style</ListItem>
@@ -518,11 +514,14 @@ https://github.com/styled-components/styled-components/issues/4025
         </UnorderedList>
         <Notes>
           <ul>
-            <li>So to scale the application, even with atomic classes, you need granular style loading</li>
+            <li>
+              So to scale the application, even with atomic classes, you need granular style loading
+            </li>
             <li>Once you get it, you don't need atomic classes as much</li>
             <li>For example, inlining of critical CSS is a massive performance boost on mobile</li>
             <li>
-              Today, Next.js Pages Router with CSS Modules is the best way I am aware of to get granular style loading.
+              Today, Next.js Pages Router with CSS Modules is the best way I am aware of to get
+              granular style loading.
             </li>
           </ul>
           7m25s
@@ -539,7 +538,10 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             {/* Same point in https://github.com/vercel/next.js/discussions/59989#discussioncomment-9409037 */}
-            <li>For those that have time to rewatch my talk, this is a quick quote from Sebastian Markberg that raise the need for granular style loading</li>
+            <li>
+              For those that have time to rewatch my talk, this is a quick quote from Sebastian
+              Markberg that raise the need for granular style loading
+            </li>
           </ul>
           7m30s
         </Notes>
@@ -594,13 +596,15 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>
-              Last, backward compatible.
-              We have experienced first hand when moving from JSS to Emotion how
-              painful the migration was for the ecosystem.
+              Last, backward compatible. We have experienced first hand when moving from JSS to
+              Emotion how painful the migration was for the ecosystem.
             </li>
             <li>Spending time to migrate is tricky</li>
             <li>What if it was only about replacing their imports? Wouldn't to be amazing?</li>
-            <li>The styled-components API feels just fine. Why should I learn something new or spend a lot of time migrating?</li>
+            <li>
+              The styled-components API feels just fine. Why should I learn something new or spend a
+              lot of time migrating?
+            </li>
           </ul>
           8m30s
         </Notes>
@@ -626,7 +630,7 @@ https://github.com/styled-components/styled-components/issues/4025
             margin: '0 auto',
           })}
         >
-          <source src="/images/anotherone.mov" type="video/mp4"></source>
+            <source src="/images/anotherone.mov" type="video/mp4"></source>
         </video>
         <Notes>
           <ul>
@@ -637,9 +641,13 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Image src="/images/code-example.png" width="50%" className={css({
+        <Image
+          src="/images/code-example.png"
+          width="50%"
+          className={css({
             margin: '30px auto',
-          })} />
+          })}
+        />
         <Notes>
           <ul>
             <li>This is how it looks like</li>
@@ -725,7 +733,10 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             <li>But today, we are focused on making it work with Material UI v6</li>
             <li>We last release Material UI v5.0.0 almost 3 years ago.</li>
-            <li>With Material UI v6 we have two goals: modernize the library and be compatible with Pigment CSS.</li>
+            <li>
+              With Material UI v6 we have two goals: modernize the library and be compatible with
+              Pigment CSS.
+            </li>
           </ul>
         </Notes>
       </Slide>
@@ -734,13 +745,19 @@ https://github.com/styled-components/styled-components/issues/4025
           Introducing blog post
         </Heading>
         {/* use https://huggingface.co/spaces/huggingface-projects/QR-code-AI-art-generator to make the QR code looks good */}
-        <Text fontSize="1.8rem" color="secondary" className={css({ textAlign: 'center !important' })}>
+        <Text
+          fontSize="1.8rem"
+          color="secondary"
+          className={css({ textAlign: 'center !important' })}
+        >
           https://mui.com/blog/introducing-pigment-css/
         </Text>
         <Image src="/images/qr.jpg" width="20%" className={css({ margin: '0px auto' })} />
         <Notes>
           <ul>
-            <li>If you want to learn more about Pigment CSS, you can check our introduction blog post</li>
+            <li>
+              If you want to learn more about Pigment CSS, you can check our introduction blog post
+            </li>
             <li>Thank you</li>
           </ul>
         </Notes>
