@@ -281,7 +281,7 @@ export default function Presentation() {
               generating over and over the same Emotion styles.
             </li>
             <li>So in theory, we could have 14% less blank screen area.</li>
-            <li>For data analysis use cases, it matters, it's a big deal.</li>
+            <li>For analyzing data use cases, I think it matters.</li>
           </ul>
           4m10s
         </Notes>
@@ -299,7 +299,7 @@ export default function Presentation() {
         <Notes>
           {/* https://www.reddit.com/r/reactjs/comments/1bzsxa6/take_a_survey_which_ui_component_library_does/?rdt=61541 */}
           <ul>
-            <li>And if this wasn't enough, we also hear this from our users</li>
+            <li>And if this wasn't enough, we also hear it from you</li>
             <li>People loving to use Material UI but feel frustrated about its speed.</li>
           </ul>
           4m20s
