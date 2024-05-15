@@ -247,8 +247,8 @@ export default function Presentation() {
             </li>
             <li>So in total, you look at 16 kB.</li>
             <li>
-              To be fair, it's not the end of the world, if you compare it to the bundle size of
-              React, you have 45KB.
+              Now, to be fair, it's not the end of the world, if you compare it to the bundle size of
+              React itself, it's about 1/3 (45KB).
             </li>
             <li>Still, is it really needed?</li>
           </ul>
@@ -273,7 +273,7 @@ export default function Presentation() {
           <ul>
             <li>But sure, let's say you add virtualization.</li>
             <li>This is our data grid, rendering 100,000 rows with CPU throttling.</li>
-            <li>Do you see the blank screen areas?</li>
+            <li>Do you see the blank areas?</li>
           </ul>
           3m50s
         </Notes>
@@ -286,10 +286,10 @@ export default function Presentation() {
         <Notes>
           <ul>
             <li>
-              If you look at the time it takes to render each row, we spent about 14% of the time
-              generating over and over the same Emotion styles.
+              If you look at the performance timeline, you will find that it spent about 14% of the time
+              generating over and over the same Emotion styles for the rows.
             </li>
-            <li>So in theory, we could have 14% less blank screen area.</li>
+            <li>So in theory, we could have 14% fewer blank areas.</li>
             <li>For analyzing data use cases, I think it matters.</li>
           </ul>
           4m10s
@@ -309,7 +309,7 @@ export default function Presentation() {
           {/* https://www.reddit.com/r/reactjs/comments/1bzsxa6/take_a_survey_which_ui_component_library_does/?rdt=61541 */}
           <ul>
             <li>And if this wasn't enough, we also hear it from you</li>
-            <li>Here is a person loving to use Material UI but feel frustrated with its speed.</li>
+            <li>Here is a person loving to use Material UI but experiencing frustration with the speed of the sx prop.</li>
           </ul>
           4m20s
         </Notes>
@@ -354,7 +354,7 @@ https://github.com/styled-components/styled-components/issues/4025
               Nor styled components or Emotion are compatible with it, and we see no real progress.
             </li>
             <li>The blocking point is the React context API that is not available with RSC, so far.</li>
-            <li>Now, we might be able to use the React cache API, but again, we don't see much work happening there.</li>
+            <li>Now, we might be able to use the React cache API to workaround this, but again we don't see much work happening there.</li>
           </ul>
           4m40s
         </Notes>
@@ -366,9 +366,8 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>These problems are too important for MUI not to try to solve.</li>
-            <li>Over a year ago, we started to work on it.</li>
+            <li>Over a year ago, we started to focus on this. I hope you will too.</li>
             <li>Let's look at how we approached this.</li>
-            <li>But I also hope I will inspire more people to focus on this.</li>
           </ul>
           5m00s
         </Notes>
@@ -389,9 +388,9 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>There are a lot of of options.</li>
             <li>CSS Modules, Inline style, StyleX, Tailwind CSS, Linaria, and so on.</li>
             <li>It's overwhelming to compare them all.</li>
-            <li>Instead, we are going to look at some key properties to look at</li>
+            <li>So let's look at some of the key properties I think we should have</li>
             <li>
-              A disclaimer, I'm looking at those in the context of Material UI, these solution adopt
+              Before disclaimer, I'm looking at those in the context of Material UI, these solution adopt
               different tradeoffs, I'm sure they all have context where they are best.
             </li>
           </ul>
@@ -409,7 +408,7 @@ https://github.com/styled-components/styled-components/issues/4025
         />
         <Notes>
           <ul>
-            <li>The first thing we looked at is style colocation.</li>
+            <li>The first thing we wanted is style colocation.</li>
             <li>Meaning having the style in the same file as the html</li>
             <li>I think it's important, this bring great benefits:</li>
             <li>
@@ -463,7 +462,7 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>Lately, we have seen more atomic classes solutions emerge</li>
             <li>
               They are interesting because for small and medium size applications, they allow to
-              keep a single CSS file, while keeping it fast enough. It's simplers.
+              have a single CSS file, while keeping it fast enough. It's simplers.
             </li>
             <li>Now, it's not all bright</li>
             <li>
@@ -505,7 +504,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>And what about larger applications?</li>
-            <li>Atomic classes works if you keep your use of nested selectors in check</li>
+            <li>Atomic classes works if you avoid as much as possible nested selectors. It doesn't scale otherwise</li>
             <li>But nested selectors have good use cases</li>
           </ul>
           7m00s
@@ -527,9 +526,8 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>
               So to scale the application, even with atomic classes, you eventually need granular style loading
             </li>
-            <li>To be clear, I mean granular style as only loading the CSS for the elements that are on the page.</li>
-            <li>Once you get it, how much do you need atomic classes to improve performance? Hum</li>
-            <li>Inlining this critical CSS in the HTML is a massive performance boost on mobile</li>
+            <li>Meaning only loading the CSS for the elements that are on the page.</li>
+            <li>But once you get granular style loading, how much do you need atomic classes to improve performance? Hum</li>
           </ul>
           7m25s
         </Notes>
@@ -546,10 +544,7 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             {/* Same point in https://github.com/vercel/next.js/discussions/59989#discussioncomment-9409037 */}
             <li>
-              For those that have time to rewatch my talk, this is a quick quote from Sebastian Markbåge that raise the need for granular style loading.
-            </li>
-            <li>
-              He's effectively saying that it's the right direction to take.
+              For those that have time to rewatch my talk, I have included a quote from Sebastian Markbåge on the need for granular style loading.
             </li>
           </ul>
           7m30s
@@ -567,9 +562,11 @@ https://github.com/styled-components/styled-components/issues/4025
         </UnorderedList>
         <Notes>
           <ul>
-            <li>Emotion giving you one of the fastest First Contentful Paint metrics</li>
+            <li>It's one of the areas where Emotion perform well</li>
             <li>The more recently libraries are not as exciting for me.</li>
-            <li>I think we, as a community, should move toward making granular style loading core to how we do CSS like it's for JavaScript.</li>
+            <li>
+              I think we, as a community, should move toward making granular style loading core to how we do CSS like it's for JavaScript.
+            </li>
           </ul>
           7m45s
         </Notes>
