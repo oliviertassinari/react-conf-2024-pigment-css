@@ -262,7 +262,7 @@ export default function Presentation() {
         <Notes>
           {/* https://mui.com/x/react-data-grid/#pro-plan https://github.com/mui/mui-x/issues/11866#issuecomment-1963168133 */}
           <ul>
-            <li>Let's say you add add virtualization.</li>
+            <li>But sure, let's say you add virtualization.</li>
             <li>This is our data grid, rendering 100,000 rows with CPU throttling.</li>
             <li>Do you see the blank screen areas?</li>
           </ul>

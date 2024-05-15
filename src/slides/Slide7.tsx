@@ -35,12 +35,12 @@ export default function Slide7() {
         >
           <Card>
             <Text fontSize="1.8rem" color="textSecondary" fontWeight="500">
-              Material UI
+              Base UI
             </Text>
           </Card>
           <Card>
             <Text fontSize="1.8rem" color="textSecondary" fontWeight="500">
-              Base UI
+              Material UI
             </Text>
           </Card>
           <Card>
