@@ -31,6 +31,7 @@ import Slide7 from './slides/Slide7';
 import Slide8 from './slides/Slide8';
 import Slide9 from './slides/Slide9';
 import Slide10 from './slides/Slide10';
+import SlideGodSack from './slides/SlideGodSack';
 
 const Button = styled.button`
   background: transparent;
@@ -604,18 +605,10 @@ https://github.com/styled-components/styled-components/issues/4025
             </li>
             <li>What if it the solution was only about replacing imports? Wouldn't to be amazing?</li>
             <li>
-              The styled-components API feels just fine. Why should I learn something new or spend a
-              lot of time migrating?
+              The styled-components API, it feels fine.
             </li>
           </ul>
           8m30s
-        </Notes>
-      </Slide>
-      <Slide>
-        <Notes>
-          <ul>
-            <li></li>
-          </ul>
         </Notes>
       </Slide>
       <Slide>
@@ -626,27 +619,25 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             <li>This is where Pigment CSS steps in</li>
             <li>A new CSS-in-JS library that we have been working on for the last 12 months</li>
+            <li>I known what you are thinking</li>
           </ul>
           8m45s
         </Notes>
       </Slide>
-      <Slide>
-        <video
-          controls
-          playsInline
-          className={css({
-            width: '100%',
-            margin: '0 auto',
-          })}
-        >
-            <source src="/images/anotherone.mov" type="video/mp4"></source>
-        </video>
+      <Slide className={css({ ':first-child': { padding: 0, justifyContent: 'center' } })}>
+        <SlideGodSack />
         <Notes>
           <ul>
-            <li>I known what you are thinking</li>
             <li>Another one?</li>
           </ul>
           9m00s
+        </Notes>
+      </Slide>
+      <Slide>
+        <Notes>
+          <ul>
+            <li></li>
+          </ul>
         </Notes>
       </Slide>
       <Slide>
