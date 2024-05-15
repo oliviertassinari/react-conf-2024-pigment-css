@@ -428,7 +428,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Heading fontWeight="500" color="primary">
           Style colocation
         </Heading>
-        <Text>CSS Modules → 🤔</Text>
+        <Text>CSS Modules 🤔</Text>
         <Notes>
           <ul>
             <li>In that context CSS Modules isn't great.</li>
@@ -555,15 +555,14 @@ https://github.com/styled-components/styled-components/issues/4025
           Plain vs. Atomic classes
         </Heading>
         <UnorderedList>
-          <ListItem>Emotion / Styled component → 👌</ListItem>
-          <ListItem>StyleX → 🤔</ListItem>
-          <ListItem>Tailwind CSS → 🤔🤔</ListItem>
-          <ListItem>Panda CSS → 🤔🤔</ListItem>
+          <ListItem>Emotion / Styled component 👌</ListItem>
+          <ListItem>StyleX, Tailwind CSS, Panda CSS 🤔</ListItem>
         </UnorderedList>
         <Notes>
           <ul>
             <li>It's one of the areas where Emotion perform well</li>
             <li>The more recently libraries are not as exciting for me.</li>
+            <li>Atomic classes yes, but please not in development. And more importantly</li>
             <li>
               I think we, as a community, should move toward making granular style loading core to how we do CSS like it's for JavaScript.
             </li>
@@ -580,13 +579,13 @@ https://github.com/styled-components/styled-components/issues/4025
         </UnorderedList>
         <Appear>
           <UnorderedList>
-            <ListItem>StyleX → 🤔</ListItem>
-            <ListItem>Tailwind CSS → 🤔🤔</ListItem>
+            <ListItem>StyleX 🤔</ListItem>
+            <ListItem>Tailwind CSS 🤔🤔</ListItem>
           </UnorderedList>
         </Appear>
         <Notes>
           <ul>
-            <li>Familiarity</li>
+            <li>Now, familiarity</li>
             <li>Do I have to learn a new API?</li>
             <li>I have a limit memory capacity, I espetially don't want the need for a cheatsheet</li>
           </ul>
