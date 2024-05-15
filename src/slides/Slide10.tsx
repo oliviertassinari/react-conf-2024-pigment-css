@@ -25,16 +25,12 @@ export default function Slide10() {
         </Heading>
         <span
           className={css({
-            marginTop: 50,
+            marginTop: 30,
             width: '70%',
             flexGrow: 0,
             padding: '1rem',
             display: 'flex',
             justifyContent: 'center',
-            border: '1px solid',
-            borderColor: 'hsla(220, 100%, 95%, 0.15)',
-            borderRadius: '.65rem',
-            backgroundColor: 'hsla(220, 100%, 95%, 0.1)',
           })}
         >
           <video
