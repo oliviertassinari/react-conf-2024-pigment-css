@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { styled, css } from '@pigment-css/react';
 import { Template } from './Template';
 import { Backdrop } from './Backdrop';
@@ -14,6 +15,8 @@ import {
   Notes,
   UnorderedList,
   ListItem,
+  DeckContext,
+  useMousetrap,
 } from 'spectacle';
 import { rawTheme } from '../rawTheme';
 
@@ -77,9 +80,25 @@ const transition = {
   },
 };
 
+// Support presentation dongles
+function KeyboardShortcut() {
+  const deckContext = React.useContext(DeckContext);
+
+  useMousetrap(
+    {
+      pageup: deckContext.stepBackward,
+      pagedown: deckContext.stepForward,
+    },
+    [],
+  );
+
+  return null;
+}
+
 export default function Presentation() {
   return (
     <Deck theme={spectacleTheme} transition={transition} template={<Template />}>
+      <KeyboardShortcut />
       <Slide>
         <Slide1 />
         <Notes>
