@@ -300,7 +300,7 @@ export default function Presentation() {
           {/* https://www.reddit.com/r/reactjs/comments/1bzsxa6/take_a_survey_which_ui_component_library_does/?rdt=61541 */}
           <ul>
             <li>And if this wasn't enough, we also hear it from you</li>
-            <li>People loving to use Material UI but feel frustrated about its speed.</li>
+            <li>Here is a person loving to use Material UI but feel frustrated with its speed.</li>
           </ul>
           4m20s
         </Notes>
@@ -344,7 +344,8 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>
               Nor styled components or Emotion are compatible with it, and we see no real progress.
             </li>
-            <li>The blocking point is the React context API that is not working with RSC.</li>
+            <li>The blocking point is the React context API that is not available with RSC, so far.</li>
+            <li>Now, we might be able to use the React cache API, but again, we don't see much work happening there.</li>
           </ul>
           4m40s
         </Notes>
@@ -358,14 +359,15 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>These problems are too important for MUI not to try to solve.</li>
             <li>Over a year ago, we started to work on it.</li>
             <li>Let's look at how we approached this.</li>
+            <li>But I also hope I will inspire more people to focus on this.</li>
           </ul>
           5m00s
         </Notes>
       </SlideLayout.Center>
       <Slide>
         <UnorderedList>
-          <ListItem>Inline style</ListItem>
           <ListItem>CSS Modules</ListItem>
+          <ListItem>Inline style</ListItem>
           <ListItem>StyleX</ListItem>
           <ListItem>Tailwind CSS</ListItem>
           <ListItem>Linaria</ListItem>
@@ -376,9 +378,9 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>There are a lot of of options.</li>
-            <li>Inline style, CSS Modules, StyleX, Tailwind CSS, Linaria, and so on.</li>
+            <li>CSS Modules, Inline style, StyleX, Tailwind CSS, Linaria, and so on.</li>
             <li>It's overwhelming to compare them all.</li>
-            <li>Instead, we are going to look at some key properties</li>
+            <li>Instead, we are going to look at some key properties to look at</li>
             <li>
               A disclaimer, I'm looking at those in the context of Material UI, these solution adopt
               different tradeoffs, I'm sure they all have context where they are best.
@@ -405,7 +407,7 @@ https://github.com/styled-components/styled-components/issues/4025
               <ul>
                 <li>It minimize context shifting</li>
                 <li>You don't have to name everything</li>
-                <li>having the style close also open doors for more dynamic logic</li>
+                <li>having the style close also open doors for more dynamic logic with JavaScript</li>
               </ul>
               <li>People who truly want separation of concerns can still get it</li>
             </li>
@@ -429,19 +431,18 @@ https://github.com/styled-components/styled-components/issues/4025
       </Slide>
       <Slide>
         <Heading fontWeight="500" color="primary">
-          Plain vs. Atomic class names
+          Plain vs. Atomic classes
         </Heading>
         <Notes>
           <ul>
-            <li>Another very structuring choice is on Plain vs. Atomic class names</li>
-            <li>It involves both performance and DX considerations</li>
+            <li>Another very structuring choice is deciding on adopting Atomic classes or not</li>
           </ul>
           6m05s
         </Notes>
       </Slide>
       <Slide>
         <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
-          Plain vs. Atomic class names
+          Plain vs. Atomic classes
         </Heading>
         {/* TODO: Conflict between Pigment CSS and Styled components https://github.com/mui/pigment-css/issues/80 */}
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
@@ -450,19 +451,22 @@ https://github.com/styled-components/styled-components/issues/4025
         <Image src="/images/class-atomic.png" width="60%" className={css({ margin: '0px auto' })} />
         <Notes>
           <ul>
-            <li>Lately, we have seen more atomic class names solutions</li>
+            <li>Lately, we have seen more atomic classes solutions emerge</li>
             <li>
               They are interesting because for small and medium size applications, they allow to
-              keep a single CSS file, while keeping it small enough, it's simplers.
+              keep a single CSS file, while keeping it fast enough. It's simplers.
             </li>
             <li>Now, it's not all bright</li>
+            <li>
+              In development, you get hard to debug style, and heavy DOM that is hard to inspect.
+            </li>
           </ul>
           6m20s
         </Notes>
       </Slide>
       <Slide>
         <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
-          Plain vs. Atomic class names
+          Plain vs. Atomic classes
         </Heading>
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
           Plain class names
@@ -470,13 +474,9 @@ https://github.com/styled-components/styled-components/issues/4025
         <Image src="/images/class-plain.png" width="60%" className={css({ margin: '0px auto' })} />
         <Notes>
           <ul>
+            <li>For me, the dream output in development is the one we used to have in Material UI v4.</li>
             <li>
-              In development, you get hard to debug style, and heavy DOM that is hard to inspect.
-            </li>
-            <li>For me, the dream output is the one we used to have in Material UI v4.</li>
-            <li>
-              Clear class name, not too heavy DOM, helps know exaclty what to customize from the
-              theme.
+              Clear class name and not too heavy DOM. It really helps to understand your styling strucutre.
             </li>
           </ul>
           6m40s
@@ -484,7 +484,7 @@ https://github.com/styled-components/styled-components/issues/4025
       </Slide>
       <Slide>
         <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
-          Plain vs. Atomic class names
+          Plain vs. Atomic classes
         </Heading>
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
           Growing applications
@@ -504,33 +504,30 @@ https://github.com/styled-components/styled-components/issues/4025
       </Slide>
       <Slide>
         <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
-          Plain vs. Atomic class names
+          Plain vs. Atomic classes
         </Heading>
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
           Granular style loading
         </Text>
         <UnorderedList>
           <ListItem>Only loading the CSS you need for the page</ListItem>
-          <ListItem>Inlining of critical CSS</ListItem>
+          <ListItem>Do you still need atomic classes?</ListItem>
         </UnorderedList>
         <Notes>
           <ul>
             <li>
-              So to scale the application, even with atomic classes, you need granular style loading
+              So to scale the application, even with atomic classes, you eventually need granular style loading
             </li>
-            <li>Once you get it, you don't need atomic classes as much</li>
-            <li>For example, inlining of critical CSS is a massive performance boost on mobile</li>
-            <li>
-              Today, Next.js Pages Router with CSS Modules is the best way I am aware of to get
-              granular style loading.
-            </li>
+            <li>To be clear, I mean granular style as only loading the CSS for the elements that are on the page.</li>
+            <li>Once you get it, how much do you need atomic classes to improve performance? Hum</li>
+            <li>Inlining this critical CSS in the HTML is a massive performance boost on mobile</li>
           </ul>
           7m25s
         </Notes>
       </Slide>
       <Slide>
         <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
-          Plain vs. Atomic class names
+          Plain vs. Atomic classes
         </Heading>
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
           Granular style loading
@@ -540,8 +537,10 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             {/* Same point in https://github.com/vercel/next.js/discussions/59989#discussioncomment-9409037 */}
             <li>
-              For those that have time to rewatch my talk, this is a quick quote from Sebastian
-              Markberg that raise the need for granular style loading
+              For those that have time to rewatch my talk, this is a quick quote from Sebastian Markbåge that raise the need for granular style loading.
+            </li>
+            <li>
+              He's effectively saying that it's the right direction to take.
             </li>
           </ul>
           7m30s
@@ -549,18 +548,19 @@ https://github.com/styled-components/styled-components/issues/4025
       </Slide>
       <Slide>
         <Heading fontWeight="500" color="primary">
-          Plain vs. Atomic class names
+          Plain vs. Atomic classes
         </Heading>
         <UnorderedList>
+          <ListItem>Emotion / Styled component → 👌</ListItem>
           <ListItem>StyleX → 🤔</ListItem>
-          <ListItem>Tailwind CSS → 🤔</ListItem>
-          <ListItem>Panda CSS → 🤔</ListItem>
-          <ListItem>Emotion / Styled component → 💪</ListItem>
+          <ListItem>Tailwind CSS → 🤔🤔</ListItem>
+          <ListItem>Panda CSS → 🤔🤔</ListItem>
         </UnorderedList>
         <Notes>
           <ul>
             <li>Emotion giving you one of the fastest First Contentful Paint metrics</li>
-            <li>The more recently libraries are not as exciting for me</li>
+            <li>The more recently libraries are not as exciting for me.</li>
+            <li>I think we, as a community, should move toward making granular style loading core to how we do CSS like it's for JavaScript.</li>
           </ul>
           7m45s
         </Notes>
@@ -575,14 +575,14 @@ https://github.com/styled-components/styled-components/issues/4025
         <Appear>
           <UnorderedList>
             <ListItem>StyleX → 🤔</ListItem>
-            <ListItem>Tailwind CSS → 🤔</ListItem>
+            <ListItem>Tailwind CSS → 🤔🤔</ListItem>
           </UnorderedList>
         </Appear>
         <Notes>
           <ul>
             <li>Familiarity</li>
             <li>Do I have to learn a new API?</li>
-            <li>I have a limit memory capacity, I don't want to need a cheatsheet</li>
+            <li>I have a limit memory capacity, I espetially don't want the need for a cheatsheet</li>
           </ul>
           8m00s
         </Notes>
