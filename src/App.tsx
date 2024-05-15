@@ -540,6 +540,9 @@ https://github.com/styled-components/styled-components/issues/4025
           Granular style loading
         </Text>
         <Image src="/images/future-of-css.png" width="80%" className={css({ margin: '0 auto' })} />
+        <Text fontSize="1rem" color="secondary" textAlign="center" className={css({ textDecoration: 'underline' })}>
+          reactwg/react-18#108
+        </Text>
         <Notes>
           <ul>
             {/* Same point in https://github.com/vercel/next.js/discussions/59989#discussioncomment-9409037 */}
@@ -555,7 +558,7 @@ https://github.com/styled-components/styled-components/issues/4025
           Plain vs. Atomic classes
         </Heading>
         <UnorderedList>
-          <ListItem>Emotion / Styled component 👌</ListItem>
+          <ListItem>Emotion, Styled component 👍</ListItem>
           <ListItem>StyleX, Tailwind CSS, Panda CSS 🤔</ListItem>
         </UnorderedList>
         <Notes>
