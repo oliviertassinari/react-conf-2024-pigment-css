@@ -167,7 +167,7 @@ export default function Presentation() {
             <li>And again, it's consistent with the same survey.</li>
             <li>
               In the State of CSS you can see a clear decline of interest in styled-components and
-              Emotion since a year ago.
+              Emotion since a year or two ago.
             </li>
           </ul>
           1m45s
@@ -204,13 +204,13 @@ export default function Presentation() {
         <Notes>
           <ul>
             <li>
-              At MUI, we fund the development of a few open-source projects:
+              At MUI, we fund the development of a few open-source projects, we have:
               <br />
-              - Material UI, a popular UI library that implements Google's Material Design
+              - Base UI, a headless UI component library, meaning unstyled
               <br />
-              - Base UI, a headless, "unstyled" UI component library
+              - Material UI, a popular UI library that implements Material Design principles
               <br />
-              - MUI X, a set of advanced React components, like Data Grids, Charts, and so on
+              - MUI X, a set of advanced React components, including Data Grids, Charts, and so on
               <br />
               - Toolpad, a set of components to quickly build internal tools
               <br />
@@ -231,15 +231,14 @@ export default function Presentation() {
             <li>The first problem we faced was with performance.</li>
             <li>
               The bundle size of the application takes a hit, styled-components adds about 11kB
-              gzipped because they have a runtime.
+              gzipped because it has a runtime.
             </li>
             <li>
-              And you also need to add about 4kB because it works with a rich JavaScript theme and
-              its color transformation tools.
+              And you also need to add about 4kB because it works with a rich JavaScript theme and some helpers, like around colors.
             </li>
-            <li>So in total, maybe 16 kB.</li>
+            <li>So in total, you look at 16 kB.</li>
             <li>
-              To be fair, it's not the end of the day, if you compare it to the bundle size of
+              To be fair, it's not the end of the world, if you compare it to the bundle size of
               React, you have 45KB.
             </li>
             <li>Still, is it really needed?</li>
@@ -251,7 +250,7 @@ export default function Presentation() {
         <Slide9 />
         <Notes>
           <ul>
-            <li>The runtime takes a much larger hit</li>
+            <li>The runtime takes the largest performance hit</li>
             <li>Here, you can see how much time it takes to render a table with 1,000 rows.</li>
             <li>It's not great, you can't use Emotion without virtualization.</li>
           </ul>
