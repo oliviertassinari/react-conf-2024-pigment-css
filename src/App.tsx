@@ -631,9 +631,45 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
+        <Heading fontWeight="500" color="primary">
+          Why?
+        </Heading>
+        {/* Source https://www.figma.com/design/tQ4ItyDhQQ77B68QDVx7Ys/Untitled?node-id=1-2&t=RKZxegL0vZPl4dnq-0 */}
+        <Image
+          src="/images/tradeoff.png"
+          width="50%"
+          className={css({
+            margin: '30px auto',
+          })}
+        />
         <Notes>
           <ul>
-            <li></li>
+            <li>So Why?</li>
+            <li>If you map the space, having on one side the effort it takes to migrate</li>
+            <li>And on the other, the reliance on JavaScript.</li>
+            <li>You get this chart</li>
+            <li>Starting from Emotion, we had to choose between either go toward CSS only, so toward CSS Modules or Tailwind CSS</li>
+            <li>But at the expense of a costly migration and giving up on some nice features</li>
+            <li>Or go the other way, into Babel or even Rust code transformation with bundlers integration and get the nicest features.</li>
+            <li>Inspired by the work done on the React Compiler, and not seeing projects attemping it, we felt it had to be tried.</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <Heading fontWeight="500" color="primary">
+          Why?
+        </Heading>
+        {/* Source https://www.figma.com/design/tQ4ItyDhQQ77B68QDVx7Ys/Untitled?node-id=1-2&t=RKZxegL0vZPl4dnq-0 */}
+        <Image
+          src="/images/tradeoff-after.png"
+          width="50%"
+          className={css({
+            margin: '30px auto',
+          })}
+        />
+        <Notes>
+          <ul>
+            <li>And this is Why</li>
           </ul>
         </Notes>
       </Slide>
@@ -649,6 +685,7 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             <li>This is how it looks like</li>
             <li>It's pretty much the same as Emotion</li>
+            <li>With an extra `sx` prop for quick iterations</li>
           </ul>
         </Notes>
       </Slide>
@@ -671,6 +708,9 @@ https://github.com/styled-components/styled-components/issues/4025
           </Appear>
           <Appear>
             <ListItem>As few breaking changes as possible</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>Optional Atomic CSS down the line</ListItem>
           </Appear>
         </UnorderedList>
         <Notes>
@@ -699,10 +739,10 @@ https://github.com/styled-components/styled-components/issues/4025
             <ListItem>Started as a fork of Linaria</ListItem>
           </Appear>
           <Appear>
-            <ListItem>It transpile the code to generate CSS Modules files</ListItem>
+            <ListItem>And now based on Anber/wyw-in-js</ListItem>
           </Appear>
           <Appear>
-            <ListItem>Based on https://github.com/Anber/wyw-in-js</ListItem>
+            <ListItem>It transpile the code to generate CSS Modules files</ListItem>
           </Appear>
         </UnorderedList>
         <Notes>
@@ -718,7 +758,8 @@ https://github.com/styled-components/styled-components/issues/4025
         <Image src="/images/josh.png" width="40%" className={css({ margin: '0px auto' })} />
         <Notes>
           <ul>
-            <li>When does this land? People have already been playing with it</li>
+            <li>When does this land?</li>
+            <li>It's in alpha, but people have already been playing with it.</li>
           </ul>
         </Notes>
       </Slide>
@@ -728,7 +769,7 @@ https://github.com/styled-components/styled-components/issues/4025
         </Heading>
         <Notes>
           <ul>
-            <li>But today, we are focused on making it work with Material UI v6</li>
+            <li>Today, we are focused on making it work with Material UI v6</li>
             <li>We last release Material UI v5.0.0 almost 3 years ago.</li>
             <li>
               With Material UI v6 we have two goals: modernize the library and be compatible with
