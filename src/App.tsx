@@ -80,6 +80,14 @@ const transition = {
   },
 };
 
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+}
+
 // Support presentation dongles
 function KeyboardShortcut() {
   const deckContext = React.useContext(DeckContext);
@@ -88,6 +96,7 @@ function KeyboardShortcut() {
     {
       pageup: deckContext.stepBackward,
       pagedown: deckContext.stepForward,
+      f: toggleFullScreen,
     },
     [],
   );
@@ -110,7 +119,7 @@ export default function Presentation() {
             <li>
               By the end of this presentation, I would like you to better understand how React
               Server Components are shaking this space, the challenges with today's generation of
-              libraries, and the key properties I think you should look out for a great styling
+              libraries, and the key properties I think we should look out for a great styling
               solutions.
             </li>
             <li>

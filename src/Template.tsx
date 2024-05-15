@@ -5,7 +5,7 @@ import { DeckContext, FullScreen } from 'spectacle';
 // https://stackoverflow.com/questions/521295/seeding-the-random-number-generator-in-javascript
 // A pseudorandom number generator
 function splitmix32(seed: number) {
-  return function () {
+  return () => {
     seed |= 0;
     seed = (seed + 0x9e3779b9) | 0;
     let t = seed ^ (seed >>> 16);

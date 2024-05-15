@@ -1,7 +1,6 @@
 import { styled, css, keyframes } from '@pigment-css/react';
 import styled2 from '@emotion/styled';
 import styled3 from 'styled-components';
-import PigmentLogo from '../components/PigmentLogo';
 
 const scale = keyframes({
   to: { scale: 'var(--scale)' },
