@@ -592,7 +592,7 @@ https://github.com/styled-components/styled-components/issues/4025
           Backward compatible
         </Heading>
         <UnorderedList>
-          <ListItem>What if it was only about replacing their imports? 😍</ListItem>
+          <ListItem>What if the solution was only about replacing imports? 😍</ListItem>
         </UnorderedList>
         <Notes>
           <ul>
@@ -601,7 +601,7 @@ https://github.com/styled-components/styled-components/issues/4025
               Emotion how painful the migration was for the ecosystem.
             </li>
             <li>Spending time to migrate is tricky</li>
-            <li>What if it was only about replacing their imports? Wouldn't to be amazing?</li>
+            <li>What if it the solution was only about replacing imports? Wouldn't to be amazing?</li>
             <li>
               The styled-components API feels just fine. Why should I learn something new or spend a
               lot of time migrating?
