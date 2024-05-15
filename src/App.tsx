@@ -558,7 +558,7 @@ https://github.com/styled-components/styled-components/issues/4025
           Plain vs. Atomic classes
         </Heading>
         <UnorderedList>
-          <ListItem>Emotion, Styled component 👍</ListItem>
+          <ListItem>Emotion, Styled component, Linaria 👍</ListItem>
           <ListItem>StyleX, Tailwind CSS, Panda CSS 🤔</ListItem>
         </UnorderedList>
         <Notes>
@@ -580,17 +580,11 @@ https://github.com/styled-components/styled-components/issues/4025
         <UnorderedList>
           <ListItem>Am I good to go with what I already know about CSS?</ListItem>
         </UnorderedList>
-        <Appear>
-          <UnorderedList>
-            <ListItem>StyleX 🤔</ListItem>
-            <ListItem>Tailwind CSS 🤔🤔</ListItem>
-          </UnorderedList>
-        </Appear>
         <Notes>
           <ul>
             <li>Now, familiarity</li>
-            <li>Do I have to learn a new API?</li>
-            <li>I have a limit memory capacity, I espetially don't want the need for a cheatsheet</li>
+            <li>Do I have to learn a new API? Or can I rely on my existing knowledge?</li>
+            <li>Say I am a Designer, or I have a limit memory capacity, It would be great for this library to be really fast to learn, and not need cheat sheet.</li>
           </ul>
           8m00s
         </Notes>
@@ -605,10 +599,9 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>
-              Last, backward compatible. We have experienced first hand when moving from JSS to
+              Last, backward compatible. We experienced first hand when moving from JSS to
               Emotion how painful the migration was for the ecosystem.
             </li>
-            <li>Spending time to migrate is tricky</li>
             <li>What if it the solution was only about replacing imports? Wouldn't to be amazing?</li>
             <li>
               The styled-components API feels just fine. Why should I learn something new or spend a
@@ -616,6 +609,13 @@ https://github.com/styled-components/styled-components/issues/4025
             </li>
           </ul>
           8m30s
+        </Notes>
+      </Slide>
+      <Slide>
+        <Notes>
+          <ul>
+            <li></li>
+          </ul>
         </Notes>
       </Slide>
       <Slide>
