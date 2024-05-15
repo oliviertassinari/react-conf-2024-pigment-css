@@ -81,12 +81,8 @@ const transition = {
   },
 };
 
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else {
-    document.exitFullscreen();
-  }
+function setFullScreen() {
+  document.documentElement.requestFullscreen();
 }
 
 // Support presentation dongles
@@ -97,7 +93,7 @@ function KeyboardShortcut() {
     {
       pageup: deckContext.stepBackward,
       pagedown: deckContext.stepForward,
-      f: toggleFullScreen,
+      f: setFullScreen,
     },
     [],
   );
@@ -619,7 +615,8 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             <li>This is where Pigment CSS steps in</li>
             <li>A new CSS-in-JS library that we have been working on for the last 12 months</li>
-            <li>I known what you are thinking</li>
+            <li>Now, I known what you are thinking</li>
+            <li>Another one?</li>
           </ul>
           8m45s
         </Notes>
@@ -628,7 +625,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <SlideGodSack />
         <Notes>
           <ul>
-            <li>Another one?</li>
+            {/* The use of https://www.gov.uk/guidance/exceptions-to-copyright seems legal */}
           </ul>
           9m00s
         </Notes>
