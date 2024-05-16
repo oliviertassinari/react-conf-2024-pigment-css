@@ -807,10 +807,10 @@ https://github.com/styled-components/styled-components/issues/4025
       <Slide>
         <SlideContainer leftAligned noBgColor>
           <TitleAndSubtitle title="Performance" subtitle="Pigment CSS" />
-          <ImageContainer>
+          <ImageContainer width="50%">
             <Image
               src="/images/benchmark-after.png"
-              width="50%"
+              width="100%"
               className={css({ margin: 'auto' })}
             />
           </ImageContainer>
@@ -848,8 +848,8 @@ https://github.com/styled-components/styled-components/issues/4025
       <Slide>
         <SlideContainer leftAligned noBgColor>
           <TitleAndSubtitle title="When does this land?" subtitle="Pigment CSS" />
-          <ImageContainer>
-            <Image src="/images/josh.png" width="35%" />
+          <ImageContainer width="35%">
+            <Image src="/images/josh.png" width="100%" />
           </ImageContainer>
         </SlideContainer>
         <Notes>
