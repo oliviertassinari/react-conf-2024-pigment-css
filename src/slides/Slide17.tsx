@@ -3,15 +3,16 @@ import SlideContainer from '../components/SlideContainer';
 import TitleAndSubtitle from '../components/TitleAndSubtitle';
 import { Image } from 'spectacle';
 
-export default function Slide8() {
+export default function Slide17() {
   return (
     <SlideContainer leftAligned noBgColor>
-      <TitleAndSubtitle title="11 + 4 = 16kB of gzipped bundle size" subtitle="Performance" />
+      <TitleAndSubtitle title="Style colocation" />
       <span
         className={css({
           margin: 'auto',
           marginTop: '1rem',
-          padding: '1rem 0',
+          width: '100%',
+          padding: '1rem',
           display: 'flex',
           justifyContent: 'center',
           border: '1px solid',
@@ -21,7 +22,7 @@ export default function Slide8() {
           boxShadow: '0 8px 20px #000',
         })}
       >
-        <Image src="/images/bundle-size.png" width="70%" className={css({ margin: 0 })} />
+        <Image src="/images/tailwind-code.png" width="90%%" />
       </span>
     </SlideContainer>
   );

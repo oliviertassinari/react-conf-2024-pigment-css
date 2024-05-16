@@ -4,6 +4,8 @@ import { Template } from './Template';
 import { Backdrop } from './Backdrop';
 import { Pigment } from './components/Pigment';
 import SlideContainer from './components/SlideContainer';
+import TitleAndSubtitle from './components/TitleAndSubtitle';
+import ImageContainer from './components/ImageContainer';
 import {
   Slide,
   SlideLayout,
@@ -31,6 +33,11 @@ import Slide7 from './slides/Slide7';
 import Slide8 from './slides/Slide8';
 import Slide9 from './slides/Slide9';
 import Slide10 from './slides/Slide10';
+import Slide11 from './slides/Slide11';
+import Slide12 from './slides/Slide12';
+import Slide13 from './slides/Slide13';
+import Slide15 from './slides/Slide15';
+import Slide16 from './slides/Slide16';
 import SlideGodSack from './slides/SlideGodSack';
 
 const Button = styled.button`
@@ -281,14 +288,7 @@ export default function Presentation() {
         </Notes>
       </Slide>
       <Slide>
-        <Text fontSize="2rem" color="secondary">
-          Performance
-        </Text>
-        <Image
-          src="/images/data-grid.png"
-          width="40%"
-          className={css({ margin: '50px auto', borderRadius: 2 })}
-        />
+        <Slide11 />
         <Notes>
           <ul>
             <li>
@@ -302,14 +302,7 @@ export default function Presentation() {
         </Notes>
       </Slide>
       <Slide>
-        <Text fontSize="2rem" color="secondary">
-          Performance
-        </Text>
-        <Image
-          src="/images/user-feedback-1.png"
-          width="55%"
-          className={css({ margin: '100px auto 20px', borderRadius: 4 })}
-        />
+        <Slide12 />
         {/*<Image src="/images/user-feedback-2.png" width="55%" className={css({ margin: '5px auto' })} />*/}
         <Notes>
           {/* https://www.reddit.com/r/reactjs/comments/1bzsxa6/take_a_survey_which_ui_component_library_does/?rdt=61541 */}
@@ -324,30 +317,7 @@ export default function Presentation() {
         </Notes>
       </Slide>
       <Slide>
-        <Text fontSize="2rem" color="secondary">
-          RSC support
-        </Text>
-        <Image
-          src="/images/rsc-emotion.png"
-          width="50%"
-          className={css({
-            position: 'absolute',
-            borderRadius: 4,
-            top: 150,
-            transform: 'rotate(-1deg)',
-          })}
-        />
-        <Image
-          src="/images/rsc-sc.png"
-          width="50%"
-          className={css({
-            position: 'absolute',
-            borderRadius: 4,
-            top: 150,
-            left: '50%',
-            transform: 'rotate(4deg)',
-          })}
-        />
+        <Slide13 />
         <Notes>
           {/*
 https://github.com/emotion-js/emotion/issues/2978
@@ -387,16 +357,7 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </SlideLayout.Center>
       <Slide>
-        <UnorderedList>
-          <ListItem>CSS Modules</ListItem>
-          <ListItem>Inline style</ListItem>
-          <ListItem>StyleX</ListItem>
-          <ListItem>Tailwind CSS</ListItem>
-          <ListItem>Linaria</ListItem>
-          <ListItem>Panda CSS</ListItem>
-          <ListItem>Tokanami</ListItem>
-          <ListItem>…</ListItem>
-        </UnorderedList>
+        <Slide15 />
         <Notes>
           <ul>
             <li>There are a lot of of options.</li>
@@ -413,14 +374,7 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          Style colocation
-        </Heading>
-        <Image
-          src="/images/style-collocation.png"
-          width="50%"
-          className={css({ margin: '0px auto', borderRadius: 8 })}
-        />
+        <Slide16 />
         <Notes>
           <ul>
             <li>The first thing we wanted is style colocation.</li>
@@ -442,10 +396,10 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          Style colocation
-        </Heading>
-        <Text>CSS Modules 🤔</Text>
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Style colocation" />
+          <Text>CSS Modules 🤔</Text>
+        </SlideContainer>
         <Notes>
           <ul>
             <li>In that context CSS Modules isn't great.</li>
@@ -455,9 +409,9 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          Plain vs. Atomic classes
-        </Heading>
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Plain vs. Atomic classes" />
+        </SlideContainer>
         <Notes>
           <ul>
             <li>Another key decision is on adopting Atomic classes or not</li>
@@ -466,18 +420,16 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
-          Plain vs. Atomic classes
-        </Heading>
-        {/* TODO: Conflict between Pigment CSS and Styled components https://github.com/mui/pigment-css/issues/80 */}
-        <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
-          Atomic class names
-        </Text>
-        <Image
-          src="/images/class-atomic.png"
-          width="60%"
-          className={css({ margin: '0px auto', borderRadius: 2 })}
-        />
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Atomic class names" subtitle="Plain vs. Atomic classes" />
+          <ImageContainer>
+            <Image
+              src="/images/class-atomic.png"
+              width="60%"
+              className={css({ margin: '0px auto', borderRadius: 2 })}
+            />
+          </ImageContainer>
+        </SlideContainer>
         <Notes>
           <ul>
             <li>Lately, we have seen a trend of more atomic classes solutions emerge</li>
@@ -494,17 +446,16 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
-          Plain vs. Atomic classes
-        </Heading>
-        <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
-          Plain class names
-        </Text>
-        <Image
-          src="/images/class-plain.png"
-          width="60%"
-          className={css({ margin: '0px auto', borderRadius: 2 })}
-        />
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Plain class names" subtitle="Plain vs. Atomic classes" />
+          <ImageContainer>
+            <Image
+              src="/images/class-plain.png"
+              width="60%"
+              className={css({ margin: '0px auto', borderRadius: 2 })}
+            />
+          </ImageContainer>
+        </SlideContainer>
         <Notes>
           <ul>
             <li>
@@ -519,16 +470,13 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
-          Plain vs. Atomic classes
-        </Heading>
-        <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
-          Growing applications
-        </Text>
-        <UnorderedList>
-          <ListItem>Atomic classes keep the CSS file small</ListItem>
-          <ListItem>But nested selectors have good use cases</ListItem>
-        </UnorderedList>
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Growing applications" subtitle="Plain vs. Atomic classes" />
+          <UnorderedList>
+            <ListItem>Atomic classes keep the CSS file small</ListItem>
+            <ListItem>But nested selectors have good use cases</ListItem>
+          </UnorderedList>
+        </SlideContainer>
         <Notes>
           <ul>
             <li>And what about larger applications?</li>
@@ -540,16 +488,13 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
-          Plain vs. Atomic classes
-        </Heading>
-        <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
-          Granular style loading
-        </Text>
-        <UnorderedList>
-          <ListItem>Only loading the CSS you need for the page</ListItem>
-          <ListItem>Do you still need atomic classes?</ListItem>
-        </UnorderedList>
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Granular style loading" subtitle="Plain vs. Atomic classes" />
+          <UnorderedList>
+            <ListItem>Only loading the CSS you need for the page</ListItem>
+            <ListItem>Do you still need atomic classes?</ListItem>
+          </UnorderedList>
+        </SlideContainer>
         <Notes>
           <ul>
             <li>
@@ -566,25 +511,24 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary" className={css({ marginBottom: '0 !important' })}>
-          Plain vs. Atomic classes
-        </Heading>
-        <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
-          Granular style loading
-        </Text>
-        <Image
-          src="/images/future-of-css.png"
-          width="80%"
-          className={css({ margin: '0 auto', borderRadius: 2 })}
-        />
-        <Text
-          fontSize="1rem"
-          color="secondary"
-          textAlign="center"
-          className={css({ textDecoration: 'underline' })}
-        >
-          reactwg/react-18#108
-        </Text>
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Granular style loading" subtitle="Plain vs. Atomic classes" />
+          <ImageContainer>
+            <Image
+              src="/images/future-of-css.png"
+              width="80%"
+              className={css({ margin: '0 auto', borderRadius: 2 })}
+            />
+          </ImageContainer>
+          <Text
+            fontSize="1rem"
+            color="secondary"
+            textAlign="center"
+            className={css({ textDecoration: 'underline', margin: '-50px auto', width: '100%' })}
+          >
+            reactwg/react-18#108
+          </Text>
+        </SlideContainer>
         <Notes>
           <ul>
             {/* Same point in https://github.com/vercel/next.js/discussions/59989#discussioncomment-9409037 */}
@@ -598,13 +542,13 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          Plain vs. Atomic classes
-        </Heading>
-        <UnorderedList>
-          <ListItem>Emotion, Styled component, Linaria 👍</ListItem>
-          <ListItem>StyleX, Tailwind CSS, Panda CSS 🤔</ListItem>
-        </UnorderedList>
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="So, which should we pick?" subtitle="Plain vs. Atomic classes" />
+          <UnorderedList>
+            <ListItem>Emotion, Styled component, Linaria 👍</ListItem>
+            <ListItem>StyleX, Tailwind CSS, Panda CSS 🤔</ListItem>
+          </UnorderedList>
+        </SlideContainer>
         <Notes>
           <ul>
             <li>So, which library should we pick here?</li>
@@ -620,12 +564,12 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          Familiarity
-        </Heading>
-        <UnorderedList>
-          <ListItem>Am I good to go with what I already know about CSS?</ListItem>
-        </UnorderedList>
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Familiarity" subtitle="Considerations" />
+          <UnorderedList>
+            <ListItem>Am I good to go with what I already know about CSS?</ListItem>
+          </UnorderedList>
+        </SlideContainer>
         <Notes>
           <ul>
             <li>Another dimension, familiarity</li>
@@ -639,12 +583,12 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          Backward compatible
-        </Heading>
-        <UnorderedList>
-          <ListItem>What if the solution was only about replacing imports? 😍</ListItem>
-        </UnorderedList>
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Backward compatible" subtitle="Considerations" />
+          <UnorderedList>
+            <ListItem>What if the solution was only about replacing imports? 😍</ListItem>
+          </UnorderedList>
+        </SlideContainer>
         <Notes>
           <ul>
             <li>
@@ -753,29 +697,31 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          Key design decisions
-        </Heading>
-        <UnorderedList>
-          <Appear>
-            <ListItem>As few breaking changes as possible</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>No runtime</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>A runtime fallback</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Granular style loading</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>RSC support</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Being able to add Atomic CSS later down the road for production</ListItem>
-          </Appear>
-        </UnorderedList>
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Key design decisions" subtitle="Pigment CSS" />
+        </SlideContainer>
+        <div className={css({ marginTop: '-50px', padding: '0 4rem' })}>
+          <UnorderedList>
+            <Appear>
+              <ListItem>As few breaking changes as possible</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>No runtime</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>A runtime fallback</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Granular style loading</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>RSC support</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Being able to add Atomic CSS later down the road for production</ListItem>
+            </Appear>
+          </UnorderedList>
+        </div>
         <Notes>
           <ul>
             <li>These has been or key design decisions</li>
@@ -783,10 +729,17 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          Performance
-        </Heading>
-        <Image src="/images/benchmark-after.png" width="50%" className={css({ margin: 'auto' })} />
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Performance" subtitle="Pigment CSS" />
+          <ImageContainer>
+            <Image
+              src="/images/benchmark-after.png"
+              width="50%"
+              className={css({ margin: 'auto' })}
+            />
+          </ImageContainer>
+        </SlideContainer>
+
         <Notes>
           <ul>
             <li>This is how it looks like now, with the same benchmark.</li>
@@ -794,20 +747,22 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          How does it work?
-        </Heading>
-        <UnorderedList>
-          <Appear>
-            <ListItem>Started as a fork of Linaria</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Share logic with wyw-in-js</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>It transpile the code to generate CSS Modules files</ListItem>
-          </Appear>
-        </UnorderedList>
+        <SlideContainer leftAligned noBgColor noHeight>
+          <TitleAndSubtitle title="How does it work?" subtitle="Pigment CSS" />
+        </SlideContainer>
+        <div className={css({ marginTop: '-50px', padding: '0 4rem' })}>
+          <UnorderedList>
+            <Appear>
+              <ListItem>Started as a fork of Linaria</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Shares logic with wyw-in-js</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>It transpiles the code to generate CSS Modules files</ListItem>
+            </Appear>
+          </UnorderedList>
+        </div>
         <Notes>
           <ul>
             <li>These has been or key design decisions</li>
@@ -815,14 +770,12 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          When does this land?
-        </Heading>
-        <Image
-          src="/images/josh.png"
-          width="40%"
-          className={css({ margin: '0px auto', borderRadius: 4 })}
-        />
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="When does this land?" subtitle="Pigment CSS" />
+          <ImageContainer>
+            <Image src="/images/josh.png" width="35%" />
+          </ImageContainer>
+        </SlideContainer>
         <Notes>
           <ul>
             <li>When does this land?</li>
@@ -834,7 +787,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Heading fontWeight="500" color="primary">
           Material UI v6
         </Heading>
-        <Image src="/images/material-ui.png" width="65%" className={css({ margin: '40px auto' })} />
+        <Image src="/images/material-ui.png" width="65%" className={css({ margin: '0 auto' })} />
         <Notes>
           <ul>
             <li>Today, we are focused on making it work with Material UI v6</li>

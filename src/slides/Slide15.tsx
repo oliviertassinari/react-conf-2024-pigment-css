@@ -1,18 +1,17 @@
 import { css } from '@pigment-css/react';
 import SlideContainer from '../components/SlideContainer';
 import Card from '../components/Card';
-import TitleAndSubtitle from '../components/TitleAndSubtitle';
 import { Text } from 'spectacle';
 
-export default function Slide7() {
+export default function Slide15() {
   return (
     <SlideContainer noBgColor leftAligned>
-      <TitleAndSubtitle title="The open-source projects we fund" subtitle="The MUI ecosystem" />
       <section
         className={css({
           margin: 'auto',
           marginTop: '8rem',
           display: 'flex',
+          flexWrap: 'wrap',
           alignItems: 'center',
           justifyContent: 'center',
           gap: '1rem',
@@ -20,22 +19,42 @@ export default function Slide7() {
       >
         <Card>
           <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
-            Base UI
+            Inline styles
           </Text>
         </Card>
         <Card>
           <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
-            Material UI
+            CSS Modules
           </Text>
         </Card>
         <Card>
           <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
-            MUI X
+            StyleX
           </Text>
         </Card>
         <Card>
           <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
-            Toolpad
+            Tailwind CSS
+          </Text>
+        </Card>
+        <Card>
+          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+            Linaria
+          </Text>
+        </Card>
+        <Card>
+          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+            Panda CSS
+          </Text>
+        </Card>
+        <Card>
+          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+            Tokanami
+          </Text>
+        </Card>
+        <Card>
+          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+            etc...
           </Text>
         </Card>
       </section>

@@ -1,52 +1,40 @@
 import { css } from '@pigment-css/react';
 import SlideContainer from '../components/SlideContainer';
-import { Heading, Text } from 'spectacle';
+import TitleAndSubtitle from '../components/TitleAndSubtitle';
 
 export default function Slide10() {
   return (
-    <SlideContainer noBgColor>
-      <div
+    <SlideContainer leftAligned noBgColor>
+      <TitleAndSubtitle title="Data Grid" subtitle="Performance" />
+      <span
         className={css({
+          margin: 'auto',
+          // width: '70%',
+          flexGrow: 0,
+          padding: '1rem',
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
           justifyContent: 'center',
-          '& > div': {
-            margin: 0,
-            padding: 0,
-          },
+          border: '1px solid',
+          borderColor: 'hsla(220, 100%, 95%, 0.15)',
+          borderRadius: '.65rem',
+          backgroundColor: 'hsla(220, 100%, 95%, 0.05)',
+          boxShadow: '0 8px 20px #000',
         })}
       >
-        <Text fontSize="1.5rem" color="brandBlue" fontWeight="500">
-          Performance
-        </Text>
-        <Heading fontWeight="500" color="primary">
-          Data Grid
-        </Heading>
-        <span
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className={css({
-            marginTop: 30,
-            width: '70%',
-            flexGrow: 0,
-            padding: '1rem',
-            display: 'flex',
-            justifyContent: 'center',
+            width: '60%',
+            borderRadius: '.65rem',
+            overflow: 'clip',
           })}
         >
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className={css({
-              width: '70%',
-              borderRadius: '0.3rem',
-            })}
-          >
-            <source src="/images/data-grid.mp4" type="video/mp4" />
-          </video>
-        </span>
-      </div>
+          <source src="/images/data-grid.mp4" type="video/mp4" />
+        </video>
+      </span>
     </SlideContainer>
   );
 }
