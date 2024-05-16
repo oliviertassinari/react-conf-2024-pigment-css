@@ -105,7 +105,7 @@ export default function Presentation() {
   return (
     <Deck theme={spectacleTheme} transition={transition} template={<Template />}>
       <KeyboardShortcut />
-      <Slide className={css({ ':first-child': { padding: 0 } })}>
+      <Slide className={css({ '& .sc-dAbbOL': { padding: 0 } })}>
         <Slide1 />
         <Notes>
           <ul>
@@ -119,9 +119,8 @@ export default function Presentation() {
               styling libraries, and the key properties I think we should look out for a great one.
             </li>
             <li>
-              Now, the space might be shaken, but there is hope. I'm also going
-              to introduce Pigment CSS, which is part of a next generation of CSS-in-JS libraries
-              movement.
+              Now, the space might be shaken, but there is hope. I'm also going to introduce Pigment
+              CSS, which is part of a next generation of CSS-in-JS libraries movement.
             </li>
           </ul>
           35s
@@ -146,8 +145,8 @@ export default function Presentation() {
           <ul>
             <li>You folks seems to be a good sample of the ecosystem.</li>
             <li>
-              According to the last State of CSS survey, over half of the community uses one
-              of these two libraires.
+              According to the last State of CSS survey, over half of the community uses one of
+              these two libraires.
             </li>
           </ul>
           1m05s
@@ -200,9 +199,7 @@ export default function Presentation() {
               For those that don't know me, I co-created Material UI a long time ago. I'm now
               running MUI as its CEO.
             </li>
-            <li>
-              How is this relevant?
-            </li>
+            <li>How is this relevant?</li>
           </ul>
           2m05s
         </Notes>
@@ -224,8 +221,8 @@ export default function Presentation() {
               <br />
             </li>
             <li>
-              So, the common denominator between them is that all these projects rely on Emotion in one
-              way or another, which gave us a good exposure to the problems.
+              So, the common denominator between them is that all these projects rely on Emotion in
+              one way or another, which gave us a good exposure to the problems.
             </li>
           </ul>
           2m30s
@@ -238,11 +235,12 @@ export default function Presentation() {
           <ul>
             <li>The first problem we faced was with performance.</li>
             <li>
-              When you install styled-components, you add about 11kB
-              gzipped of JavaScript in your bundle. It's because it has a runtime.
+              When you install styled-components, you add about 11kB gzipped of JavaScript in your
+              bundle. It's because it has a runtime.
             </li>
             <li>
-              And you also need to add about 4kB because it works with a rich JavaScript theme and some helpers.
+              And you also need to add about 4kB because it works with a rich JavaScript theme and
+              some helpers.
             </li>
             <li>So in total, you look at 16 kB.</li>
             <li>
@@ -259,7 +257,10 @@ export default function Presentation() {
         <Notes>
           <ul>
             <li>The runtime takes a performance hit, larger one this time.</li>
-            <li>Here, you can see how much time it takes to render a table with 1,000 rows with a few different approaches.</li>
+            <li>
+              Here, you can see how much time it takes to render a table with 1,000 rows with a few
+              different approaches.
+            </li>
             <li>It's not great with Emotion, you can't use it without virtualization.</li>
           </ul>
           3m30s
@@ -281,12 +282,16 @@ export default function Presentation() {
         <Text fontSize="2rem" color="secondary">
           Performance
         </Text>
-        <Image src="/images/data-grid.png" width="40%" className={css({ margin: '50px auto', borderRadius: 2 })} />
+        <Image
+          src="/images/data-grid.png"
+          width="40%"
+          className={css({ margin: '50px auto', borderRadius: 2 })}
+        />
         <Notes>
           <ul>
             <li>
-              If you look at the performance timeline, you will find that it spent about 14% of the time
-              generating over and over the same Emotion styles for the rows.
+              If you look at the performance timeline, you will find that it spent about 14% of the
+              time generating over and over the same Emotion styles for the rows.
             </li>
             <li>So in theory, we could have 14% fewer blank areas.</li>
             <li>For analyzing data use cases, I think it matters.</li>
@@ -308,7 +313,10 @@ export default function Presentation() {
           {/* https://www.reddit.com/r/reactjs/comments/1bzsxa6/take_a_survey_which_ui_component_library_does/?rdt=61541 */}
           <ul>
             <li>And if this wasn't enough, we also hear it from you</li>
-            <li>Here is a person loving to use Material UI but experiencing frustration with the speed of the sx prop.</li>
+            <li>
+              Here is a person loving to use Material UI but experiencing frustration with the speed
+              of the sx prop.
+            </li>
           </ul>
           4m20s
         </Notes>
@@ -352,8 +360,13 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>
               Nor styled components or Emotion are compatible with it, and we see no real progress.
             </li>
-            <li>The blocking point is the React context API that is not available with RSC, so far.</li>
-            <li>Now, we might be able to use the React cache API to workaround this, but again we don't see much work happening there.</li>
+            <li>
+              The blocking point is the React context API that is not available with RSC, so far.
+            </li>
+            <li>
+              Now, we might be able to use the React cache API to workaround this, but again we
+              don't see much work happening there.
+            </li>
           </ul>
           4m40s
         </Notes>
@@ -389,8 +402,9 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>It's overwhelming to compare them all.</li>
             <li>So let's look at some of the key properties I think we should have</li>
             <li>
-              But before a disclaimer, I'm looking at those in my own context and Material UI, these solution adopt
-              different tradeoffs, I'm sure they all have context where they are best.
+              But before a disclaimer, I'm looking at those in my own context and Material UI, these
+              solution adopt different tradeoffs, I'm sure they all have context where they are
+              best.
             </li>
           </ul>
           5m25s
@@ -414,7 +428,9 @@ https://github.com/styled-components/styled-components/issues/4025
               <ul>
                 <li>It minimize context shifting</li>
                 <li>You don't have to name everything</li>
-                <li>having the style close also open doors for more dynamic logic with JavaScript</li>
+                <li>
+                  having the style close also open doors for more dynamic logic with JavaScript
+                </li>
               </ul>
               <li>People who truly want separation of concerns can still get it</li>
             </li>
@@ -455,7 +471,11 @@ https://github.com/styled-components/styled-components/issues/4025
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
           Atomic class names
         </Text>
-        <Image src="/images/class-atomic.png" width="60%" className={css({ margin: '0px auto', borderRadius: 2 })} />
+        <Image
+          src="/images/class-atomic.png"
+          width="60%"
+          className={css({ margin: '0px auto', borderRadius: 2 })}
+        />
         <Notes>
           <ul>
             <li>Lately, we have seen a trend of more atomic classes solutions emerge</li>
@@ -478,12 +498,19 @@ https://github.com/styled-components/styled-components/issues/4025
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
           Plain class names
         </Text>
-        <Image src="/images/class-plain.png" width="60%" className={css({ margin: '0px auto', borderRadius: 2 })} />
+        <Image
+          src="/images/class-plain.png"
+          width="60%"
+          className={css({ margin: '0px auto', borderRadius: 2 })}
+        />
         <Notes>
           <ul>
-            <li>For me, the dream output in development is the one we used to have in Material UI v4.</li>
             <li>
-              Clear class name and not too heavy DOM. It really helps to understand your styling strucutre.
+              For me, the dream output in development is the one we used to have in Material UI v4.
+            </li>
+            <li>
+              Clear class name and not too heavy DOM. It really helps to understand your styling
+              strucutre.
             </li>
           </ul>
           6m40s
@@ -524,10 +551,14 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>
-              So to scale the application, even with atomic classes, you eventually need granular style loading.
+              So to scale the application, even with atomic classes, you eventually need granular
+              style loading.
             </li>
             <li>Meaning only loading the CSS for the elements that are on the page.</li>
-            <li>But once you get granular style loading, how much do you need atomic classes to improve performance? Hum</li>
+            <li>
+              But once you get granular style loading, how much do you need atomic classes to
+              improve performance? Hum
+            </li>
           </ul>
           7m25s
         </Notes>
@@ -539,15 +570,26 @@ https://github.com/styled-components/styled-components/issues/4025
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
           Granular style loading
         </Text>
-        <Image src="/images/future-of-css.png" width="80%" className={css({ margin: '0 auto', borderRadius: 2 })} />
-        <Text fontSize="1rem" color="secondary" textAlign="center" className={css({ textDecoration: 'underline' })}>
+        <Image
+          src="/images/future-of-css.png"
+          width="80%"
+          className={css({ margin: '0 auto', borderRadius: 2 })}
+        />
+        <Text
+          fontSize="1rem"
+          color="secondary"
+          textAlign="center"
+          className={css({ textDecoration: 'underline' })}
+        >
           reactwg/react-18#108
         </Text>
         <Notes>
           <ul>
             {/* Same point in https://github.com/vercel/next.js/discussions/59989#discussioncomment-9409037 */}
             <li>
-              If you don't trust, me, trust the former React Tech Lead, Sebastian Markbåge. Here is a quote on the need for granular style loading that you can read on the replay of my talk.
+              If you don't trust, me, trust the former React Tech Lead, Sebastian Markbåge. Here is
+              a quote on the need for granular style loading that you can read on the replay of my
+              talk.
             </li>
           </ul>
           7m30s
@@ -568,7 +610,8 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>The more recently libraries are not as exciting for me.</li>
             <li>Atomic classes yes, but please not in development. And more importantly</li>
             <li>
-              I think we, as a community, should move toward making granular style loading core to how we do CSS like it's for loading JavaScript.
+              I think we, as a community, should move toward making granular style loading core to
+              how we do CSS like it's for loading JavaScript.
             </li>
           </ul>
           7m45s
@@ -585,7 +628,10 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             <li>Now, familiarity</li>
             <li>Do I have to learn a new API? Or can I rely on my existing knowledge?</li>
-            <li>Say I am a Designer, or I have a limit memory capacity, It would be great for this library to be really fast to learn, and not need cheat sheet.</li>
+            <li>
+              Say I am a Designer, or I have a limit memory capacity, It would be great for this
+              library to be really fast to learn, and not need cheat sheet.
+            </li>
           </ul>
           8m00s
         </Notes>
@@ -600,25 +646,25 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>
-              Last, backward compatible. We experienced first hand when moving from JSS to
-              Emotion how painful the migration was for the ecosystem.
+              Last, backward compatible. We experienced first hand when moving from JSS to Emotion
+              how painful the migration was for the ecosystem.
             </li>
             <li>What if the solution was only about replacing imports? Wouldn't to be amazing?</li>
-            <li>
-              The styled-components API, it feels fine.
-            </li>
+            <li>The styled-components API, it feels fine.</li>
           </ul>
           8m30s
         </Notes>
       </Slide>
-      <Slide className={css({ ':first-child': { padding: 0 } })}>
+      <Slide className={css({ '& .sc-dAbbOL': { padding: 0 } })}>
         <SlideContainer>
           <Pigment />
         </SlideContainer>
         <Notes>
           <ul>
             <li>This is where Pigment CSS steps in</li>
-            <li>A new CSS-in-JS library that we have been working on at MUI for the last 12 months</li>
+            <li>
+              A new CSS-in-JS library that we have been working on at MUI for the last 12 months
+            </li>
             <li>----</li>
             <li>I known what you are thinking</li>
             <li>Another one?</li>
@@ -626,7 +672,7 @@ https://github.com/styled-components/styled-components/issues/4025
           8m45s
         </Notes>
       </Slide>
-      <Slide className={css({ ':first-child': { padding: 0, justifyContent: 'center' } })}>
+      <Slide className={css({ '& .sc-dAbbOL': { padding: 0, justifyContent: 'center' } })}>
         <SlideGodSack />
         <Notes>
           <ul>
@@ -653,10 +699,19 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>If you map the space, having on one side the effort it takes to migrate</li>
             <li>And on the other, how much the solution relies on JavaScript.</li>
             <li>You get this chart</li>
-            <li>Starting from Emotion, we had to choose between either go toward CSS only, so toward CSS Modules or Tailwind CSS</li>
+            <li>
+              Starting from Emotion, we had to choose between either go toward CSS only, so toward
+              CSS Modules or Tailwind CSS
+            </li>
             <li>But at the expense of a costly migration and giving up on some nice features</li>
-            <li>Or go the other way, into Babel or even Rust code transformation with bundlers integration and get the nicest features.</li>
-            <li>Inspired by the work done on the React Compiler, and not seeing projects attemping it, we felt it had to be tried, nobody else was going to do it.</li>
+            <li>
+              Or go the other way, into Babel or even Rust code transformation with bundlers
+              integration and get the nicest features.
+            </li>
+            <li>
+              Inspired by the work done on the React Compiler, and not seeing projects attemping it,
+              we felt it had to be tried, nobody else was going to do it.
+            </li>
           </ul>
         </Notes>
       </Slide>
@@ -761,7 +816,11 @@ https://github.com/styled-components/styled-components/issues/4025
         <Heading fontWeight="500" color="primary">
           When does this land?
         </Heading>
-        <Image src="/images/josh.png" width="40%" className={css({ margin: '0px auto', borderRadius: 4 })} />
+        <Image
+          src="/images/josh.png"
+          width="40%"
+          className={css({ margin: '0px auto', borderRadius: 4 })}
+        />
         <Notes>
           <ul>
             <li>When does this land?</li>

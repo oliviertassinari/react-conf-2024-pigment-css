@@ -8,7 +8,7 @@ export default function SlideGodSack() {
   const active = deckContext.activeView.slideIndex === 28;
   const presenterMode = new URLSearchParams(window.location.search).get('presenterMode') === 'true';
   React.useEffect(() => {
-    if(presenterMode) {
+    if (presenterMode) {
       return;
     }
     if (active) {
@@ -20,14 +20,14 @@ export default function SlideGodSack() {
   }, [active, presenterMode]);
   return (
     <video
-    ref={ref}
-    playsInline
-    className={css({
-      width: '100%',
-      margin: '0 auto',
-    })}
+      ref={ref}
+      playsInline
+      className={css({
+        width: '100%',
+        margin: '0 auto',
+      })}
     >
-      <source src="/images/anotherone.mp4" type="video/mp4"></source>
+        <source src="/images/anotherone.mp4" type="video/mp4"></source>
     </video>
   );
 }

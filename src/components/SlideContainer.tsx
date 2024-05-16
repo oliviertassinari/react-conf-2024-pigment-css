@@ -12,7 +12,7 @@ export default function SlideContainer({
     <div
       className={css({
         height: '100lvh',
-        paddingBottom: '50px',
+        paddingBottom: '80px',
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',

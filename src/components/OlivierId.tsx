@@ -25,6 +25,7 @@ export default function OlivierId({
       }))}
       style={{
         position: notAbsolute ? 'static' : 'absolute',
+        bottom: notAbsolute ? undefined : 90,
         gap: bigger ? '1rem' : '0.875rem',
       }}
     >
