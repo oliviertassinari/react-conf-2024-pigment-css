@@ -13,6 +13,7 @@ export default function Slide11() {
           marginTop: '1rem',
           padding: '1rem',
           display: 'flex',
+          width: '40%',
           justifyContent: 'center',
           border: '1px solid',
           borderColor: 'hsla(220, 100%, 95%, 0.15)',
@@ -21,7 +22,7 @@ export default function Slide11() {
           boxShadow: '0 8px 20px #000',
         })}
       >
-        <Image src="/images/data-grid.png" width="40%" />
+        <Image src="/images/data-grid.png" width="100%" />
       </span>
     </SlideContainer>
   );

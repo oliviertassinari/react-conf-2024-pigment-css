@@ -11,7 +11,7 @@ export default function Slide9() {
         className={css({
           margin: 'auto',
           marginTop: '1rem',
-          width: '100%',
+          width: '65%',
           padding: '1rem',
           display: 'flex',
           justifyContent: 'center',
@@ -24,7 +24,7 @@ export default function Slide9() {
       >
         <Image
           src="/images/benchmark-before.png"
-          width="65%"
+          width="100%"
           className={css({ borderRadius: '.3rem' })}
         />
       </span>

@@ -515,10 +515,10 @@ https://github.com/styled-components/styled-components/issues/4025
       <Slide>
         <SlideContainer leftAligned noBgColor>
           <TitleAndSubtitle title="Granular style loading" subtitle="Plain vs. Atomic classes" />
-          <ImageContainer>
+          <ImageContainer width="80%">
             <Image
               src="/images/future-of-css.png"
-              width="80%"
+              width="100%"
               className={css({ margin: '0 auto', borderRadius: 2 })}
             />
           </ImageContainer>
@@ -568,7 +568,7 @@ https://github.com/styled-components/styled-components/issues/4025
               })}
             >
               <Text fontSize="1.3rem" color="textPrimary" fontWeight="500">
-                Plain classes 👍
+                Granular style loading 👍
               </Text>
               <Card>
                 <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">
@@ -608,7 +608,7 @@ https://github.com/styled-components/styled-components/issues/4025
               })}
             >
               <Text fontSize="1.3rem" color="textTertiary" fontWeight="500">
-                Atomic classes
+                Atomic classes 🤔
               </Text>
               <Card>
                 <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">

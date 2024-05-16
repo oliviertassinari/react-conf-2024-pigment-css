@@ -11,8 +11,7 @@ export default function Slide12() {
         className={css({
           margin: 'auto',
           marginTop: '1rem',
-          width: '100%',
-          // height: '100%',
+          width: '80%',
           padding: '1rem',
           display: 'flex',
           justifyContent: 'center',

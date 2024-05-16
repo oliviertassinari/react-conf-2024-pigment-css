@@ -9,16 +9,11 @@ export default function Slide10() {
       <span
         className={css({
           margin: 'auto',
-          // width: '70%',
+          width: '60%',
           flexGrow: 0,
           padding: '1rem',
           display: 'flex',
           justifyContent: 'center',
-          border: '1px solid',
-          borderColor: 'hsla(220, 100%, 95%, 0.15)',
-          borderRadius: '.65rem',
-          backgroundColor: 'hsla(220, 100%, 95%, 0.05)',
-          boxShadow: '0 8px 20px #000',
         })}
       >
         <video
@@ -27,7 +22,7 @@ export default function Slide10() {
           loop
           playsInline
           className={css({
-            width: '60%',
+            width: '100%',
             borderRadius: '.65rem',
             overflow: 'clip',
           })}
