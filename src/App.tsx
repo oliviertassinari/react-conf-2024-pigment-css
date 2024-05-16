@@ -778,8 +778,6 @@ https://github.com/styled-components/styled-components/issues/4025
       <Slide>
         <SlideContainer leftAligned noBgColor>
           <TitleAndSubtitle title="Key design decisions" subtitle="Pigment CSS" />
-        </SlideContainer>
-        <div className={css({ marginTop: '-2rem', padding: '0 4rem' })}>
           <UnorderedList>
             <Appear>
               <ListItem>No runtime</ListItem>
@@ -797,7 +795,7 @@ https://github.com/styled-components/styled-components/issues/4025
               <ListItem>Being able to add atomic CSS later down the road for production</ListItem>
             </Appear>
           </UnorderedList>
-        </div>
+        </SlideContainer>
         <Notes>
           <ul>
             <li>These has been our key design decisions</li>
@@ -815,7 +813,6 @@ https://github.com/styled-components/styled-components/issues/4025
             />
           </ImageContainer>
         </SlideContainer>
-
         <Notes>
           <ul>
             <li>This is how it looks like now, with the same benchmark.</li>
