@@ -89,14 +89,16 @@ function setFullScreen() {
 function KeyboardShortcut() {
   const deckContext = React.useContext(DeckContext);
 
-  useMousetrap(
-    {
-      pageup: deckContext.stepBackward,
-      pagedown: deckContext.stepForward,
-      f: setFullScreen,
-    },
-    [],
-  );
+  if (deckContext.useAnimations) {
+    useMousetrap(
+      {
+        pageup: deckContext.stepBackward,
+        pagedown: deckContext.stepForward,
+        f: setFullScreen,
+      },
+      [],
+    );
+  }
 
   return null;
 }
