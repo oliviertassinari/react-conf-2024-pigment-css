@@ -416,7 +416,7 @@ https://github.com/styled-components/styled-components/issues/4025
         </SlideContainer>
         <Notes>
           <ul>
-            <li>Another key decision is on adopting Atomic classes or not</li>
+            <li>Another key decision is do you use Atomic classes or not</li>
           </ul>
           6m05s
         </Notes>
@@ -481,7 +481,7 @@ https://github.com/styled-components/styled-components/issues/4025
         </SlideContainer>
         <Notes>
           <ul>
-            <li>And what about larger applications?</li>
+            <li>I talked about small and medium size application but what about larger applications?</li>
             <li>Atomic classes works if you avoid as much as possible nested selectors.</li>
             <li>and completely breaks down if you don't</li>
             <li>But nested selectors have good use cases</li>
@@ -535,7 +535,7 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             {/* Same point in https://github.com/vercel/next.js/discussions/59989#discussioncomment-9409037 */}
             <li>
-              If you don't trust, me, trust the former React Tech Lead, Sebastian Markbåge. Here is
+              You don't have to trust me, you can trust the former React Tech Lead, Sebastian Markbåge. Here is
               a quote on the need for granular style loading that you can read on the replay of my
               talk.
             </li>
@@ -572,17 +572,12 @@ https://github.com/styled-components/styled-components/issues/4025
               </Text>
               <Card>
                 <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">
-                  Emotion
+                  Emotion / styled-components
                 </Text>
               </Card>
               <Card>
                 <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">
-                  styled-components
-                </Text>
-              </Card>
-              <Card>
-                <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">
-                  Linaria
+                  CSS Modules / Linaria
                 </Text>
               </Card>
             </span>
@@ -635,8 +630,7 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>The more recently libraries are not as exciting for me.</li>
             <li>Atomic classes yes, but please not in development. And more importantly</li>
             <li>
-              I think we, as a community, should move toward making granular style loading core to
-              how we do CSS like it's for loading JavaScript.
+              If I could only get one outcome from my talk, is that I wish I could inspire the community to move toward making granular style loading, the same way we take JavaScript code splitting very seriously.
             </li>
           </ul>
           7m45s
@@ -653,10 +647,8 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             <li>Another dimension, familiarity</li>
             <li>Do I have to learn a new API? Or can I rely on my existing knowledge?</li>
-            <li>
-              Say I am a Designer, or I have a limited memory capacity, It would be great for this
-              library to be really fast to learn, and not need cheat sheet.
-            </li>
+            <li>I don't want to have to rely on a cheat sheet </li>
+            <li>Maybe you are a Designer. I personaly have limited memory capacity.</li>
           </ul>
           8m00s
         </Notes>
@@ -720,7 +712,7 @@ https://github.com/styled-components/styled-components/issues/4025
         />
         <Notes>
           <ul>
-            <li>So Why?</li>
+            <li>So Why are we doing that?</li>
             <li>If you map the space, having on one side the effort it takes to migrate</li>
             <li>And on the other, how much the solution relies on JavaScript.</li>
             <li>You get this chart</li>
@@ -780,7 +772,7 @@ https://github.com/styled-components/styled-components/issues/4025
           <TitleAndSubtitle title="Key design decisions" subtitle="Pigment CSS" />
           <UnorderedList>
             <Appear>
-              <ListItem>No runtime</ListItem>
+              <ListItem>No runtime (but with fallback)</ListItem>
             </Appear>
             <Appear>
               <ListItem>RSC support</ListItem>
