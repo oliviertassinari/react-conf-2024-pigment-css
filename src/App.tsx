@@ -772,6 +772,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Heading fontWeight="500" color="primary">
           Material UI v6
         </Heading>
+        <Image src="/images/material-ui.png" width="65%" className={css({ margin: '40px auto' })} />
         <Notes>
           <ul>
             <li>Today, we are focused on making it work with Material UI v6</li>
