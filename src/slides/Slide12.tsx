@@ -6,7 +6,7 @@ import { Image } from 'spectacle';
 export default function Slide12() {
   return (
     <SlideContainer leftAligned noBgColor>
-      <TitleAndSubtitle title="Data Grid" subtitle="Performance" />
+      <TitleAndSubtitle title="Performance" />
       <span
         className={css({
           margin: 'auto',
@@ -23,7 +23,7 @@ export default function Slide12() {
           boxShadow: '0 8px 20px #000',
         })}
       >
-        <Image src="/images/user-feedback-1.png" width="100%%" />
+        <Image src="/images/user-feedback-1.png" width="100%" />
       </span>
     </SlideContainer>
   );

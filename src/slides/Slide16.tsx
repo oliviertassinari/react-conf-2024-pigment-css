@@ -23,7 +23,7 @@ export default function Slide16() {
           boxShadow: '0 8px 20px #000',
         })}
       >
-        <Image src="/images/tailwind-code.png" width="90%%" />
+        <Image src="/images/tailwind-code.png" width="90%" />
       </span>
     </SlideContainer>
   );
