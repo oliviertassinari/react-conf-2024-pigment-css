@@ -281,7 +281,7 @@ export default function Presentation() {
         <Text fontSize="2rem" color="secondary">
           Performance
         </Text>
-        <Image src="/images/data-grid.png" width="40%" className={css({ margin: '50px auto' })} />
+        <Image src="/images/data-grid.png" width="40%" className={css({ margin: '50px auto', borderRadius: 2 })} />
         <Notes>
           <ul>
             <li>
@@ -301,7 +301,7 @@ export default function Presentation() {
         <Image
           src="/images/user-feedback-1.png"
           width="55%"
-          className={css({ margin: '100px auto 20px' })}
+          className={css({ margin: '100px auto 20px', borderRadius: 4 })}
         />
         {/*<Image src="/images/user-feedback-2.png" width="55%" className={css({ margin: '5px auto' })} />*/}
         <Notes>
@@ -403,7 +403,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Image
           src="/images/style-collocation.png"
           width="50%"
-          className={css({ margin: '0px auto' })}
+          className={css({ margin: '0px auto', borderRadius: 8 })}
         />
         <Notes>
           <ul>
@@ -455,7 +455,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
           Atomic class names
         </Text>
-        <Image src="/images/class-atomic.png" width="60%" className={css({ margin: '0px auto' })} />
+        <Image src="/images/class-atomic.png" width="60%" className={css({ margin: '0px auto', borderRadius: 2 })} />
         <Notes>
           <ul>
             <li>Lately, we have seen a trend of more atomic classes solutions emerge</li>
@@ -478,7 +478,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
           Plain class names
         </Text>
-        <Image src="/images/class-plain.png" width="60%" className={css({ margin: '0px auto' })} />
+        <Image src="/images/class-plain.png" width="60%" className={css({ margin: '0px auto', borderRadius: 2 })} />
         <Notes>
           <ul>
             <li>For me, the dream output in development is the one we used to have in Material UI v4.</li>
@@ -539,7 +539,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Text fontSize="2rem" color="secondary" className={css({ marginTop: '0 !important' })}>
           Granular style loading
         </Text>
-        <Image src="/images/future-of-css.png" width="80%" className={css({ margin: '0 auto' })} />
+        <Image src="/images/future-of-css.png" width="80%" className={css({ margin: '0 auto', borderRadius: 2 })} />
         <Text fontSize="1rem" color="secondary" textAlign="center" className={css({ textDecoration: 'underline' })}>
           reactwg/react-18#108
         </Text>
@@ -684,6 +684,7 @@ https://github.com/styled-components/styled-components/issues/4025
           width="50%"
           className={css({
             margin: '30px auto',
+            borderRadius: '.65rem',
           })}
         />
         <Notes>
@@ -760,7 +761,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Heading fontWeight="500" color="primary">
           When does this land?
         </Heading>
-        <Image src="/images/josh.png" width="40%" className={css({ margin: '0px auto' })} />
+        <Image src="/images/josh.png" width="40%" className={css({ margin: '0px auto', borderRadius: 4 })} />
         <Notes>
           <ul>
             <li>When does this land?</li>
