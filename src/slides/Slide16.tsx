@@ -11,7 +11,7 @@ export default function Slide16() {
         className={css({
           margin: 'auto',
           marginTop: '1rem',
-          width: '100%',
+          width: '85%',
           // height: '100%',
           padding: '1rem',
           display: 'flex',
@@ -23,7 +23,7 @@ export default function Slide16() {
           boxShadow: '0 8px 20px #000',
         })}
       >
-        <Image src="/images/tailwind-code.png" width="90%" />
+        <Image src="/images/tailwind-code.png" width="100%" />
       </span>
     </SlideContainer>
   );
