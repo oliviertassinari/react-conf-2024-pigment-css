@@ -611,7 +611,7 @@ https://github.com/styled-components/styled-components/issues/4025
           8m30s
         </Notes>
       </Slide>
-      <Slide>
+      <Slide className={css({ ':first-child': { padding: 0 } })}>
         <SlideContainer>
           <Pigment />
         </SlideContainer>
