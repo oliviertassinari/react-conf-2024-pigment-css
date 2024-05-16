@@ -18,42 +18,42 @@ export default function Slide15() {
         })}
       >
         <Card>
-          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+          <Text fontSize="2.2rem" color="textPrimary" fontWeight="500">
             Inline styles
           </Text>
         </Card>
         <Card>
-          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+          <Text fontSize="2.2rem" color="textPrimary" fontWeight="500">
             CSS Modules
           </Text>
         </Card>
         <Card>
-          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+          <Text fontSize="2.2rem" color="textPrimary" fontWeight="500">
             StyleX
           </Text>
         </Card>
         <Card>
-          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+          <Text fontSize="2.2rem" color="textPrimary" fontWeight="500">
             Tailwind CSS
           </Text>
         </Card>
         <Card>
-          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+          <Text fontSize="2.2rem" color="textPrimary" fontWeight="500">
             Linaria
           </Text>
         </Card>
         <Card>
-          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+          <Text fontSize="2.2rem" color="textPrimary" fontWeight="500">
             Panda CSS
           </Text>
         </Card>
         <Card>
-          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+          <Text fontSize="2.2rem" color="textPrimary" fontWeight="500">
             Tokanami
           </Text>
         </Card>
         <Card>
-          <Text fontSize="2.2rem" color="textSecondary" fontWeight="500">
+          <Text fontSize="2.2rem" color="textPrimary" fontWeight="500">
             etc...
           </Text>
         </Card>

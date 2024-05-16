@@ -21,7 +21,7 @@ export default function Slide2() {
           Quick poll
         </Text>
         <Heading fontWeight="500" color="primary">
-          Who here is currently depending
+          Who here is currently depending on
           <br />
           styled-components or Emotion?
         </Heading>

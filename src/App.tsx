@@ -6,6 +6,7 @@ import { Pigment } from './components/Pigment';
 import SlideContainer from './components/SlideContainer';
 import TitleAndSubtitle from './components/TitleAndSubtitle';
 import ImageContainer from './components/ImageContainer';
+import Card from './components/Card';
 import {
   Slide,
   SlideLayout,
@@ -56,6 +57,7 @@ const spectacleTheme = {
     brandBlue: 'hsl(210, 100%, 65%)',
     textPrimary: '#FFF',
     textSecondary: 'hsl(210, 20%, 75%)',
+    textTertiary: 'hsl(210, 20%, 55%)',
     textRed: 'hsl(0, 99%, 70%)',
     tertiary: 'transparent',
   },
@@ -544,10 +546,87 @@ https://github.com/styled-components/styled-components/issues/4025
       <Slide>
         <SlideContainer leftAligned noBgColor>
           <TitleAndSubtitle title="So, which should we pick?" subtitle="Plain vs. Atomic classes" />
-          <UnorderedList>
-            <ListItem>Emotion, Styled component, Linaria 👍</ListItem>
-            <ListItem>StyleX, Tailwind CSS, Panda CSS 🤔</ListItem>
-          </UnorderedList>
+          <span
+            className={css({
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '.5rem',
+            })}
+          >
+            <span
+              className={css({
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '.5rem',
+                padding: '0 3rem',
+                '> span': {
+                  width: '70%',
+                },
+              })}
+            >
+              <Text fontSize="1.3rem" color="textPrimary" fontWeight="500">
+                Plain classes 👍
+              </Text>
+              <Card>
+                <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">
+                  Emotion
+                </Text>
+              </Card>
+              <Card>
+                <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">
+                  styled-components
+                </Text>
+              </Card>
+              <Card>
+                <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">
+                  Linaria
+                </Text>
+              </Card>
+            </span>
+            <hr
+              className={css({
+                all: 'unset',
+                height: '100%',
+                width: '2px',
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+              })}
+            />
+            <span
+              className={css({
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '.5rem',
+                padding: '0 3rem',
+                '> span': {
+                  width: '70%',
+                },
+              })}
+            >
+              <Text fontSize="1.3rem" color="textTertiary" fontWeight="500">
+                Atomic classes
+              </Text>
+              <Card>
+                <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">
+                  Tailwind CSS
+                </Text>
+              </Card>
+              <Card>
+                <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">
+                  Panda CSS
+                </Text>
+              </Card>
+              <Card>
+                <Text fontSize="1.5rem" color="textPrimary" fontWeight="500">
+                  StyleX
+                </Text>
+              </Card>
+            </span>
+          </span>
         </SlideContainer>
         <Notes>
           <ul>
@@ -575,7 +654,7 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>Another dimension, familiarity</li>
             <li>Do I have to learn a new API? Or can I rely on my existing knowledge?</li>
             <li>
-              Say I am a Designer, or I have a limit memory capacity, It would be great for this
+              Say I am a Designer, or I have a limited memory capacity, It would be great for this
               library to be really fast to learn, and not need cheat sheet.
             </li>
           </ul>
@@ -584,7 +663,7 @@ https://github.com/styled-components/styled-components/issues/4025
       </Slide>
       <Slide>
         <SlideContainer leftAligned noBgColor>
-          <TitleAndSubtitle title="Backward compatible" subtitle="Considerations" />
+          <TitleAndSubtitle title="Backwards compatible" subtitle="Considerations" />
           <UnorderedList>
             <ListItem>What if the solution was only about replacing imports? 😍</ListItem>
           </UnorderedList>
@@ -700,31 +779,28 @@ https://github.com/styled-components/styled-components/issues/4025
         <SlideContainer leftAligned noBgColor>
           <TitleAndSubtitle title="Key design decisions" subtitle="Pigment CSS" />
         </SlideContainer>
-        <div className={css({ marginTop: '-50px', padding: '0 4rem' })}>
+        <div className={css({ marginTop: '-2rem', padding: '0 4rem' })}>
           <UnorderedList>
             <Appear>
-              <ListItem>As few breaking changes as possible</ListItem>
-            </Appear>
-            <Appear>
               <ListItem>No runtime</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>A runtime fallback</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Granular style loading</ListItem>
             </Appear>
             <Appear>
               <ListItem>RSC support</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Being able to add Atomic CSS later down the road for production</ListItem>
+              <ListItem>Granular style loading</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>As few breaking changes as possible</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Being able to add atomic CSS later down the road for production</ListItem>
             </Appear>
           </UnorderedList>
         </div>
         <Notes>
           <ul>
-            <li>These has been or key design decisions</li>
+            <li>These has been our key design decisions</li>
           </ul>
         </Notes>
       </Slide>
@@ -756,10 +832,10 @@ https://github.com/styled-components/styled-components/issues/4025
               <ListItem>Started as a fork of Linaria</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Shares logic with wyw-in-js</ListItem>
+              <ListItem>Shares logic with WyW-in-js</ListItem>
             </Appear>
             <Appear>
-              <ListItem>It transpiles the code to generate CSS Modules files</ListItem>
+              <ListItem>It transpiles the code to generate CSS Module files</ListItem>
             </Appear>
           </UnorderedList>
         </div>
@@ -791,7 +867,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>Today, we are focused on making it work with Material UI v6</li>
-            <li>We last release Material UI v5.0.0 almost 3 years ago.</li>
+            <li>We last released Material UI v5 almost 3 years ago.</li>
             <li>
               With Material UI v6 we have two goals: modernize the library and be compatible with
               Pigment CSS (which is opt-in).
@@ -800,17 +876,24 @@ https://github.com/styled-components/styled-components/issues/4025
         </Notes>
       </Slide>
       <Slide>
-        <Heading fontWeight="500" color="primary">
-          Introducing blog post
-        </Heading>
         {/* use https://huggingface.co/spaces/huggingface-projects/QR-code-AI-art-generator to make the QR code looks good */}
         <Text
-          fontSize="1.8rem"
-          color="secondary"
-          className={css({ textAlign: 'center !important' })}
+          fontSize="1.5rem"
+          color="textPrimary"
+          fontWeight="500"
+          className={css({ textAlign: 'center !important', margin: '0px !important' })}
         >
-          https://mui.com/r/pigment
+          Learn more about Pigment CSS
+          <br />
+          <Text
+            fontSize="1.5rem"
+            color="brandBlue"
+            className={css({ textAlign: 'center !important', margin: '0 0 16px 0 !important' })}
+          >
+            👉 mui.com/r/pigment
+          </Text>
         </Text>
+        <Image src="/images/blog-post.png" width="100%" className={css({ margin: '0 auto' })} />
         <Notes>
           <ul>
             <li>

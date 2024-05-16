@@ -6,7 +6,7 @@ import { Image } from 'spectacle';
 export default function Slide12() {
   return (
     <SlideContainer leftAligned noBgColor>
-      <TitleAndSubtitle title="Performance" />
+      <TitleAndSubtitle title="Customization" subtitle="Performance" />
       <span
         className={css({
           margin: 'auto',

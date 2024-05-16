@@ -6,7 +6,7 @@ import { Image } from 'spectacle';
 export default function Slide8() {
   return (
     <SlideContainer leftAligned noBgColor>
-      <TitleAndSubtitle title="11 + 4 = 16kB of gzipped bundle size" subtitle="Performance" />
+      <TitleAndSubtitle title="16kB of gzipped bundle size" subtitle="Performance" />
       <span
         className={css({
           margin: 'auto',
