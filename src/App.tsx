@@ -105,7 +105,7 @@ export default function Presentation() {
   return (
     <Deck theme={spectacleTheme} transition={transition} template={<Template />}>
       <KeyboardShortcut />
-      <Slide>
+      <Slide className={css({ ':first-child': { padding: 0 } })}>
         <Slide1 />
         <Notes>
           <ul>
