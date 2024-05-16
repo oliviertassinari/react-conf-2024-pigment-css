@@ -11,7 +11,7 @@ export default function Slide9() {
         className={css({
           margin: 'auto',
           marginTop: '1rem',
-          width: '65%',
+          width: '60%',
           padding: '1rem',
           display: 'flex',
           justifyContent: 'center',

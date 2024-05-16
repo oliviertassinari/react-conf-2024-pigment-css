@@ -797,7 +797,24 @@ https://github.com/styled-components/styled-components/issues/4025
       <Slide>
         <SlideContainer leftAligned noBgColor>
           <TitleAndSubtitle title="Performance" subtitle="Pigment CSS" />
-          <ImageContainer width="50%">
+          <ImageContainer width="55%">
+            <Image
+              src="/images/benchmark-before.png"
+              width="100%"
+              className={css({ margin: 'auto' })}
+            />
+          </ImageContainer>
+        </SlideContainer>
+        <Notes>
+          <ul>
+            <li>This is how it looks like now, with the same benchmark.</li>
+          </ul>
+        </Notes>
+      </Slide>
+      <Slide>
+        <SlideContainer leftAligned noBgColor>
+          <TitleAndSubtitle title="Performance" subtitle="Pigment CSS" />
+          <ImageContainer width="80%">
             <Image
               src="/images/benchmark-after.png"
               width="100%"
