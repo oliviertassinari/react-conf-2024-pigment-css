@@ -24,7 +24,7 @@ const Spot = styled('span')({
   translate: '-50% -50%',
   background: 'radial-gradient(hsla(var(--hue) 100% 8%) 40%, hsl(210 20% 2%) 62%, transparent 80%)',
   position: 'absolute',
-  transition: 'all 3s ease',
+  transition: 'all 2s ease',
   mixBlendMode: 'lighten',
 });
 

@@ -1,12 +1,17 @@
 import { css } from '@pigment-css/react';
 
-export default function ImageContainer({ children }: { children: React.ReactNode }) {
+export default function ImageContainer({
+  width = '100%',
+  children,
+}: {
+  width?: string;
+  children: React.ReactNode;
+}) {
   return (
     <span
       className={css({
         margin: 'auto',
         marginTop: '1rem',
-        width: '100%',
         padding: '1rem',
         display: 'flex',
         justifyContent: 'center',
@@ -16,6 +21,9 @@ export default function ImageContainer({ children }: { children: React.ReactNode
         backgroundColor: 'hsla(220, 100%, 95%, 0.05)',
         boxShadow: '0 8px 20px #000',
       })}
+      style={{
+        width,
+      }}
     >
       {children}
     </span>

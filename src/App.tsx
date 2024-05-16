@@ -424,10 +424,10 @@ https://github.com/styled-components/styled-components/issues/4025
       <Slide>
         <SlideContainer leftAligned noBgColor>
           <TitleAndSubtitle title="Atomic class names" subtitle="Plain vs. Atomic classes" />
-          <ImageContainer>
+          <ImageContainer width="60%">
             <Image
               src="/images/class-atomic.png"
-              width="60%"
+              width="100%"
               className={css({ margin: '0px auto', borderRadius: 2 })}
             />
           </ImageContainer>
@@ -450,10 +450,10 @@ https://github.com/styled-components/styled-components/issues/4025
       <Slide>
         <SlideContainer leftAligned noBgColor>
           <TitleAndSubtitle title="Plain class names" subtitle="Plain vs. Atomic classes" />
-          <ImageContainer>
+          <ImageContainer width="60%">
             <Image
               src="/images/class-plain.png"
-              width="60%"
+              width="100%"
               className={css({ margin: '0px auto', borderRadius: 2 })}
             />
           </ImageContainer>
