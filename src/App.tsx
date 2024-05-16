@@ -628,7 +628,7 @@ https://github.com/styled-components/styled-components/issues/4025
         </UnorderedList>
         <Notes>
           <ul>
-            <li>Now, familiarity</li>
+            <li>Another dimension, familiarity</li>
             <li>Do I have to learn a new API? Or can I rely on my existing knowledge?</li>
             <li>
               Say I am a Designer, or I have a limit memory capacity, It would be great for this
@@ -802,7 +802,7 @@ https://github.com/styled-components/styled-components/issues/4025
             <ListItem>Started as a fork of Linaria</ListItem>
           </Appear>
           <Appear>
-            <ListItem>And now based on Anber/wyw-in-js</ListItem>
+            <ListItem>Share logic with wyw-in-js</ListItem>
           </Appear>
           <Appear>
             <ListItem>It transpile the code to generate CSS Modules files</ListItem>
