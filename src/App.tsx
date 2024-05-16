@@ -793,9 +793,8 @@ https://github.com/styled-components/styled-components/issues/4025
           color="secondary"
           className={css({ textAlign: 'center !important' })}
         >
-          https://mui.com/blog/introducing-pigment-css/
+          https://mui.com/r/pigment
         </Text>
-        <Image src="/images/qr.jpg" width="20%" className={css({ margin: '0px auto' })} />
         <Notes>
           <ul>
             <li>
