@@ -116,16 +116,15 @@ export default function Presentation() {
             <li>
               By the end of this presentation, I would like you to better understand how React
               Server Components are shaking this space, the challenges with today's generation of
-              libraries, and the key properties I think we should look out for a great styling
-              solutions.
+              styling libraries, and the key properties I think we should look out for a great one.
             </li>
             <li>
-              Now, React Server Components might shake the space, but there is hope. I'm also going
+              Now, the space might be shaken, but there is hope. I'm also going
               to introduce Pigment CSS, which is part of a next generation of CSS-in-JS libraries
               movement.
             </li>
           </ul>
-          40s
+          35s
         </Notes>
       </Slide>
       <Slide>
@@ -138,7 +137,7 @@ export default function Presentation() {
             <li>🙆‍♂️</li>
             <li>I see xx% of the audience who raised their hands</li>
           </ul>
-          1m00s
+          55s
         </Notes>
       </Slide>
       <Slide>
@@ -147,11 +146,11 @@ export default function Presentation() {
           <ul>
             <li>You folks seems to be a good sample of the ecosystem.</li>
             <li>
-              According to the last State of CSS survey, over 60% of the frontend community uses one
-              of these two.
+              According to the last State of CSS survey, over half of the community uses one
+              of these two libraires.
             </li>
           </ul>
-          1m10s
+          1m05s
         </Notes>
       </Slide>
       <Slide>
@@ -163,7 +162,7 @@ export default function Presentation() {
             <li>🙆‍♂️</li>
             <li>Or so fewer hands than before, but still a good number, about x%</li>
           </ul>
-          1m30s
+          1m20s
         </Notes>
       </Slide>
       <Slide>
@@ -187,7 +186,7 @@ export default function Presentation() {
           <ul>
             <li>What's going on?</li>
           </ul>
-          1m50s
+          1m40s
         </Notes>
       </SlideLayout.Center>
       <Slide>
@@ -200,6 +199,9 @@ export default function Presentation() {
             <li>
               For those that don't know me, I co-created Material UI a long time ago. I'm now
               running MUI as its CEO.
+            </li>
+            <li>
+              How is this relevant?
             </li>
           </ul>
           2m05s
@@ -222,11 +224,11 @@ export default function Presentation() {
               <br />
             </li>
             <li>
-              The common denominator between them is that all these projects rely on Emotion in one
+              So, the common denominator between them is that all these projects rely on Emotion in one
               way or another, which gave us a good exposure to the problems.
             </li>
           </ul>
-          2m45s
+          2m30s
         </Notes>
       </Slide>
       <Slide>
@@ -236,31 +238,31 @@ export default function Presentation() {
           <ul>
             <li>The first problem we faced was with performance.</li>
             <li>
-              The bundle size of the application takes a hit, styled-components adds about 11kB
-              gzipped because it has a runtime.
+              When you install styled-components, you add about 11kB
+              gzipped of JavaScript in your bundle. It's because it has a runtime.
             </li>
             <li>
-              And you also need to add about 4kB because it works with a rich JavaScript theme and some helpers, like around colors.
+              And you also need to add about 4kB because it works with a rich JavaScript theme and some helpers.
             </li>
             <li>So in total, you look at 16 kB.</li>
             <li>
-              Now, to be fair, it's not the end of the world, if you compare it to the bundle size of
-              React itself, it's about 1/3 (45KB).
+              Now, to be fair, it's not the end of the world, it's about 1/3 of the bundle size
+              React uses (45KB).
             </li>
             <li>Still, is it really needed?</li>
           </ul>
-          3m20s
+          3m00s
         </Notes>
       </Slide>
       <Slide>
         <Slide9 />
         <Notes>
           <ul>
-            <li>The runtime takes the largest performance hit</li>
-            <li>Here, you can see how much time it takes to render a table with 1,000 rows.</li>
-            <li>It's not great, you can't use Emotion without virtualization.</li>
+            <li>The runtime takes a performance hit, larger one this time.</li>
+            <li>Here, you can see how much time it takes to render a table with 1,000 rows with a few different approaches.</li>
+            <li>It's not great with Emotion, you can't use it without virtualization.</li>
           </ul>
-          3m35s
+          3m30s
         </Notes>
       </Slide>
       <Slide>
@@ -289,7 +291,7 @@ export default function Presentation() {
             <li>So in theory, we could have 14% fewer blank areas.</li>
             <li>For analyzing data use cases, I think it matters.</li>
           </ul>
-          4m10s
+          4m00s
         </Notes>
       </Slide>
       <Slide>
@@ -362,8 +364,8 @@ https://github.com/styled-components/styled-components/issues/4025
         </Heading>
         <Notes>
           <ul>
-            <li>These problems are too important for MUI not to try to solve.</li>
-            <li>Over a year ago, we started to focus on this. I hope you will too.</li>
+            <li>These problems are too important for MUI to prioritize finding a solution.</li>
+            <li>And this is what we did over a year ago.</li>
             <li>Let's look at how we approached this.</li>
           </ul>
           5m00s
@@ -387,7 +389,7 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>It's overwhelming to compare them all.</li>
             <li>So let's look at some of the key properties I think we should have</li>
             <li>
-              Before disclaimer, I'm looking at those in the context of Material UI, these solution adopt
+              But before a disclaimer, I'm looking at those in my own context and Material UI, these solution adopt
               different tradeoffs, I'm sure they all have context where they are best.
             </li>
           </ul>
@@ -440,7 +442,7 @@ https://github.com/styled-components/styled-components/issues/4025
         </Heading>
         <Notes>
           <ul>
-            <li>Another very structuring choice is deciding on adopting Atomic classes or not</li>
+            <li>Another key decision is on adopting Atomic classes or not</li>
           </ul>
           6m05s
         </Notes>
@@ -456,10 +458,10 @@ https://github.com/styled-components/styled-components/issues/4025
         <Image src="/images/class-atomic.png" width="60%" className={css({ margin: '0px auto' })} />
         <Notes>
           <ul>
-            <li>Lately, we have seen more atomic classes solutions emerge</li>
+            <li>Lately, we have seen a trend of more atomic classes solutions emerge</li>
             <li>
               They are interesting because for small and medium size applications, they allow to
-              have a single CSS file, while keeping it fast enough. It's simplers.
+              have a single CSS file, while keeping the app fast. It's simplers.
             </li>
             <li>Now, it's not all bright</li>
             <li>
@@ -501,7 +503,8 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>And what about larger applications?</li>
-            <li>Atomic classes works if you avoid as much as possible nested selectors. It doesn't scale otherwise</li>
+            <li>Atomic classes works if you avoid as much as possible nested selectors.</li>
+            <li>and completely breaks down if you don't</li>
             <li>But nested selectors have good use cases</li>
           </ul>
           7m00s
@@ -521,7 +524,7 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>
-              So to scale the application, even with atomic classes, you eventually need granular style loading
+              So to scale the application, even with atomic classes, you eventually need granular style loading.
             </li>
             <li>Meaning only loading the CSS for the elements that are on the page.</li>
             <li>But once you get granular style loading, how much do you need atomic classes to improve performance? Hum</li>
@@ -544,7 +547,7 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             {/* Same point in https://github.com/vercel/next.js/discussions/59989#discussioncomment-9409037 */}
             <li>
-              For those that have time to rewatch my talk, I have included a quote from Sebastian Markbåge on the need for granular style loading.
+              If you don't trust, me, trust the former React Tech Lead, Sebastian Markbåge. Here is a quote on the need for granular style loading that you can read on the replay of my talk.
             </li>
           </ul>
           7m30s
@@ -560,11 +563,12 @@ https://github.com/styled-components/styled-components/issues/4025
         </UnorderedList>
         <Notes>
           <ul>
-            <li>It's one of the areas where Emotion perform well</li>
+            <li>So, which library should we pick here?</li>
+            <li>I think it's one of the areas where Emotion performs the best</li>
             <li>The more recently libraries are not as exciting for me.</li>
             <li>Atomic classes yes, but please not in development. And more importantly</li>
             <li>
-              I think we, as a community, should move toward making granular style loading core to how we do CSS like it's for JavaScript.
+              I think we, as a community, should move toward making granular style loading core to how we do CSS like it's for loading JavaScript.
             </li>
           </ul>
           7m45s
@@ -599,7 +603,7 @@ https://github.com/styled-components/styled-components/issues/4025
               Last, backward compatible. We experienced first hand when moving from JSS to
               Emotion how painful the migration was for the ecosystem.
             </li>
-            <li>What if it the solution was only about replacing imports? Wouldn't to be amazing?</li>
+            <li>What if the solution was only about replacing imports? Wouldn't to be amazing?</li>
             <li>
               The styled-components API, it feels fine.
             </li>
@@ -614,8 +618,9 @@ https://github.com/styled-components/styled-components/issues/4025
         <Notes>
           <ul>
             <li>This is where Pigment CSS steps in</li>
-            <li>A new CSS-in-JS library that we have been working on for the last 12 months</li>
-            <li>Now, I known what you are thinking</li>
+            <li>A new CSS-in-JS library that we have been working on at MUI for the last 12 months</li>
+            <li>----</li>
+            <li>I known what you are thinking</li>
             <li>Another one?</li>
           </ul>
           8m45s
@@ -646,12 +651,12 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             <li>So Why?</li>
             <li>If you map the space, having on one side the effort it takes to migrate</li>
-            <li>And on the other, the reliance on JavaScript.</li>
+            <li>And on the other, how much the solution relies on JavaScript.</li>
             <li>You get this chart</li>
             <li>Starting from Emotion, we had to choose between either go toward CSS only, so toward CSS Modules or Tailwind CSS</li>
             <li>But at the expense of a costly migration and giving up on some nice features</li>
             <li>Or go the other way, into Babel or even Rust code transformation with bundlers integration and get the nicest features.</li>
-            <li>Inspired by the work done on the React Compiler, and not seeing projects attemping it, we felt it had to be tried.</li>
+            <li>Inspired by the work done on the React Compiler, and not seeing projects attemping it, we felt it had to be tried, nobody else was going to do it.</li>
           </ul>
         </Notes>
       </Slide>
@@ -669,7 +674,7 @@ https://github.com/styled-components/styled-components/issues/4025
         />
         <Notes>
           <ul>
-            <li>And this is Why</li>
+            <li>And this is where Pigment CSS fits</li>
           </ul>
         </Notes>
       </Slide>
@@ -685,7 +690,7 @@ https://github.com/styled-components/styled-components/issues/4025
           <ul>
             <li>This is how it looks like</li>
             <li>It's pretty much the same as Emotion</li>
-            <li>With an extra `sx` prop for quick iterations</li>
+            <li>With an extra `sx` prop for quick iterations that even works on primitives</li>
           </ul>
         </Notes>
       </Slide>
@@ -694,6 +699,9 @@ https://github.com/styled-components/styled-components/issues/4025
           Key design decisions
         </Heading>
         <UnorderedList>
+          <Appear>
+            <ListItem>As few breaking changes as possible</ListItem>
+          </Appear>
           <Appear>
             <ListItem>No runtime</ListItem>
           </Appear>
@@ -707,10 +715,7 @@ https://github.com/styled-components/styled-components/issues/4025
             <ListItem>RSC support</ListItem>
           </Appear>
           <Appear>
-            <ListItem>As few breaking changes as possible</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Optional Atomic CSS down the line</ListItem>
+            <ListItem>Being able to add Atomic CSS later down the road for production</ListItem>
           </Appear>
         </UnorderedList>
         <Notes>
@@ -773,7 +778,7 @@ https://github.com/styled-components/styled-components/issues/4025
             <li>We last release Material UI v5.0.0 almost 3 years ago.</li>
             <li>
               With Material UI v6 we have two goals: modernize the library and be compatible with
-              Pigment CSS.
+              Pigment CSS (which is opt-in).
             </li>
           </ul>
         </Notes>
