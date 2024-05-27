@@ -39,6 +39,7 @@ import Slide12 from './slides/Slide12';
 import Slide13 from './slides/Slide13';
 import Slide15 from './slides/Slide15';
 import Slide16 from './slides/Slide16';
+import SlideTest from './slides/SlideTest';
 import SlideGodSack from './slides/SlideGodSack';
 
 const Button = styled.button`
@@ -909,6 +910,7 @@ https://github.com/styled-components/styled-components/issues/4025
           </ul>
         </Notes>
       </Slide>
+      <SlideTest />
     </Deck>
   );
 }
