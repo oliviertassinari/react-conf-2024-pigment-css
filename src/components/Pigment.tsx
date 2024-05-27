@@ -6,6 +6,11 @@ const scale = keyframes({
   to: { scale: 'var(--scale)' },
 });
 
+const TestStyleLint = styled('span')`
+  color: rgba(0, 0, 0, 0);
+  cursor: disabled;
+`;
+
 const Bubble = styled('span')({
   height: 'var(--size, 100%)',
   aspectRatio: '1',
